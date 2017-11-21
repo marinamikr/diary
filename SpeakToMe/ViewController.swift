@@ -8,7 +8,7 @@
 
 import UIKit
 import Speech
-
+import RealmSwift
 
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     // MARK: Properties
@@ -24,6 +24,8 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet var textView : UITextView!
     
     @IBOutlet var recordButton : UIButton!
+    
+    
     
     // MARK: UIViewController
     
@@ -144,8 +146,28 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
     
-    @IBAction func hozon(){
-          let realmmodel:lelmmodel = lelmmodel()
+  
+    @IBAction func hozonbutton (){
+        
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .none
+        let now = Date()
+        
+        // デフォルトのRealmを取得
+        let realm = try! Realm()
+        
+        // 通常のSwiftのオブジェクトと同じように扱える
+        let realmModel : RealmModel = RealmModel()
+        realmModel.hizuke = f.string(from: now)
+        realmModel.honbunn = textView.text
+        
+        //書き込みは必ずrealm.write内
+        try! realm.write {
+            realm.add(realmModel)
+        }
+        
+
         
     }
 }

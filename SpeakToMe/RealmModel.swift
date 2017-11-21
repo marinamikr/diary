@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class realmDataSet: Object {
+class RealmModel: Object {
     
     dynamic var hizuke = String()
     dynamic var honbunn = String()
