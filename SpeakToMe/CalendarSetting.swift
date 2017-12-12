@@ -24,7 +24,7 @@ class  CalendarSetting {
     //カレンダーの日付に関するセッティング
     static let weekList: [String] = ["日", "月", "火", "水", "木", "金", "土"]
     
-    //カレンダーのカラー表示に関するセッティング（①日曜日または祝祭日の場合の色・②土曜日の場合の色・③平日の場合の色の決定）
+    //カレンダーのカラー表示に関するセッティング（①日曜日または祝祭日の場合の色・②土曜　日の場合の色・③平日の場合の色の決定）
     static func getCalendarColor(_ weekdayIndex: Int, isHoliday: Bool = false) -> UIColor {
         if isSunday(weekdayIndex) || isHoliday {
             return holidayColor

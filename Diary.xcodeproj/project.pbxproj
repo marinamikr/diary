@@ -19,6 +19,7 @@
 		CE060A451FCD7B9E00048B74 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A441FCD7B9E00048B74 /* TargetDateSetting.swift */; };
 		CE060A471FCD7D0B00048B74 /* CurrentDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */; };
 		CE060A491FCD7DB700048B74 /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */; };
+		CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */; };
 		CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED221BB1FC4430B003964CB /* CalendarViewController.swift */; };
 		CEFBE8271FBB08A00051ACC9 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE8261FBB08A00051ACC9 /* RealmModel.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		CE060A441FCD7B9E00048B74 /* TargetDateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
 		CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateSetting.swift; sourceTree = "<group>"; };
 		CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
+		CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		CED221BB1FC4430B003964CB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		CEFBE8261FBB08A00051ACC9 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				CE060A441FCD7B9E00048B74 /* TargetDateSetting.swift */,
 				CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */,
 				CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */,
+				CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				CE060A401FCD6E8600048B74 /* CollectionViewCell.swift in Sources */,
 				CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */,
+				CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */,
 				CE060A471FCD7D0B00048B74 /* CurrentDateSetting.swift in Sources */,
 				CE060A431FCD76E800048B74 /* CalendarSetting.swift in Sources */,
 				7539A4731CE7A57600505E8B /* ViewController.swift in Sources */,
