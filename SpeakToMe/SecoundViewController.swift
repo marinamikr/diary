@@ -29,6 +29,7 @@ class SecoundViewController: UIViewController {
         let nib:UINib = UINib(nibName: "CollectionViewCell", bundle: nil)
         calendarCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         calendarCollectionView.dataSource = self
+        calendarCollectionView.delegate = self
         
         updateDataSource()
         
@@ -57,7 +58,7 @@ class SecoundViewController: UIViewController {
 
 
 
-extension SecoundViewController: UICollectionViewDataSource {
+extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
     
@@ -171,6 +172,27 @@ extension SecoundViewController: UICollectionViewDataSource {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 例えば端末サイズの半分の width と height にして 2 列にする場合
+        let width: CGFloat = UIScreen.main.bounds.width / 7 - 13
+        let height: CGFloat = UIScreen.main.bounds.height / 6 - 13
+        print("セルサイズ")
+        return CGSize(width: width, height: height )
+    }
+    
+    
+    // Cell が選択された場合
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
+        // [indexPath.row] から画像名を探し、UImage を設定
+        selectedImage = UIImage(named: photos[indexPath.row])
+        if selectedImage != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
+            performSegue(withIdentifier: "toSubViewController",sender: nil)
+        }
+        
+    }
     
     
     
