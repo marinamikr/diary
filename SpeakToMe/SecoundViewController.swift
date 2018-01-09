@@ -9,7 +9,9 @@
 import UIKit
 
 class SecoundViewController: UIViewController {
-  
+    
+    
+    
     // MARK: Properties
     var dayCellLists: [String?] = []
     
@@ -59,7 +61,6 @@ class SecoundViewController: UIViewController {
 
 
 extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    
     
     
     private enum indexType: Int {
@@ -176,7 +177,6 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
         // 例えば端末サイズの半分の width と height にして 2 列にする場合
         let width: CGFloat = UIScreen.main.bounds.width / 7 - 13
         let height: CGFloat = UIScreen.main.bounds.height / 6 - 13
-        print("セルサイズ")
         return CGSize(width: width, height: height )
     }
     
@@ -184,17 +184,17 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
+        print("touch")
+        ThirdViewController.date
         
-        // [indexPath.row] から画像名を探し、UImage を設定
-        selectedImage = UIImage(named: photos[indexPath.row])
-        if selectedImage != nil {
-            // SubViewController へ遷移するために Segue を呼び出す
-            performSegue(withIdentifier: "toSubViewController",sender: nil)
-        }
+        // SubViewController へ遷移するために Segue を呼び出す
+        performSegue(withIdentifier: "goThirdViewController",sender: nil)
         
     }
-    
-    
-    
+    // Segue 準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "goThirdViewController") {
+            let subVC: ThirdViewController = (segue.destination as? ThirdViewController)!
+        }
+    }
 }
-

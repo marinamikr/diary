@@ -165,9 +165,6 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         try! realm.write {
             realm.add(realmModel)
         }
-        
-        
-        
     }
 }
 
