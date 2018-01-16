@@ -148,23 +148,27 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     @IBAction func hozonbutton (){
         
-        let f = DateFormatter()
-        f.dateStyle = .long
-        f.timeStyle = .none
-        let now = Date()
+        let dateFormater = DateFormatter()
+        dateFormater.locale = Locale(identifier: "ja_JP")
+        dateFormater.dateFormat = "yyyy/MM/dd"
+        let date :String = dateFormater.string(from: Date())
+        
+      
         
         // デフォルトのRealmを取得
         let realm = try! Realm()
         
         // 通常のSwiftのオブジェクトと同じように扱える
         let realmModel : RealmModel = RealmModel()
-        realmModel.hizuke = f.string(from: now)
+        realmModel.hizuke = date
         realmModel.honbunn = textView.text
         
         //書き込みは必ずrealm.write内
         try! realm.write {
             realm.add(realmModel)
         }
+        
+        print(date)
     }
 }
 

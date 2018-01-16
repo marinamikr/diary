@@ -10,7 +10,8 @@ import UIKit
 
 class SecoundViewController: UIViewController {
     
-    
+    var position: Int = 0
+
     
     // MARK: Properties
     var dayCellLists: [String?] = []
@@ -78,6 +79,7 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     private enum collection: String{
         case cellName = "CollectionViewCell"
     }
+    
     
     func updateDataSource() {
         var day = 1
@@ -184,8 +186,8 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        print("touch")
-        ThirdViewController.date
+       print(dayCellLists[indexPath.row])
+       position = indexPath.row
         
         // SubViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "goThirdViewController",sender: nil)
@@ -195,6 +197,11 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "goThirdViewController") {
             let subVC: ThirdViewController = (segue.destination as? ThirdViewController)!
+            subVC.year = targetYear
+            subVC.month = targetMonth
+            subVC.day = position
+           
+            
         }
     }
 }

@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ThirdViewController: UIViewController {
     
-    static var date = ""
+    var year: Int = 0
+    var month: Int  = 0
+    var day: Int = 0
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(year)
+        print(month)
+        print(day)
+        
+        //Realmオブジェクトの取得
+        let realm = try! Realm()
+       //もし、dateの情報が、Cellに表示する日付と一致するものを検索
+        if let realmModel = realm.objects(RealmModel.self).filter("hizuke == %@", String(year)+"/"+String(month)+"/"+String(day)).last{
+            
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,8 +37,7 @@ class ThirdViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+   
     /*
     // MARK: - Navigation
 
