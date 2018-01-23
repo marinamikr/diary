@@ -11,22 +11,16 @@ import RealmSwift
 
 class ThirdViewController: UIViewController {
     
-    var year: Int = 0
-    var month: Int  = 0
-    var day: Int = 0
-  
+    var dateString: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(year)
-        print(month)
-        print(day)
+        print(dateString)
         
         //Realmオブジェクトの取得
         let realm = try! Realm()
        //もし、dateの情報が、Cellに表示する日付と一致するものを検索
-        if let realmModel = realm.objects(RealmModel.self).filter("hizuke == %@", String(year)+"/"+String(month)+"/"+String(day)).last{
+        if let realmModel = realm.objects(RealmModel.self).filter("hizuke == %@", dateString).last{
             
         }
         

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class DateManeger{
+class DateManager{
     func toDateString(year: Int, month: Int, day: Int) -> String{
         if month <= 9 {
             if day <= 9{
@@ -23,5 +23,13 @@ class DateManeger{
                 return String(year) + "/" + String(month) + "/" + String(day)
             }
         }
+    }
+    
+    func format(date: Date)  -> String {
+        let dateFormater = DateFormatter()
+        dateFormater.locale = Locale(identifier: "ja_JP")
+        dateFormater.dateFormat = "yyyy/MM/dd"
+        let date :String = dateFormater.string(from: date)
+        return date
     }
 }

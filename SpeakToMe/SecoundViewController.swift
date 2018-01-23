@@ -10,8 +10,10 @@ import UIKit
 
 class SecoundViewController: UIViewController {
     
+    var datemanager2: DateManager = DateManager()
+    
     var position: Int = 0
-
+    
     
     // MARK: Properties
     var dayCellLists: [String?] = []
@@ -63,7 +65,7 @@ class SecoundViewController: UIViewController {
 
 extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    
+   
     private enum indexType: Int {
         case weekdayTitleArea     = 0
         case calendarContentsArea = 1
@@ -186,22 +188,23 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-       print(dayCellLists[indexPath.row])
-       position = indexPath.row
+        print(dayCellLists[indexPath.row])
+        position = indexPath.row
         
         // SubViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "goThirdViewController",sender: nil)
+        
+        
         
     }
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "goThirdViewController") {
             let subVC: ThirdViewController = (segue.destination as? ThirdViewController)!
-            subVC.year = targetYear
-            subVC.month = targetMonth
-            subVC.day = position
-           
             
+            let stringReturn = datemanager2.toDateString(year: targetYear, month: targetMonth, day: position)
+            
+            subVC.dateString = stringReturn
         }
     }
 }

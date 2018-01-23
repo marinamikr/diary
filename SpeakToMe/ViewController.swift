@@ -12,6 +12,9 @@ import RealmSwift
 
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
+    var dateManager: DateManager = DateManager()
+    
+    
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
     
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -147,28 +150,25 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     
     @IBAction func hozonbutton (){
-        
-        let dateFormater = DateFormatter()
-        dateFormater.locale = Locale(identifier: "ja_JP")
-        dateFormater.dateFormat = "yyyy/MM/dd"
-        let date :String = dateFormater.string(from: Date())
-        
-      
-        
+     
         // デフォルトのRealmを取得
         let realm = try! Realm()
         
+        let dateReturn = dateManager.format(date: Date())
+       
+        
         // 通常のSwiftのオブジェクトと同じように扱える
         let realmModel : RealmModel = RealmModel()
-        realmModel.hizuke = date
+        realmModel.hizuke = dateReturn
         realmModel.honbunn = textView.text
+        
         
         //書き込みは必ずrealm.write内
         try! realm.write {
             realm.add(realmModel)
         }
         
-        print(date)
+        print(dateReturn)
     }
 }
 
