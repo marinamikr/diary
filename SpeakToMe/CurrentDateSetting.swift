@@ -9,11 +9,24 @@
 import Foundation
 class CurrentDateSetting {
     
-static func getCurrentYearAndMonth() -> (targetYear: Int, targetMonth: Int) {
+    var date : Date = Date()
     
-    //Calendarクラスのインスタンスを初期化した後に日付の情報を取得して、年と月をタプルで返す
-    let currentCalendar: Calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-    let comps: DateComponents = currentCalendar.dateComponents([.year, .month], from: Date())
-    return (Int(comps.year!), Int(comps.month!))
-}
+    func getCurrentYearAndMonth(number: Int) -> (targetYear: Int, targetMonth: Int) {
+        
+        let changeDate  : Date = changeMonth(date: self.date,number: number)
+        
+        //Calendarクラスのインスタンスを初期化した後に日付の情報を取得して、年と月をタプルで返す
+        let currentCalendar: Calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        let comps: DateComponents = currentCalendar.dateComponents([.year, .month], from: changeDate)
+        return (Int(comps.year!), Int(comps.month!))
+    }
+    
+    func changeMonth(date : Date,number: Int) -> Date {
+        
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.month = number
+        return (calendar as NSCalendar).date(byAdding: dateComponents, to: date, options: NSCalendar.Options(rawValue: 0))!
+    }
+    
 }

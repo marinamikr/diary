@@ -10,7 +10,10 @@ import UIKit
 
 class SecoundViewController: UIViewController {
     
+    var number: Int = 0
+    
     var datemanager2: DateManager = DateManager()
+    var currentDateSetting : CurrentDateSetting = CurrentDateSetting()
     
     var position: Int = 0
     
@@ -19,8 +22,10 @@ class SecoundViewController: UIViewController {
     var dayCellLists: [String?] = []
     
     //ラベルに表示するための年と月の変数
-    var targetYear: Int!  = CurrentDateSetting.getCurrentYearAndMonth().targetYear
-    var targetMonth: Int! = CurrentDateSetting.getCurrentYearAndMonth().targetMonth
+    var targetYear: Int!
+    var targetMonth: Int!
+    
+    
     
     //日本の祝祭日判定用のインスタンス
     let holidayObj: CalculateCalendarLogic = CalculateCalendarLogic()
@@ -30,6 +35,11 @@ class SecoundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
+        
+        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
+        
         
         let nib:UINib = UINib(nibName: "CollectionViewCell", bundle: nil)
         calendarCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
@@ -58,6 +68,21 @@ class SecoundViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func before(_ sender: Any){
+        number = number - 1
+        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
+        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
+        updateDataSource()
+        calendarCollectionView.reloadData()
+        
+    }
+    @IBAction func next(_ sender: Any) {
+        number = number + 1
+        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
+        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
+        updateDataSource()
+        calendarCollectionView.reloadData()
+    }
     
 }
 
@@ -65,7 +90,7 @@ class SecoundViewController: UIViewController {
 
 extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-   
+    
     private enum indexType: Int {
         case weekdayTitleArea     = 0
         case calendarContentsArea = 1
@@ -207,4 +232,6 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
             subVC.dateString = stringReturn
         }
     }
+    
+    
 }

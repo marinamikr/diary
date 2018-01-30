@@ -10,9 +10,12 @@ import UIKit
 import RealmSwift
 
 class ThirdViewController: UIViewController {
+
     
     var dateString: String = ""
 
+    @IBOutlet weak var textview: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(dateString)
@@ -20,7 +23,10 @@ class ThirdViewController: UIViewController {
         //Realmオブジェクトの取得
         let realm = try! Realm()
        //もし、dateの情報が、Cellに表示する日付と一致するものを検索
-        if let realmModel = realm.objects(RealmModel.self).filter("hizuke == %@", dateString).last{
+        if let realmModel :RealmModel = realm.objects(RealmModel.self).filter("hizuke == %@", dateString).last{
+            
+            print(realmModel.honbunn)
+            textview.text = realmModel.honbunn
             
         }
         
