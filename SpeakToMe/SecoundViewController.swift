@@ -12,10 +12,11 @@ class SecoundViewController: UIViewController {
     
     var number: Int = 0
     
+    
     var datemanager2: DateManager = DateManager()
     var currentDateSetting : CurrentDateSetting = CurrentDateSetting()
     
-    var position: Int = 0
+    var day: Int = 0
     
     
     // MARK: Properties
@@ -30,6 +31,34 @@ class SecoundViewController: UIViewController {
     //日本の祝祭日判定用のインスタンス
     let holidayObj: CalculateCalendarLogic = CalculateCalendarLogic()
     
+    @IBOutlet weak var yearlabel: UILabel!
+    
+    @IBOutlet weak var monthlabel: UILabel!
+    
+    @IBAction func before(_ sender: Any){
+        number = number - 1
+        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
+        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
+        updateDataSource()
+        calendarCollectionView.reloadData()
+        
+        monthlabel.text = String(targetMonth)
+        yearlabel.text = String(targetYear)
+        
+        
+    }
+    @IBAction func next(_ sender: Any) {
+        number = number + 1
+        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
+        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
+        updateDataSource()
+        calendarCollectionView.reloadData()
+        
+        monthlabel.text = String(targetMonth)
+        yearlabel.text = String(targetYear)
+    }
+    
+    
     
     @IBOutlet weak var calendarCollectionView: UICollectionView!
     
@@ -40,6 +69,10 @@ class SecoundViewController: UIViewController {
         
         targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
         
+        monthlabel.text = String(targetMonth)
+        
+        yearlabel.text = String(targetYear)
+
         
         let nib:UINib = UINib(nibName: "CollectionViewCell", bundle: nil)
         calendarCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
@@ -68,21 +101,6 @@ class SecoundViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    @IBAction func before(_ sender: Any){
-        number = number - 1
-        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
-        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
-        updateDataSource()
-        calendarCollectionView.reloadData()
-        
-    }
-    @IBAction func next(_ sender: Any) {
-        number = number + 1
-        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
-        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
-        updateDataSource()
-        calendarCollectionView.reloadData()
-    }
     
 }
 
@@ -205,7 +223,7 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // 例えば端末サイズの半分の width と height にして 2 列にする場合
         let width: CGFloat = UIScreen.main.bounds.width / 7 - 13
-        let height: CGFloat = UIScreen.main.bounds.height / 6 - 13
+        let height: CGFloat = (UIScreen.main.bounds.height - 220) / 6 - 13
         return CGSize(width: width, height: height )
     }
     
@@ -213,8 +231,10 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
     // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        print(dayCellLists[indexPath.row])
-        position = indexPath.row
+//        print(dayCellLists[indexPath.row])
+        print(dayCellLists)
+        print(indexPath.row)
+        day = Int(dayCellLists[indexPath.row]!)!
         
         // SubViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "goThirdViewController",sender: nil)
@@ -227,7 +247,7 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
         if (segue.identifier == "goThirdViewController") {
             let subVC: ThirdViewController = (segue.destination as? ThirdViewController)!
             
-            let stringReturn = datemanager2.toDateString(year: targetYear, month: targetMonth, day: position)
+            let stringReturn = datemanager2.toDateString(year: targetYear, month: targetMonth, day: day)
             
             subVC.dateString = stringReturn
         }

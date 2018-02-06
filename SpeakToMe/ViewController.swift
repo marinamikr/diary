@@ -27,6 +27,10 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     @IBOutlet var recordButton : UIButton!
     
+    @IBAction func keyboard() {
+       textView.becomeFirstResponder()
+    }
+    
     // MARK: UIViewController
     
     public override func viewDidLoad() {
