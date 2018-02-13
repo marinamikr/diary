@@ -27,6 +27,18 @@ class SecoundViewController: UIViewController {
     var targetMonth: Int!
     
     
+    @IBAction func genzaihe() {
+        number = 0
+        targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
+        targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
+        updateDataSource()
+        calendarCollectionView.reloadData()
+        
+        monthlabel.text = String(targetMonth)
+        yearlabel.text = String(targetYear)
+        
+        
+    }
     
     //日本の祝祭日判定用のインスタンス
     let holidayObj: CalculateCalendarLogic = CalculateCalendarLogic()
@@ -57,9 +69,6 @@ class SecoundViewController: UIViewController {
         monthlabel.text = String(targetMonth)
         yearlabel.text = String(targetYear)
     }
-    
-    
-    
     @IBOutlet weak var calendarCollectionView: UICollectionView!
     
     override func viewDidLoad() {

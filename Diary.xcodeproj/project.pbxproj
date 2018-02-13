@@ -23,6 +23,8 @@
 		CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F3B200E14C700D53F4E /* DateManager.swift */; };
 		CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */; };
 		CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED221BB1FC4430B003964CB /* CalendarViewController.swift */; };
+		CEFAA62D2032F8CD0072B682 /* diary.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFAA62C2032F8CD0072B682 /* diary.png */; };
+		CEFAA631203305420072B682 /* 8834 [更新済み].png in Resources */ = {isa = PBXBuildFile; fileRef = CEFAA630203305420072B682 /* 8834 [更新済み].png */; };
 		CEFBE8271FBB08A00051ACC9 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE8261FBB08A00051ACC9 /* RealmModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		CE4C5F3B200E14C700D53F4E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		CED221BB1FC4430B003964CB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		CEFAA62C2032F8CD0072B682 /* diary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diary.png; path = ../../diary.png; sourceTree = "<group>"; };
+		CEFAA630203305420072B682 /* 8834 [更新済み].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "8834 [更新済み].png"; path = "../../8834/8834 [更新済み].png"; sourceTree = "<group>"; };
 		CEFBE8261FBB08A00051ACC9 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,8 @@
 				CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */,
 				CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */,
 				CE4C5F3B200E14C700D53F4E /* DateManager.swift */,
+				CEFAA630203305420072B682 /* 8834 [更新済み].png */,
+				CEFAA62C2032F8CD0072B682 /* diary.png */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -188,8 +194,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFAA62D2032F8CD0072B682 /* diary.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
+				CEFAA631203305420072B682 /* 8834 [更新済み].png in Resources */,
 				CE060A411FCD6E8600048B74 /* CollectionViewCell.xib in Resources */,
 				7539A4761CE7A57600505E8B /* Main.storyboard in Resources */,
 			);

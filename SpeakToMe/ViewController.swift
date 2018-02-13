@@ -28,13 +28,18 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet var recordButton : UIButton!
     
     @IBAction func keyboard() {
-       textView.becomeFirstResponder()
+      self.textView.becomeFirstResponder()
+    }
+    
+    @IBAction func buttonHide() {
+        self.textView.resignFirstResponder()
     }
     
     // MARK: UIViewController
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
         
        
         
@@ -43,6 +48,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     override public func viewDidAppear(_ animated: Bool) {
+        
         speechRecognizer.delegate = self
         
         SFSpeechRecognizer.requestAuthorization { authStatus in
@@ -110,7 +116,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 self.recognitionTask = nil
                 
                 self.recordButton.isEnabled = true
-                self.recordButton.setTitle("Start Recording", for: [])
+                self.recordButton.setTitle("Start", for: [])
             }
         }
         
@@ -131,10 +137,10 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             recordButton.isEnabled = true
-            recordButton.setTitle("Start Recording", for: [])
+            recordButton.setTitle("Start", for: [])
         } else {
             recordButton.isEnabled = false
-            recordButton.setTitle("Recognition not available", for: .disabled)
+            recordButton.setTitle("Recognition", for: .disabled)
         }
     }
     
@@ -145,10 +151,10 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             audioEngine.stop()
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
-            recordButton.setTitle("Stopping", for: .disabled)
+            recordButton.setTitle("Stop", for: .disabled)
         } else {
             try! startRecording()
-            recordButton.setTitle("Stop recording", for: [])
+            recordButton.setTitle("Stop", for: [])
         }
     }
     
@@ -173,6 +179,14 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
         
         print(dateReturn)
+        let Alert: UIAlertController = UIAlertController(title:"保存が完了しました",message:"",preferredStyle: .alert)
+        let CloseAction = UIAlertAction(title: "OK", style: .default) {
+            action in
+            print("OK")
+        }
+        Alert.addAction(CloseAction)
+        present(Alert, animated: true, completion: nil)
+        
     }
 }
 
