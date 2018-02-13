@@ -125,9 +125,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhL-oc-XrI">
-                                <rect key="frame" x="-41" y="-24" width="98" height="84"/>
+                                <rect key="frame" x="10" y="28" width="52" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="diary.png"/>
+                                <state key="normal" image="8834 [更新済み]3.png"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="PlQ-W6-ch2"/>
                                 </connections>
@@ -211,9 +211,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvZ-ae-9ja">
-                                <rect key="frame" x="252" y="499" width="52" height="50"/>
+                                <rect key="frame" x="233" y="486" width="52" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="8834 [更新済み].png"/>
+                                <state key="normal" title="Button" image="8834 [更新済み]１.png"/>
                                 <connections>
                                     <segue destination="sJm-EP-6ti" kind="show" id="e2K-VJ-9jf"/>
                                 </connections>
@@ -233,8 +233,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8834 [更新済み].png" width="1334" height="1333"/>
-        <image name="diary.png" width="1141" height="976"/>
+        <image name="8834 [更新済み]3.png" width="1426" height="1425"/>
+        <image name="8834 [更新済み]１.png" width="1334" height="1333"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="e2K-VJ-9jf"/>
