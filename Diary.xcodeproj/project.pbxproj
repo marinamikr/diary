@@ -23,10 +23,11 @@
 		CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F3B200E14C700D53F4E /* DateManager.swift */; };
 		CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */; };
 		CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED221BB1FC4430B003964CB /* CalendarViewController.swift */; };
-		CEFAA6332033077E0072B682 /* diary.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFAA6322033077D0072B682 /* diary.png */; };
 		CEFAA635203307FA0072B682 /* 8834 [更新済み]１.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFAA634203307F90072B682 /* 8834 [更新済み]１.png */; };
 		CEFAA63720331C2A0072B682 /* 8834 [更新済み]3.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFAA63620331C280072B682 /* 8834 [更新済み]3.png */; };
 		CEFBE8271FBB08A00051ACC9 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE8261FBB08A00051ACC9 /* RealmModel.swift */; };
+		CEFF440F203C1851002E6B31 /* 8834 [更新済み]13.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFF440E203C1850002E6B31 /* 8834 [更新済み]13.png */; };
+		CEFF4411203C1BEF002E6B31 /* 8834 [更新済み]2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFF4410203C1BEF002E6B31 /* 8834 [更新済み]2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,10 +52,11 @@
 		CE4C5F3B200E14C700D53F4E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		CED221BB1FC4430B003964CB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		CEFAA6322033077D0072B682 /* diary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diary.png; sourceTree = "<group>"; };
 		CEFAA634203307F90072B682 /* 8834 [更新済み]１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8834 [更新済み]１.png"; sourceTree = "<group>"; };
 		CEFAA63620331C280072B682 /* 8834 [更新済み]3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8834 [更新済み]3.png"; sourceTree = "<group>"; };
 		CEFBE8261FBB08A00051ACC9 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		CEFF440E203C1850002E6B31 /* 8834 [更新済み]13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8834 [更新済み]13.png"; sourceTree = "<group>"; };
+		CEFF4410203C1BEF002E6B31 /* 8834 [更新済み]2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8834 [更新済み]2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,8 @@
 				CE4C5F3B200E14C700D53F4E /* DateManager.swift */,
 				CEFAA634203307F90072B682 /* 8834 [更新済み]１.png */,
 				CEFAA63620331C280072B682 /* 8834 [更新済み]3.png */,
-				CEFAA6322033077D0072B682 /* diary.png */,
+				CEFF4410203C1BEF002E6B31 /* 8834 [更新済み]2.png */,
+				CEFF440E203C1850002E6B31 /* 8834 [更新済み]13.png */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -199,11 +202,12 @@
 			files = (
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CEFAA635203307FA0072B682 /* 8834 [更新済み]１.png in Resources */,
+				CEFF440F203C1851002E6B31 /* 8834 [更新済み]13.png in Resources */,
 				CEFAA63720331C2A0072B682 /* 8834 [更新済み]3.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
 				CE060A411FCD6E8600048B74 /* CollectionViewCell.xib in Resources */,
-				CEFAA6332033077E0072B682 /* diary.png in Resources */,
 				7539A4761CE7A57600505E8B /* Main.storyboard in Resources */,
+				CEFF4411203C1BEF002E6B31 /* 8834 [更新済み]2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

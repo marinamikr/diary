@@ -16,6 +16,11 @@ class ThirdViewController: UIViewController {
 
     @IBOutlet weak var textview: UITextView!
     
+    
+    @IBAction func karendahe(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(dateString)

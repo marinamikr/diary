@@ -13,4 +13,5 @@ class RealmModel: Object {
     
     dynamic var hizuke = String()
     dynamic var honbunn = String()
+    dynamic var image = NSObject()
 }

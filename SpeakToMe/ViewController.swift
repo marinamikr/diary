@@ -10,7 +10,7 @@ import UIKit
 import Speech
 import RealmSwift
 
-public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
+public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var dateManager: DateManager = DateManager()
     
@@ -35,18 +35,56 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.textView.resignFirstResponder()
     }
     
+    @IBOutlet weak var picture: UIImageView!
+    
+    
+    // カメラロールから写真を選択する処理
+    @IBAction func choosePicture() {
+        
+    }
+   
+    
+    
     // MARK: UIViewController
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+     
        
+       
+     picture.isUserInteractionEnabled = true
+        picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.picturetap(_:))))
         
         // Disable the record buttons until authorization has been granted.
         recordButton.isEnabled = false
     }
     
+    // 写真を選んだ後に呼ばれる処理
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // 選択した写真を取得する
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        // ビューに表示する
+        self.picture.image = image
+        // 写真を選ぶビューを引っ込める
+        self.dismiss(animated: true)
+    }
+    
+    func picturetap(_ sender: UITapGestureRecognizer) {
+        print("タップ")
+        // カメラロールが利用可能か？
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            // 写真を選ぶビュー
+            let pickerView = UIImagePickerController()
+            // 写真の選択元をカメラロールにする
+            // 「.camera」にすればカメラを起動できる
+            pickerView.sourceType = .photoLibrary
+            // デリゲート
+            pickerView.delegate = self
+            // ビューに表示
+            self.present(pickerView, animated: true)
+        }
+    }
+
     override public func viewDidAppear(_ animated: Bool) {
         
         speechRecognizer.delegate = self
@@ -171,6 +209,9 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         let realmModel : RealmModel = RealmModel()
         realmModel.hizuke = dateReturn
         realmModel.honbunn = textView.text
+        realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSObject
+        
+        
         
         
         //書き込みは必ずrealm.write内

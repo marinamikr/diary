@@ -26,6 +26,9 @@ class SecoundViewController: UIViewController {
     var targetYear: Int!
     var targetMonth: Int!
     
+    @IBAction func nikkihe(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func genzaihe() {
         number = 0
