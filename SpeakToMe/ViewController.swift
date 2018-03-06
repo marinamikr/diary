@@ -209,9 +209,10 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         let realmModel : RealmModel = RealmModel()
         realmModel.hizuke = dateReturn
         realmModel.honbunn = textView.text
-        realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSObject
         
-        
+        if picture.image != nil{
+            realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
+        }
         
         
         //書き込みは必ずrealm.write内

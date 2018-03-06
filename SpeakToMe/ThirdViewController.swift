@@ -16,6 +16,7 @@ class ThirdViewController: UIViewController {
 
     @IBOutlet weak var textview: UITextView!
     
+    @IBOutlet weak var realmimageview: UIImageView!
     
     @IBAction func karendahe(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -33,9 +34,12 @@ class ThirdViewController: UIViewController {
             print(realmModel.honbunn)
             textview.text = realmModel.honbunn
             
+            let realmimage: UIImage? = UIImage(data: realmModel.image as Data)
+            realmimageview.image = realmimage
         }
         
         // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
