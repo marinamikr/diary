@@ -28,7 +28,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     @IBOutlet var recordButton : UIButton!
     
     @IBAction func keyboard() {
-      self.textView.becomeFirstResponder()
+        self.textView.becomeFirstResponder()
     }
     
     @IBAction func buttonHide() {
@@ -42,17 +42,25 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     @IBAction func choosePicture() {
         
     }
-   
+    
     
     
     // MARK: UIViewController
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-     
-       
-       
-     picture.isUserInteractionEnabled = true
+        
+        
+            let now = Date()
+           let yearString = now.getyear(date: now)
+        
+           print(yearString)
+        
+      
+        
+        
+        
+        picture.isUserInteractionEnabled = true
         picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.picturetap(_:))))
         
         // Disable the record buttons until authorization has been granted.
@@ -84,7 +92,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
             self.present(pickerView, animated: true)
         }
     }
-
+    
     override public func viewDidAppear(_ animated: Bool) {
         
         speechRecognizer.delegate = self
@@ -198,18 +206,17 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     
     
     @IBAction func hozonbutton (){
-     
+        
         // デフォルトのRealmを取得
         let realm = try! Realm()
         
         let dateReturn = dateManager.format(date: Date())
-       
+        
         
         // 通常のSwiftのオブジェクトと同じように扱える
         let realmModel : RealmModel = RealmModel()
         realmModel.hizuke = dateReturn
         realmModel.honbunn = textView.text
-        
         if picture.image != nil{
             realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
         }
