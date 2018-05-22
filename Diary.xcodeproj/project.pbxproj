@@ -22,6 +22,7 @@
 		CE12CA6B20A1BD1200F5EAEC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12CA6A20A1BD1200F5EAEC /* Extension.swift */; };
 		CE4C5F3A2004CEC200D53F4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */; };
 		CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F3B200E14C700D53F4E /* DateManager.swift */; };
+		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
 		CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */; };
 		CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED221BB1FC4430B003964CB /* CalendarViewController.swift */; };
 		CEFAA635203307FA0072B682 /* 8834 [更新済み]１.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFAA634203307F90072B682 /* 8834 [更新済み]１.png */; };
@@ -52,6 +53,7 @@
 		CE12CA6A20A1BD1200F5EAEC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		CE4C5F3B200E14C700D53F4E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		CED221BB1FC4430B003964CB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		CEFAA634203307F90072B682 /* 8834 [更新済み]１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8834 [更新済み]１.png"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				CEFF4410203C1BEF002E6B31 /* 8834 [更新済み]2.png */,
 				CEFF440E203C1850002E6B31 /* 8834 [更新済み]13.png */,
 				CE12CA6A20A1BD1200F5EAEC /* Extension.swift */,
+				CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -152,7 +155,6 @@
 				7539A46A1CE7A57600505E8B /* Frameworks */,
 				7539A46B1CE7A57600505E8B /* Resources */,
 				ED9461F483F7CCC4C696621E /* [CP] Embed Pods Frameworks */,
-				E798B088904C479CF1C48DC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +207,7 @@
 			files = (
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CEFAA635203307FA0072B682 /* 8834 [更新済み]１.png in Resources */,
+				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CEFF440F203C1851002E6B31 /* 8834 [更新済み]13.png in Resources */,
 				CEFAA63720331C2A0072B682 /* 8834 [更新済み]3.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
@@ -235,21 +238,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E798B088904C479CF1C48DC9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ED9461F483F7CCC4C696621E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,13 +245,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,7 +409,7 @@
 				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SpeakToMeewr";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.SpeakToMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -433,7 +427,7 @@
 				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SpeakToMeewr";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.SpeakToMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
