@@ -41,6 +41,10 @@ class ThirdViewController: UIViewController {
             
             let realmimage: UIImage? = UIImage(data: realmModel.image as Data)
             realmimageview.image = realmimage
+            
+            //テキストを編集できないように設定
+            textview.isEditable = false
+            
         }
         //インスタンスを作成
         DBRef = Database.database().reference()
@@ -52,7 +56,7 @@ class ThirdViewController: UIViewController {
         let text :String = textview.text
         let data = ["本文": text]
         DBRef.child("日記").child(dateString).setValue(data)
-
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
