@@ -59,7 +59,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lu-FZ-GBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531.25" y="-321.12676056338029"/>
+            <point key="canvasLocation" x="2618" y="-680"/>
+        </scene>
+        <!--All Recived Diary View Controller-->
+        <scene sceneID="cdm-CH-7Yz">
+            <objects>
+                <viewController id="cwJ-LQ-vk5" customClass="AllRecivedDiaryViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CFw-Ta-rhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="m9A-qt-OiA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zE9-xj-IBv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6X-3G-WM4">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="19" id="Ikk-UH-DbG">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="19"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ikk-UH-DbG" id="Irz-ty-adn">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="18.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="g6X-3G-WM4" id="44g-NT-a2l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tuf-bp-n0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767.5" y="261.97183098591552"/>
         </scene>
         <!--Secound View Controller-->
         <scene sceneID="cP5-yp-nB3">
@@ -144,6 +182,14 @@
                                 </state>
                                 <connections>
                                     <action selector="genzaihe" destination="sJm-EP-6ti" eventType="touchUpInside" id="9p3-bO-DdY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hx-hA-Xac">
+                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="cwJ-LQ-vk5" kind="show" id="wMQ-hW-GK5"/>
                                 </connections>
                             </button>
                         </subviews>

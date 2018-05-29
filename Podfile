@@ -9,6 +9,7 @@ pod 'RealmSwift'
   # Pods for SpeakToMe
 pod 'RealmSwift'
 pod 'Firebase/Core'
-	pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/Database'
 
 end

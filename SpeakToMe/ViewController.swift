@@ -9,6 +9,9 @@
 import UIKit
 import Speech
 import RealmSwift
+import FirebaseDatabase
+import FirebaseStorage
+import Firebase
 
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
@@ -26,6 +29,12 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     @IBOutlet var textView : UITextView!
     
     @IBOutlet var recordButton : UIButton!
+    
+    // インスタンス変数
+    var DBRef:DatabaseReference!
+    
+    var myUUID: String!
+    
     
     @IBAction func keyboard() {
         self.textView.becomeFirstResponder()
@@ -45,18 +54,16 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     
     
     
+    
     // MARK: UIViewController
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        let now = Date()
+        let yearString = now.getyear(date: now)
         
-            let now = Date()
-           let yearString = now.getyear(date: now)
-        
-           print(yearString)
-        
-      
+        print(yearString)
         
         
         
@@ -65,6 +72,10 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         
         // Disable the record buttons until authorization has been granted.
         recordButton.isEnabled = false
+        
+        //インスタンスを作成
+        DBRef = Database.database().reference()
+        myUUID =  NSUUID().uuidString
     }
     
     // 写真を選んだ後に呼ばれる処理
@@ -228,14 +239,71 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         }
         
         print(dateReturn)
-        let Alert: UIAlertController = UIAlertController(title:"保存が完了しました",message:"",preferredStyle: .alert)
-        let CloseAction = UIAlertAction(title: "OK", style: .default) {
+        let alert: UIAlertController = UIAlertController(title:"保存が完了しました。共有しますか？",message:"",preferredStyle: .alert)
+        let shareAction = UIAlertAction(title: "YES", style: .default) {
             action in
-            print("OK")
+            Util.printLog(viewC: self, tag: "共有アラート", contents: "共有する")
+
+            self.sendMyDiary()
         }
-        Alert.addAction(CloseAction)
-        present(Alert, animated: true, completion: nil)
+        
+        let closeAction = UIAlertAction(title: "NO", style: .default) {
+            action in
+            Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
+        }
+        alert.addAction(shareAction)
+        alert.addAction(closeAction)
+        present(alert, animated: true, completion: nil)
         
     }
+    
+    
+    
+    func sendMyDiary() -> Void {
+        
+        // strageの一番トップのReferenceを指定
+        let storage = Storage.storage()
+        // let storageRef = storage.reference(forURL: "gs://calender-4a2d3.appspot.com")
+        let storageRef = storage.reference(forURL: "gs://diary-fbba6.appspot.com")
+        
+        //変数picに画像を設定
+        if let pic = Util.resizeImage(src:picture.image!){
+        
+        //変数dataにpicをNSDataにしたものを指定
+        if let data = UIImagePNGRepresentation(pic) {
+            
+            //ロード中のダイアログを表示する
+            //SVProgressHUD.show()
+            
+            // トップReferenceの一つ下の固有IDの枝を指定
+            let riversRef = storageRef.child(myUUID).child(String.getRandomStringWithLength(length: 60))
+            
+            
+            // Upload the file to the path "images/rivers.jpg"
+            let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
+                guard let metadata = metadata else {
+                    // Uh-oh, an error occurred!
+                    return
+                }
+                // Metadata contains file metadata such as size, content-type.
+                let size = metadata.size
+                // You can also access to download URL after upload.
+                storageRef.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        // Uh-oh, an error occurred!
+                        return
+                    }
+                    print(url)
+                }
+            }
+            
+            
+           
+        }
+    }
+    
+        
+    }
+    
+    
 }
-

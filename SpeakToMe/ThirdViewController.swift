@@ -24,8 +24,6 @@ class ThirdViewController: UIViewController {
     @IBAction func karendahe(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    // インスタンス変数
-    var DBRef:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,18 +44,12 @@ class ThirdViewController: UIViewController {
             textview.isEditable = false
             
         }
-        //インスタンスを作成
-        DBRef = Database.database().reference()
+      
         
         // Do any additional setup after loading the view.
         
     }
-    @IBAction func add(_ sender: AnyObject) {
-        let text :String = textview.text
-        let data = ["本文": text]
-        DBRef.child("日記").child(dateString).setValue(data)
-        
-    }
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

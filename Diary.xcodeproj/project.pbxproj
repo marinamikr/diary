@@ -20,6 +20,8 @@
 		CE060A471FCD7D0B00048B74 /* CurrentDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */; };
 		CE060A491FCD7DB700048B74 /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */; };
 		CE12CA6B20A1BD1200F5EAEC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12CA6A20A1BD1200F5EAEC /* Extension.swift */; };
+		CE24278620BD4678009955AB /* AllRecivedDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278520BD4678009955AB /* AllRecivedDiaryViewController.swift */; };
+		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
 		CE4C5F3A2004CEC200D53F4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */; };
 		CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F3B200E14C700D53F4E /* DateManager.swift */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
@@ -51,6 +53,8 @@
 		CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateSetting.swift; sourceTree = "<group>"; };
 		CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
 		CE12CA6A20A1BD1200F5EAEC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CE24278520BD4678009955AB /* AllRecivedDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecivedDiaryViewController.swift; sourceTree = "<group>"; };
+		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		CE4C5F3B200E14C700D53F4E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		7539A46F1CE7A57600505E8B /* SpeakToMe */ = {
 			isa = PBXGroup;
 			children = (
+				CE24278720BD5DC6009955AB /* Util */,
 				7539A4701CE7A57600505E8B /* AppDelegate.swift */,
 				7539A4721CE7A57600505E8B /* ViewController.swift */,
 				7539A4741CE7A57600505E8B /* Main.storyboard */,
@@ -124,6 +129,7 @@
 				CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */,
 				CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */,
 				CE4C5F3B200E14C700D53F4E /* DateManager.swift */,
+				CE24278520BD4678009955AB /* AllRecivedDiaryViewController.swift */,
 				CEFAA634203307F90072B682 /* 8834 [更新済み]１.png */,
 				CEFAA63620331C280072B682 /* 8834 [更新済み]3.png */,
 				CEFF4410203C1BEF002E6B31 /* 8834 [更新済み]2.png */,
@@ -141,6 +147,14 @@
 				7728B0D1782366C8CF929497 /* Pods-SpeakToMe.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE24278720BD5DC6009955AB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CE24278820BD5DDE009955AB /* Util.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +259,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -253,6 +268,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -278,12 +294,14 @@
 				CE060A431FCD76E800048B74 /* CalendarSetting.swift in Sources */,
 				CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */,
 				7539A4731CE7A57600505E8B /* ViewController.swift in Sources */,
+				CE24278920BD5DDE009955AB /* Util.swift in Sources */,
 				CE060A491FCD7DB700048B74 /* CalculateCalendarLogic.swift in Sources */,
 				CEFBE8271FBB08A00051ACC9 /* RealmModel.swift in Sources */,
 				CE12CA6B20A1BD1200F5EAEC /* Extension.swift in Sources */,
 				CE4C5F3A2004CEC200D53F4E /* ThirdViewController.swift in Sources */,
 				CE060A451FCD7B9E00048B74 /* TargetDateSetting.swift in Sources */,
 				7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */,
+				CE24278620BD4678009955AB /* AllRecivedDiaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
