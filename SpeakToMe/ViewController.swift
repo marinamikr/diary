@@ -75,7 +75,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         
         //インスタンスを作成
         DBRef = Database.database().reference()
-        myUUID =  NSUUID().uuidString
+        myUUID = Util.getUUID()
     }
     
     // 写真を選んだ後に呼ばれる処理
@@ -245,11 +245,14 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
             Util.printLog(viewC: self, tag: "共有アラート", contents: "共有する")
 
             self.sendMyDiary()
+              self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
         }
         
         let closeAction = UIAlertAction(title: "NO", style: .default) {
             action in
             Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
+            
+             self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
         }
         alert.addAction(shareAction)
         alert.addAction(closeAction)
@@ -279,26 +282,18 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
             let riversRef = storageRef.child(myUUID).child(String.getRandomStringWithLength(length: 60))
             
             
-            // Upload the file to the path "images/rivers.jpg"
-            let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
-                guard let metadata = metadata else {
-                    // Uh-oh, an error occurred!
-                    return
-                }
-                // Metadata contains file metadata such as size, content-type.
-                let size = metadata.size
-                // You can also access to download URL after upload.
-                storageRef.downloadURL { (url, error) in
-                    guard let downloadURL = url else {
-                        // Uh-oh, an error occurred!
-                        return
-                    }
-                    print(url)
-                }
-            }
+            // strageに画像をアップロード
+            riversRef.putData(data, metadata: nil, completion: { metaData, error in
+                let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
+                Util.printLog(viewC: self, tag: "download", contents: downloadURL)
+                let data = ["本文": self.textView.text!,"日付": self.dateManager.format(date: Date()),"URL": downloadURL]
+                let ref = Database.database().reference()
+                
+                ref.child(self.myUUID).childByAutoId().setValue(data)
+                
+            })
+        
             
-            
-           
         }
     }
     
@@ -306,4 +301,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     }
     
     
+    @IBAction func toSecondViewController(_ sender: Any){
+         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+    }
 }

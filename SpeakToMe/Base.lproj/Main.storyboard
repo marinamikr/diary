@@ -192,6 +192,14 @@
                                     <segue destination="cwJ-LQ-vk5" kind="show" id="wMQ-hW-GK5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZa-88-n0c">
+                                <rect key="frame" x="27" y="518" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Q0q-F8-fbb" kind="show" id="iLu-PQ-yej"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.60392156862745094" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -205,6 +213,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-Ye-raM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.375" y="-467.95774647887322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="37Y-oO-j8v">
+            <objects>
+                <viewController id="Q0q-F8-fbb" customClass="QRViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ux3-PW-1dX"/>
+                        <viewControllerLayoutGuide type="bottom" id="wLe-2i-zsH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nh4-6T-JTz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pC6-9Y-GiH">
+                                <rect key="frame" x="40" y="208" width="238" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrImage" destination="pC6-9Y-GiH" id="WYi-Sm-BWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhM-26-AN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.25" y="261.97183098591552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -280,7 +315,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="8834 [更新済み]１.png"/>
                                 <connections>
-                                    <segue destination="sJm-EP-6ti" kind="show" id="e2K-VJ-9jf"/>
+                                    <action selector="toSecondViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUY-KV-nwm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -291,6 +326,7 @@
                         <outlet property="picture" destination="vQL-IX-aC4" id="GYG-8K-2K4"/>
                         <outlet property="recordButton" destination="7xe-MP-Nm9" id="WtH-Dp-x5U"/>
                         <outlet property="textView" destination="ggL-NT-4I1" id="FcW-fL-5hR"/>
+                        <segue destination="sJm-EP-6ti" kind="show" identifier="toSecondViewController" id="2Wa-P1-dNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

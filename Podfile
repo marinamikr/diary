@@ -8,8 +8,8 @@ pod 'RealmSwift'
 
   # Pods for SpeakToMe
 pod 'RealmSwift'
-pod 'Firebase/Core'
-pod 'Firebase/Storage'
-pod 'Firebase/Database'
+pod 'Firebase/Core', '~> 4.13.0'
+pod 'Firebase/Storage', '~> 4.13.0'
+pod 'Firebase/Database', '~> 4.13.0'
 
 end

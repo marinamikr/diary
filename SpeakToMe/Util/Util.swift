@@ -14,6 +14,9 @@ class Util: NSObject {
         print(String(describing: viewC.self) + "【" + tag + "】", terminator: "")
         print(contents)
     }
+    static func printErrorLog(viewC : Any ){
+        printLog(viewC: viewC.self, tag: "error", contents: "Error")
+    }
     
     /// イメージのサイズを変更
     static func resizeImage(src: UIImage!) -> UIImage! {
@@ -46,7 +49,9 @@ class Util: NSObject {
         
         return dst!
     }
-
+    static func getUUID() -> String {
+       return UIDevice.current.identifierForVendor!.uuidString
+    }
     
     
 }

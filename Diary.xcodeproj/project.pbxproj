@@ -24,6 +24,7 @@
 		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
 		CE4C5F3A2004CEC200D53F4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */; };
 		CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C5F3B200E14C700D53F4E /* DateManager.swift */; };
+		CE9E1EC620C6AB6900B23B07 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E1EC520C6AB6900B23B07 /* QRViewController.swift */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
 		CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */; };
 		CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED221BB1FC4430B003964CB /* CalendarViewController.swift */; };
@@ -57,6 +58,7 @@
 		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CE4C5F392004CEC100D53F4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		CE4C5F3B200E14C700D53F4E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		CE9E1EC520C6AB6900B23B07 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEB1FB8E1FDFDCD60018A36D /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		CED221BB1FC4430B003964CB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				CEFF440E203C1850002E6B31 /* 8834 [更新済み]13.png */,
 				CE12CA6A20A1BD1200F5EAEC /* Extension.swift */,
 				CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */,
+				CE9E1EC520C6AB6900B23B07 /* QRViewController.swift */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				CE060A401FCD6E8600048B74 /* CollectionViewCell.swift in Sources */,
 				CED221BC1FC4430B003964CB /* CalendarViewController.swift in Sources */,
 				CEB1FB8F1FDFDCD60018A36D /* SecoundViewController.swift in Sources */,
+				CE9E1EC620C6AB6900B23B07 /* QRViewController.swift in Sources */,
 				CE060A471FCD7D0B00048B74 /* CurrentDateSetting.swift in Sources */,
 				CE060A431FCD76E800048B74 /* CalendarSetting.swift in Sources */,
 				CE4C5F3C200E14C700D53F4E /* DateManager.swift in Sources */,
