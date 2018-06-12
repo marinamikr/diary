@@ -19,6 +19,8 @@
 		CE060A451FCD7B9E00048B74 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A441FCD7B9E00048B74 /* TargetDateSetting.swift */; };
 		CE060A471FCD7D0B00048B74 /* CurrentDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */; };
 		CE060A491FCD7DB700048B74 /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */; };
+		CE07CB0420CFC33400D4E2D1 /* XibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07CB0220CFC33400D4E2D1 /* XibTableViewCell.swift */; };
+		CE07CB0520CFC33400D4E2D1 /* XibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE07CB0320CFC33400D4E2D1 /* XibTableViewCell.xib */; };
 		CE12CA6B20A1BD1200F5EAEC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12CA6A20A1BD1200F5EAEC /* Extension.swift */; };
 		CE24278620BD4678009955AB /* AllRecivedDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278520BD4678009955AB /* AllRecivedDiaryViewController.swift */; };
 		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
@@ -53,6 +55,8 @@
 		CE060A441FCD7B9E00048B74 /* TargetDateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
 		CE060A461FCD7D0B00048B74 /* CurrentDateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateSetting.swift; sourceTree = "<group>"; };
 		CE060A481FCD7DB700048B74 /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
+		CE07CB0220CFC33400D4E2D1 /* XibTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibTableViewCell.swift; sourceTree = "<group>"; };
+		CE07CB0320CFC33400D4E2D1 /* XibTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibTableViewCell.xib; sourceTree = "<group>"; };
 		CE12CA6A20A1BD1200F5EAEC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CE24278520BD4678009955AB /* AllRecivedDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecivedDiaryViewController.swift; sourceTree = "<group>"; };
 		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				CE12CA6A20A1BD1200F5EAEC /* Extension.swift */,
 				CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */,
 				CE9E1EC520C6AB6900B23B07 /* QRViewController.swift */,
+				CE07CB0220CFC33400D4E2D1 /* XibTableViewCell.swift */,
+				CE07CB0320CFC33400D4E2D1 /* XibTableViewCell.xib */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
+				CE07CB0520CFC33400D4E2D1 /* XibTableViewCell.xib in Resources */,
 				CEFAA635203307FA0072B682 /* 8834 [更新済み]１.png in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CEFF440F203C1851002E6B31 /* 8834 [更新済み]13.png in Resources */,
@@ -303,6 +310,7 @@
 				CEFBE8271FBB08A00051ACC9 /* RealmModel.swift in Sources */,
 				CE12CA6B20A1BD1200F5EAEC /* Extension.swift in Sources */,
 				CE4C5F3A2004CEC200D53F4E /* ThirdViewController.swift in Sources */,
+				CE07CB0420CFC33400D4E2D1 /* XibTableViewCell.swift in Sources */,
 				CE060A451FCD7B9E00048B74 /* TargetDateSetting.swift in Sources */,
 				7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */,
 				CE24278620BD4678009955AB /* AllRecivedDiaryViewController.swift in Sources */,

@@ -52,9 +52,6 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         
     }
     
-    
-    
-    
     // MARK: UIViewController
     
     public override func viewDidLoad() {
@@ -76,6 +73,8 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         //インスタンスを作成
         DBRef = Database.database().reference()
         myUUID = Util.getUUID()
+        
+        
     }
     
     // 写真を選んだ後に呼ばれる処理
@@ -243,16 +242,16 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         let shareAction = UIAlertAction(title: "YES", style: .default) {
             action in
             Util.printLog(viewC: self, tag: "共有アラート", contents: "共有する")
-
+            
             self.sendMyDiary()
-              self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+            self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
         }
         
         let closeAction = UIAlertAction(title: "NO", style: .default) {
             action in
             Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
             
-             self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+            self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
         }
         alert.addAction(shareAction)
         alert.addAction(closeAction)
@@ -271,37 +270,37 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         
         //変数picに画像を設定
         if let pic = Util.resizeImage(src:picture.image!){
-        
-        //変数dataにpicをNSDataにしたものを指定
-        if let data = UIImagePNGRepresentation(pic) {
             
-            //ロード中のダイアログを表示する
-            //SVProgressHUD.show()
-            
-            // トップReferenceの一つ下の固有IDの枝を指定
-            let riversRef = storageRef.child(myUUID).child(String.getRandomStringWithLength(length: 60))
-            
-            
-            // strageに画像をアップロード
-            riversRef.putData(data, metadata: nil, completion: { metaData, error in
-                let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
-                Util.printLog(viewC: self, tag: "download", contents: downloadURL)
-                let data = ["本文": self.textView.text!,"日付": self.dateManager.format(date: Date()),"URL": downloadURL]
-                let ref = Database.database().reference()
+            //変数dataにpicをNSDataにしたものを指定
+            if let data = UIImagePNGRepresentation(pic) {
                 
-                ref.child(self.myUUID).childByAutoId().setValue(data)
+                //ロード中のダイアログを表示する
+                //SVProgressHUD.show()
                 
-            })
-        
-            
+                // トップReferenceの一つ下の固有IDの枝を指定
+                let riversRef = storageRef.child(myUUID).child(String.getRandomStringWithLength(length: 60))
+                
+                
+                // strageに画像をアップロード
+                riversRef.putData(data, metadata: nil, completion: { metaData, error in
+                    let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
+                    Util.printLog(viewC: self, tag: "download", contents: downloadURL)
+                    let data = ["userName":"marina","contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL]
+                    let ref = Database.database().reference()
+                    
+                    ref.child(self.myUUID).childByAutoId().setValue(data)
+                    
+                })
+                
+                
+            }
         }
-    }
-    
+        
         
     }
     
     
     @IBAction func toSecondViewController(_ sender: Any){
-         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+        self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
     }
 }
