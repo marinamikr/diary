@@ -41,12 +41,17 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szL-NC-WtV">
+                        <rect key="frame" x="215" y="31" width="38" height="39"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="PUy-a4-osF" id="Det-ZQ-LF0"/>
                 <outlet property="honbunLabel" destination="0cf-K7-sWz" id="Pto-i3-8JE"/>
+                <outlet property="urlImage" destination="szL-NC-WtV" id="zC4-IS-zJ5"/>
                 <outlet property="userNameLabel" destination="rH9-U7-9Zf" id="cOs-1J-ig8"/>
             </connections>
             <point key="canvasLocation" x="6" y="69.5"/>

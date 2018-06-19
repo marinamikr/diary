@@ -16,6 +16,9 @@ class XibTableViewCell: UITableViewCell {
     
     @IBOutlet weak var honbunLabel: UILabel!
     
+    @IBOutlet weak var urlImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

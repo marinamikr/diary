@@ -17,6 +17,8 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     
     var dateManager: DateManager = DateManager()
     
+    let userDefaults = UserDefaults.standard
+    
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
     
@@ -285,7 +287,8 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
                 riversRef.putData(data, metadata: nil, completion: { metaData, error in
                     let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
                     Util.printLog(viewC: self, tag: "download", contents: downloadURL)
-                    let data = ["userName":"marina","contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL]
+                    let name = self.userDefaults.string(forKey: "UserName")
+                    let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL]
                     let ref = Database.database().reference()
                     
                     ref.child(self.myUUID).childByAutoId().setValue(data)
