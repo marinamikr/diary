@@ -26,6 +26,11 @@ class SecoundViewController: UIViewController {
     var targetYear: Int!
     var targetMonth: Int!
     
+    var sideBackView: UIView!
+
+    
+    @IBAction func idou(_ sender: Any) {
+    }
     @IBAction func nikkihe(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -92,7 +97,6 @@ class SecoundViewController: UIViewController {
         calendarCollectionView.delegate = self
         
         updateDataSource()
-        
         
         // Do any additional setup after loading the view.
     }

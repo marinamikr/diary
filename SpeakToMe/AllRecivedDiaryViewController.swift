@@ -21,6 +21,7 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
     var dateArray = [String]()
     var contentsArray = [String]()
     var urlArray = [String]()
+    var likeArray = [Int]()
     
     let ref = Database.database().reference()
     
@@ -36,42 +37,56 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
         table.delegate = self
         
         
-       
-//        // Do any additional setup after loading the view.
-//
-//
-//        userDefaults.register(defaults: ["FriendsIDArray" : Array<String>()])
-//        var idArray = userDefaults.array(forKey: "FriendsIDArray") as! Array<String>
-//
-//        for id in idArray {
-//            self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
-//              print(snapshot)
-//                 let postDict = snapshot.value as! [String : AnyObject]
-//                print(postDict)
-//            })
-//        }
-//
-//
         
-       
+        //        // Do any additional setup after loading the view.
+        //
+        //
+        userDefaults.register(defaults: ["FriendsIDArray" : Array<String>()])
+        var idArray = userDefaults.array(forKey: "FriendsIDArray") as! Array<String>
         
-        self.ref.child(Util.getUUID()).observe(.value, with: {snapshot  in
-            
-            for child in snapshot.children {
-            
-                let postDict = (child as! DataSnapshot).value as! [String : AnyObject]
-                Util.printLog(viewC: self, tag: "URL", contents: postDict)
-                Util.printLog(viewC: self, tag: "URL", contents: postDict["URL"])
-            
-            self.userNameArray.append(postDict["userName"] as! String)
-            self.dateArray.append(postDict["date"] as! String)
-            self.contentsArray.append(postDict["contents"] as! String)
-            self.urlArray.append(postDict["URL"] as! String)
-            
-            }
-            self.table.reloadData()
-            
-        })
+        for id in idArray {
+            print(id)
+            self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
+                print(snapshot)
+                let postDict = snapshot.value as! [String : Bool]
+                print(postDict)
+                if postDict["read"]!  {
+                    self.ref.child(id).observe(.value, with: {snapshot  in
+                        
+                        for child in snapshot.children {
+                            
+                            let postDict = (child as! DataSnapshot).value as! [String : AnyObject]
+                            Util.printLog(viewC: self, tag: "URL", contents: postDict)
+                            Util.printLog(viewC: self, tag: "URL", contents: postDict["URL"])
+                            
+                            if Util.differenceOfDate(date1: Date(), date2: (postDict["date"] as! String).getDate()) > 3 {
+                                self.ref.child(id).child((child as AnyObject).key).removeValue()
+    
+                            }else{
+                                print((postDict["date"] as! String).getDate())
+                                self.userNameArray.append(postDict["userName"] as! String)
+                                self.dateArray.append(postDict["date"] as! String)
+                                self.contentsArray.append(postDict["contents"] as! String)
+                                self.urlArray.append(postDict["URL"] as! String)
+                                self.likeArray.append(postDict["like"] as! Int)
+                            }
+                            
+                        }
+                        self.ref.child(id).removeAllObservers()
+                        self.table.reloadData()
+                        
+                        
+                    })
+                }
+                
+            })
+        }
+        
+        
+        
+        
+        
+        
         
     }
     
@@ -92,6 +107,7 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
         cell?.dateLabel.text = dateArray[indexPath.row]
         cell?.honbunLabel.text = contentsArray[indexPath.row]
         cell?.urlImage.loadImage(urlString: urlArray[indexPath.row])
+        cell?.likeLabel.text = String(likeArray[indexPath.row])
         
         return cell!
     }
@@ -106,5 +122,5 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
         
     }
     
-
+    
 }

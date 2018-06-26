@@ -53,6 +53,13 @@ class Util: NSObject {
        return UIDevice.current.identifierForVendor!.uuidString
     }
     
+    static func differenceOfDate(date1: Date,date2: Date) -> Double {
+        let span = date1.timeIntervalSince(date2) // 1209600秒差
+        let daySpan = span/60/60/24 // 14 (日)
+        return daySpan
+    }
+    
+    
     
     
     

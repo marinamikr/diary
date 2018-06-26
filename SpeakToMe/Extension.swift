@@ -34,6 +34,14 @@ extension Date{
 
 extension String {
     
+    func getDate() -> Date{
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy/MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
+        return formatter.date(from: self)!
+        
+    }
+    
     static func getRandomStringWithLength(length: Int) -> String {
         
         let alphabet = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"

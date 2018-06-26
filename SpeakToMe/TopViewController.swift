@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TopViewController: UIViewController, UITextFieldDelegate {
 
@@ -28,9 +29,10 @@ class TopViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
         if (self.userDefaults.string(forKey: "UserName") != nil) {
             self.performSegue(withIdentifier: "toMainViewController", sender: nil)
-            print("bb")
         }else{
-            print("aa")
+            let ref = Database.database().reference()
+            let data = ["read":true]
+            ref.child("permission").child(Util.getUUID()).setValue(data)
         }
     }
     override func didReceiveMemoryWarning() {

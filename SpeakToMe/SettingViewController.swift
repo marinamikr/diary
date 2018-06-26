@@ -27,7 +27,7 @@ class SettingViewController: UIViewController {
     @IBAction func showSetting(_ sender: UISwitch) {
         let ref = Database.database().reference()
         
-        let data = ["able":sender.isOn]
+        let data = ["read":sender.isOn]
         ref.child("permission").child(Util.getUUID()).setValue(data)
         
     }

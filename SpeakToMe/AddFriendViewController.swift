@@ -66,6 +66,7 @@ class AddFriendViewController: UIViewController, AVCaptureMetadataOutputObjectsD
                     let id = metadata.stringValue
                     addFriendID(id: id!)
                     self.captureSession.stopRunning()
+                    self.dismiss(animated: true, completion: nil)
                 }
                 
             }

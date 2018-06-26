@@ -1,24 +1,19 @@
+
 //
-//  XibTableViewCell.swift
+//  MyTableViewCell.swift
 //  SpeakToMe
 //
-//  Created by User on 2018/06/12.
+//  Created by User on 2018/06/26.
 //  Copyright © 2018年 Henry Mason. All rights reserved.
 //
 
 import UIKit
 
-class XibTableViewCell: UITableViewCell {
+class MyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var userNameLabel: UILabel!
-    
-    @IBOutlet weak var dateLabel: UILabel!
-    
-    @IBOutlet weak var honbunLabel: UILabel!
-    
-    @IBOutlet weak var urlImage: UIImageView!
-    
-    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var myDateLabel: UILabel!
+    @IBOutlet weak var myHonbunLabel: UILabel!
+    @IBOutlet weak var myUImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

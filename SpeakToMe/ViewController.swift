@@ -288,7 +288,9 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
                     let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
                     Util.printLog(viewC: self, tag: "download", contents: downloadURL)
                     let name = self.userDefaults.string(forKey: "UserName")
-                    let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL]
+                    let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL,"like": 0] as [String : Any]
+                    
+                    
                     let ref = Database.database().reference()
                     
                     ref.child(self.myUUID).childByAutoId().setValue(data)
