@@ -47,8 +47,6 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
         
         table.reloadData()
         
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

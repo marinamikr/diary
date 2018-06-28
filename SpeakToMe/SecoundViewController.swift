@@ -97,8 +97,10 @@ class SecoundViewController: UIViewController {
         calendarCollectionView.delegate = self
         
         updateDataSource()
+        // 影を消すには両方必要
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -119,9 +121,6 @@ class SecoundViewController: UIViewController {
      */
     
 }
-
-
-
 extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     

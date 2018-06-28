@@ -81,12 +81,7 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
                 
             })
         }
-        
-        
-        
-        
-        
-        
+    
         
     }
     
