@@ -13,6 +13,7 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
     
     var tableViewArray = [UITableViewCell]()
     var userDefaults:UserDefaults = UserDefaults.standard
+    var position = 0
     //StoryBoadで扱うTableViewを宣言
     @IBOutlet var table: UITableView!
     
@@ -36,9 +37,6 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
         //テーブルビューのデリゲートメソッドはViewControllerメソッドに書くよ、という設定
         table.delegate = self
         
-        
-        
-        //        // Do any additional setup after loading the view.
         //
         //
         userDefaults.register(defaults: ["FriendsIDArray" : Array<String>()])
@@ -74,15 +72,11 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
                         }
                         self.ref.child(id).removeAllObservers()
                         self.table.reloadData()
-                        
-                        
+    
                     })
                 }
-                
             })
         }
-    
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -109,6 +103,20 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
     //セルが押された時に呼ばれるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(userNameArray[indexPath.row])が選ばれました")
+        position = indexPath.row
+          self.performSegue(withIdentifier: "toMyDiaryViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMyDiaryViewController" {
+            let allDiaryViewController = segue.destination as! AllDiaryViewController
+            allDiaryViewController.userName = userNameArray[position]
+            allDiaryViewController.date = dateArray[position]
+            allDiaryViewController.contents = contentsArray[position]
+            allDiaryViewController.url = urlArray[position]
+            allDiaryViewController.like = likeArray[position]
+            
+        }
     }
     
     

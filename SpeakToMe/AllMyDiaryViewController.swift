@@ -17,6 +17,8 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
     //StoryBoadで扱うTableViewを宣言
     @IBOutlet var table: UITableView!
     
+     @IBOutlet weak var myImage: UIImageView!
+    
     //本文、ユーザー名、日付の配列
     var dateArray = [String]()
     var contentsArray = [String]()
@@ -27,7 +29,7 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.table.register(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "myTableViewCell")
+        self.table.register(UINib(nibName: "MyCustomDiaryTableViewCell", bundle: nil), forCellReuseIdentifier: "myCustomDiaryTableViewCell")
         
         //テーブルビューのデータソースメソッドはViewControllerクラスに書くよ、という設定
         table.dataSource = self
@@ -61,7 +63,7 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
     //ID付きのセルを取得して、セル付属のtextLabelに『テスト』と表示させてみる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.table.dequeueReusableCell(withIdentifier: "myTableViewCell") as? MyTableViewCell
+        let cell = self.table.dequeueReusableCell(withIdentifier: "myCustomDiaryTableViewCell") as? MyCustomDiaryTableViewCell
         cell?.myDateLabel.text = dateArray[indexPath.row]
         cell?.myHonbunLabel.text = contentsArray[indexPath.row]
         cell?.myUImageView.image = UIImage(data: imageArray[indexPath.row] as Data)
@@ -78,6 +80,7 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
         
     }
     
+  
     
 }
 

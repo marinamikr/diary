@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48DFDA56A1895FC49A02485137813A0C"
-               BlueprintName = "Realm"
+               BlueprintIdentifier = "7AF8670FDECF80EFCAA3D04318C4B4D1"
+               BlueprintName = "KYDrawerController"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Realm.framework">
+               BuildableName = "KYDrawerController.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

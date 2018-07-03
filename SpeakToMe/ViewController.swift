@@ -13,6 +13,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import Firebase
 
+
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var dateManager: DateManager = DateManager()
@@ -308,4 +309,5 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
     @IBAction func toSecondViewController(_ sender: Any){
         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
     }
+  
 }

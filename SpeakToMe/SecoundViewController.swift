@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KYDrawerController
 
 class SecoundViewController: UIViewController {
     
@@ -32,7 +33,7 @@ class SecoundViewController: UIViewController {
     @IBAction func idou(_ sender: Any) {
     }
     @IBAction func nikkihe(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "toNikki", sender: nil)
     }
     
     @IBAction func genzaihe() {
@@ -109,6 +110,10 @@ class SecoundViewController: UIViewController {
     }
     
     
+    @IBAction func open(_ sender: Any) {
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
+    }
     
     /*
      // MARK: - Navigation
@@ -121,6 +126,7 @@ class SecoundViewController: UIViewController {
      */
     
 }
+
 extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
