@@ -57,7 +57,7 @@ extension String {
 extension UIImageView{
 
 //画像を非同期で読み込む
-func loadImage(urlString: String){
+    func loadImage(urlString: String){
     let CACHE_SEC : TimeInterval = 5 * 60; //5分キャッシュ
     let req = URLRequest(url: NSURL(string:urlString)! as URL,
                          cachePolicy: .returnCacheDataElseLoad,

@@ -104,11 +104,11 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(userNameArray[indexPath.row])が選ばれました")
         position = indexPath.row
-          self.performSegue(withIdentifier: "toMyDiaryViewController", sender: nil)
+          self.performSegue(withIdentifier: "toDiaryViewController", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toMyDiaryViewController" {
+        if segue.identifier == "toDiaryViewController" {
             let allDiaryViewController = segue.destination as! AllDiaryViewController
             allDiaryViewController.userName = userNameArray[position]
             allDiaryViewController.date = dateArray[position]

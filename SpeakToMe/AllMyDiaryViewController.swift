@@ -14,15 +14,17 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
     
     var tableViewArray = [UITableViewCell]()
     var userDefaults:UserDefaults = UserDefaults.standard
+    var position = 0
     //StoryBoadで扱うTableViewを宣言
     @IBOutlet var table: UITableView!
-    
-     @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var myImage: UIImageView!
     
     //本文、ユーザー名、日付の配列
     var dateArray = [String]()
     var contentsArray = [String]()
     var imageArray = [NSData]()
+    
+    var mImage = UIImage()
     
     let ref = Database.database().reference()
     
@@ -55,7 +57,8 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //セルの数を設定
+    
+        //セルの数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dateArray.count
     }
@@ -72,6 +75,20 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
     //セルが押された時に呼ばれるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(dateArray[indexPath.row])が選ばれました")
+        
+        position = indexPath.row
+        self.performSegue(withIdentifier: "toMyDiaryViewController", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMyDiaryViewController" {
+            let myDiaryViewController = segue.destination as! MyDiaryViewController
+            myDiaryViewController.date = dateArray[position]
+            myDiaryViewController.contents = contentsArray[position]
+            myDiaryViewController.myimages = imageArray[position]
+    
+        }
     }
     
     
