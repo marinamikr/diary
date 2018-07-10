@@ -1,10 +1,10 @@
-/*
- Copyright (C) 2016 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
- Abstract:
- The primary view controller. The speach-to-text engine is managed an configured here.
- */
+//
+//  MakeDiaryViewController.swift
+//  SpeakToMe
+//
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
+//
 
 import UIKit
 import Speech
@@ -14,7 +14,7 @@ import FirebaseStorage
 import Firebase
 
 
-public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var dateManager: DateManager = DateManager()
     
@@ -68,7 +68,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UIIma
         
         
         picture.isUserInteractionEnabled = true
-        picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.picturetap(_:))))
+        picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MakeDiaryViewController.picturetap(_:))))
         
         // Disable the record buttons until authorization has been granted.
         recordButton.isEnabled = false

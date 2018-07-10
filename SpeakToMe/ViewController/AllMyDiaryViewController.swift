@@ -1,16 +1,17 @@
 //
-//  AllRecivedDiaryViewController.swift
+//  AllMyDiaryViewController.swift
 //  SpeakToMe
 //
-//  Created by User on 2018/05/29.
-//  Copyright © 2018年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
+
 
 import UIKit
 import Firebase
 import RealmSwift
 
-class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AllMyDiaryViewController: UIViewController{
     
     var tableViewArray = [UITableViewCell]()
     var userDefaults:UserDefaults = UserDefaults.standard
@@ -58,7 +59,33 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
-        //セルの数を設定
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMyDiaryViewController" {
+            let myDiaryViewController = segue.destination as! MyDiaryViewController
+            myDiaryViewController.date = dateArray[position]
+            myDiaryViewController.contents = contentsArray[position]
+            myDiaryViewController.myimages = imageArray[position]
+    
+        }
+    }
+    
+    
+    
+    
+  
+    
+}
+
+extension AllMyDiaryViewController :UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+        
+    }
+    
+    //セルの数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dateArray.count
     }
@@ -80,24 +107,6 @@ class AllMyDiaryViewController: UIViewController, UITableViewDataSource, UITable
         self.performSegue(withIdentifier: "toMyDiaryViewController", sender: nil)
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toMyDiaryViewController" {
-            let myDiaryViewController = segue.destination as! MyDiaryViewController
-            myDiaryViewController.date = dateArray[position]
-            myDiaryViewController.contents = contentsArray[position]
-            myDiaryViewController.myimages = imageArray[position]
-    
-        }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
-        
-    }
-    
-  
     
 }
 

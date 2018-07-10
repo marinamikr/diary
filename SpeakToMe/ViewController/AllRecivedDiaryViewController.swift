@@ -2,14 +2,16 @@
 //  AllRecivedDiaryViewController.swift
 //  SpeakToMe
 //
-//  Created by User on 2018/05/29.
-//  Copyright © 2018年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
+
+
 
 import UIKit
 import Firebase
 
-class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AllRecivedDiaryViewController: UIViewController {
     
     var tableViewArray = [UITableViewCell]()
     var userDefaults:UserDefaults = UserDefaults.standard
@@ -83,6 +85,26 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDiaryViewController" {
+            let allDiaryViewController = segue.destination as! AllDiaryViewController
+            allDiaryViewController.userName = userNameArray[position]
+            allDiaryViewController.date = dateArray[position]
+            allDiaryViewController.contents = contentsArray[position]
+            allDiaryViewController.url = urlArray[position]
+            allDiaryViewController.like = likeArray[position]
+            
+        }
+    }
+    
+    
+   
+    
+    
+}
+extension AllRecivedDiaryViewController :UITableViewDataSource, UITableViewDelegate {
+    
     //セルの数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userNameArray.count
@@ -104,19 +126,7 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(userNameArray[indexPath.row])が選ばれました")
         position = indexPath.row
-          self.performSegue(withIdentifier: "toDiaryViewController", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDiaryViewController" {
-            let allDiaryViewController = segue.destination as! AllDiaryViewController
-            allDiaryViewController.userName = userNameArray[position]
-            allDiaryViewController.date = dateArray[position]
-            allDiaryViewController.contents = contentsArray[position]
-            allDiaryViewController.url = urlArray[position]
-            allDiaryViewController.like = likeArray[position]
-            
-        }
+        self.performSegue(withIdentifier: "toDiaryViewController", sender: nil)
     }
     
     
@@ -124,6 +134,4 @@ class AllRecivedDiaryViewController: UIViewController, UITableViewDataSource, UI
         return 100
         
     }
-    
-    
 }

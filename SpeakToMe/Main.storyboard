@@ -29,7 +29,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="grK-B9-0So">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="grK-B9-0So">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="grK-B9-0So" id="OO9-nu-75L">
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="2535" y="-1159"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Show My Diary View Controller-->
         <scene sceneID="ddH-zg-WV1">
             <objects>
-                <viewController id="gee-2s-KOa" customClass="ThirdViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gee-2s-KOa" customClass="ShowMyDiaryViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dS6-Nd-NP4"/>
                         <viewControllerLayoutGuide type="bottom" id="Lgc-km-B3z"/>
@@ -118,16 +118,23 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYm-hm-oHH">
                                                 <rect key="frame" x="319.66666666666669" y="0.0" width="35.333333333333314" height="317"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQW-g6-W47">
-                                                        <rect key="frame" x="0.0" y="176" width="42" height="42"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button" image="8834 [更新済み]13.png"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQW-g6-W47">
+                                                        <rect key="frame" x="-24.666666666666686" y="257" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="Q7m-NQ-PTC"/>
+                                                            <constraint firstAttribute="height" constant="40" id="vfa-47-D6W"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="calender_show_pink.png"/>
                                                         <connections>
                                                             <action selector="karendahe:" destination="gee-2s-KOa" eventType="touchUpInside" id="2op-VH-fhJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="XQW-g6-W47" secondAttribute="trailing" constant="20" id="giJ-89-CQ1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XQW-g6-W47" secondAttribute="bottom" constant="20" id="nMY-dU-cJ3"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -220,7 +227,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="19" id="Ikk-UH-DbG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="19" id="Ikk-UH-DbG">
                                         <rect key="frame" x="0.0" y="28" width="320" height="19"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ikk-UH-DbG" id="Irz-ty-adn">
@@ -242,10 +249,10 @@
             </objects>
             <point key="canvasLocation" x="3604" y="487"/>
         </scene>
-        <!--Secound View Controller-->
+        <!--Calender View Controller-->
         <scene sceneID="cP5-yp-nB3">
             <objects>
-                <viewController id="sJm-EP-6ti" customClass="SecoundViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sJm-EP-6ti" customClass="CalenderViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yGm-Uy-Lpx"/>
                         <viewControllerLayoutGuide type="bottom" id="cwc-EQ-rcN"/>
@@ -281,7 +288,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="genzaihe" destination="sJm-EP-6ti" eventType="touchUpInside" id="9p3-bO-DdY"/>
+                                                    <action selector="nowMonth" destination="sJm-EP-6ti" eventType="touchUpInside" id="T2A-nu-bQg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZC-GC-9ih">
@@ -362,20 +369,25 @@
                                     <constraint firstItem="VwK-YE-YHh" firstAttribute="top" secondItem="FAT-kk-Cas" secondAttribute="bottom" id="qzF-Kk-KcQ"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-TK-dYb">
-                                <rect key="frame" x="271" y="458" width="41" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="8834 [更新済み]2.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-TK-dYb">
+                                <rect key="frame" x="299" y="718" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="aGa-UR-vPb"/>
+                                    <constraint firstAttribute="height" constant="40" id="b3x-0O-a3c"/>
+                                </constraints>
+                                <state key="normal" image="calender_add_pink.png"/>
                                 <connections>
-                                    <action selector="nikkihe:" destination="sJm-EP-6ti" eventType="touchUpInside" id="atd-fq-Phf"/>
+                                    <action selector="toMakeDiaryViewController:" destination="sJm-EP-6ti" eventType="touchUpInside" id="2Jl-bG-vzG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5607843137254902" green="0.77254901960784317" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cwc-EQ-rcN" firstAttribute="top" secondItem="sQc-TK-dYb" secondAttribute="bottom" constant="20" id="74f-05-zTH"/>
                             <constraint firstAttribute="bottom" secondItem="nf4-re-0Zi" secondAttribute="bottom" constant="10" id="8R8-9k-H3j"/>
                             <constraint firstAttribute="trailing" secondItem="nf4-re-0Zi" secondAttribute="trailing" constant="10" id="CMF-Ua-TGV"/>
                             <constraint firstItem="nf4-re-0Zi" firstAttribute="top" secondItem="yGm-Uy-Lpx" secondAttribute="bottom" constant="10" id="NRv-wl-NOY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sQc-TK-dYb" secondAttribute="trailing" constant="20" id="RJf-xa-rdb"/>
                             <constraint firstItem="nf4-re-0Zi" firstAttribute="leading" secondItem="XoJ-l2-bYf" secondAttribute="leading" constant="10" id="WVN-EC-obM"/>
                         </constraints>
                     </view>
@@ -386,9 +398,6 @@
                                 <rect key="frame" x="16" y="7" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="idou:" destination="sJm-EP-6ti" eventType="touchUpInside" id="yx4-RZ-Lbi"/>
-                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -396,13 +405,13 @@
                         <outlet property="calendarCollectionView" destination="FAT-kk-Cas" id="Lbo-Gj-ZnC"/>
                         <outlet property="monthlabel" destination="poJ-Lm-GT1" id="zhj-ao-ir3"/>
                         <outlet property="yearlabel" destination="wTr-WM-3cq" id="iXR-jG-Am1"/>
-                        <segue destination="gee-2s-KOa" kind="show" identifier="goThirdViewController" id="w2C-kx-Xh8"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toNikki" id="ofx-tw-SX9"/>
+                        <segue destination="gee-2s-KOa" kind="show" identifier="toShowMyDiaryViewController" id="w2C-kx-Xh8"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMakeDiaryViewController" id="ofx-tw-SX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-Ye-raM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314.375" y="-382.3943661971831"/>
+            <point key="canvasLocation" x="1631" y="-556"/>
         </scene>
         <!--Drawer Controller-->
         <scene sceneID="faF-tr-8KT">
@@ -592,10 +601,10 @@
             </objects>
             <point key="canvasLocation" x="-1611" y="-421"/>
         </scene>
-        <!--View Controller-->
+        <!--Make Diary View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MakeDiaryViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -946,6 +955,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LHV-0f-Hby">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eMN-Jo-Y7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2f8-dZ-Lpr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9lN-eQ-bZ1">
@@ -957,14 +967,13 @@
                         <segue destination="sJm-EP-6ti" kind="relationship" relationship="rootViewController" id="SAL-iz-OMH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eMN-Jo-Y7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="491" y="-382"/>
         </scene>
     </scenes>
     <resources>
-        <image name="8834 [更新済み]13.png" width="1334" height="1333"/>
-        <image name="8834 [更新済み]2.png" width="1363" height="1363"/>
         <image name="8834 [更新済み]１.png" width="1334" height="1333"/>
+        <image name="calender_add_pink.png" width="1363" height="1363"/>
+        <image name="calender_show_pink.png" width="1334" height="1333"/>
     </resources>
 </document>

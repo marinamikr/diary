@@ -1,15 +1,16 @@
 //
-//  SecoundViewController.swift
+//  CalenderViewController.swift
 //  SpeakToMe
 //
-//  Created by User on 2017/12/12.
-//  Copyright © 2017年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
+
 
 import UIKit
 import KYDrawerController
 
-class SecoundViewController: UIViewController {
+class CalenderViewController: UIViewController {
     
     var number: Int = 0
     
@@ -29,14 +30,11 @@ class SecoundViewController: UIViewController {
     
     var sideBackView: UIView!
 
-    
-    @IBAction func idou(_ sender: Any) {
-    }
-    @IBAction func nikkihe(_ sender: Any) {
-        self.performSegue(withIdentifier: "toNikki", sender: nil)
+    @IBAction func toMakeDiaryViewController(_ sender: Any) {
+        self.performSegue(withIdentifier: "toMakeDiaryViewController", sender: nil)
     }
     
-    @IBAction func genzaihe() {
+    @IBAction func nowMonth() {
         number = 0
         targetYear = currentDateSetting.getCurrentYearAndMonth(number: number).targetYear
         targetMonth = currentDateSetting.getCurrentYearAndMonth(number: number).targetMonth
@@ -127,7 +125,7 @@ class SecoundViewController: UIViewController {
     
 }
 
-extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension CalenderViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
     private enum indexType: Int {
@@ -258,15 +256,15 @@ extension SecoundViewController: UICollectionViewDataSource, UICollectionViewDel
         day = Int(dayCellLists[indexPath.row]!)!
         
         // SubViewController へ遷移するために Segue を呼び出す
-        performSegue(withIdentifier: "goThirdViewController",sender: nil)
+        performSegue(withIdentifier: "toShowMyDiaryViewController",sender: nil)
         
         
         
     }
     // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "goThirdViewController") {
-            let subVC: ThirdViewController = (segue.destination as? ThirdViewController)!
+        if (segue.identifier == "toShowMyDiaryViewController") {
+            let subVC: ShowMyDiaryViewController = (segue.destination as? ShowMyDiaryViewController)!
             
             let stringReturn = datemanager2.toDateString(year: targetYear, month: targetMonth, day: day)
             

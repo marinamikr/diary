@@ -1,15 +1,18 @@
 //
-//  CalendarViewController.swift
+//  SettingViewController.swift
 //  SpeakToMe
 //
-//  Created by User on 2017/11/21.
-//  Copyright © 2017年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
+
 import UIKit
+import Firebase
 
-class CalendarViewController: UIViewController {
+class SettingViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +24,14 @@ class CalendarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func showSetting(_ sender: UISwitch) {
+        let ref = Database.database().reference()
+        
+        let data = ["read":sender.isOn]
+        ref.child("permission").child(Util.getUUID()).setValue(data)
+        
+    }
 
     /*
     // MARK: - Navigation

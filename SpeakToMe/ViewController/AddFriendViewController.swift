@@ -1,10 +1,11 @@
 //
-//  ViewController.swift
-//  AVCaptureMetadataOutputSample_QRCodeReader
+//  AddFriendViewController.swift
+//  SpeakToMe
 //
-//  Created by hirauchi.shinichi on 2016/12/19.
-//  Copyright © 2016年 SAPPOROWORKS. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
+
 
 import UIKit
 import AVFoundation

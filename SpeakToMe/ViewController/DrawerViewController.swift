@@ -2,13 +2,14 @@
 //  DrawerViewController.swift
 //  SpeakToMe
 //
-//  Created by User on 2018/07/03.
-//  Copyright © 2018年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
+
 
 import UIKit
 
-class DrawerViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class DrawerViewController: UIViewController {
     
     
     @IBOutlet weak var table: UITableView!
@@ -34,6 +35,13 @@ class DrawerViewController: UIViewController,UITableViewDataSource, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+}
+
+extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
+    
     //セルの数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
@@ -68,19 +76,17 @@ class DrawerViewController: UIViewController,UITableViewDataSource, UITableViewD
             
         case 4:
             performSegue(withIdentifier: "toSettingViewController", sender: nil)
-
+            
         default: break
             
         }
         
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 50
     }
-    
-    
-    
 }
 
 

@@ -2,14 +2,15 @@
 //  TopViewController.swift
 //  SpeakToMe
 //
-//  Created by User on 2018/06/19.
-//  Copyright © 2018年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
+
 
 import UIKit
 import Firebase
 
-class TopViewController: UIViewController, UITextFieldDelegate {
+class TopViewController: UIViewController {
 
     @IBOutlet weak var userNameText: UITextField!
     
@@ -54,9 +55,7 @@ class TopViewController: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "toMainViewController", sender: nil)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+ 
     
     /*
     // MARK: - Navigation
@@ -68,4 +67,12 @@ class TopViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+}
+
+extension TopViewController :UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
