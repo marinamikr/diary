@@ -11,6 +11,7 @@
 		7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7539A4701CE7A57600505E8B /* AppDelegate.swift */; };
 		7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4771CE7A57600505E8B /* Assets.xcassets */; };
 		7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */; };
+		CE0F746520FDEF04000D83DB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0F746420FDEF03000D83DB /* background1.png */; };
 		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
 		CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563BE20FDAEE900C4F948 /* calender_show_white.png */; };
 		CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */; };
@@ -30,14 +31,12 @@
 		CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4676C520F4C42C009DA351 /* CustomDrawerTableViewCell.xib */; };
 		CE4676D220F4C42E009DA351 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676C620F4C42C009DA351 /* CollectionViewCell.swift */; };
 		CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4676C720F4C42C009DA351 /* XibTableViewCell.xib */; };
-		CE4676D420F4C42E009DA351 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676C820F4C42D009DA351 /* XibViewController.swift */; };
 		CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4676C920F4C42D009DA351 /* CollectionViewCell.xib */; };
 		CE4676D620F4C42E009DA351 /* MyCustomDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676CA20F4C42D009DA351 /* MyCustomDiaryTableViewCell.swift */; };
 		CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4676CB20F4C42D009DA351 /* MyCustomDiaryTableViewCell.xib */; };
 		CE4676D820F4C42E009DA351 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676CC20F4C42D009DA351 /* NameTableViewCell.swift */; };
 		CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4676CD20F4C42E009DA351 /* NameTableViewCell.xib */; };
 		CE4676DA20F4C42E009DA351 /* XibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676CE20F4C42E009DA351 /* XibTableViewCell.swift */; };
-		CE4676DB20F4C42E009DA351 /* XibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4676CF20F4C42E009DA351 /* XibViewController.xib */; };
 		CE4676DC20F4C42E009DA351 /* CustomDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676D020F4C42E009DA351 /* CustomDrawerTableViewCell.swift */; };
 		CE4676DE20F4C43A009DA351 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676DD20F4C43A009DA351 /* QRViewController.swift */; };
 		CE4676E020F4C474009DA351 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676DF20F4C474009DA351 /* RealmModel.swift */; };
@@ -60,7 +59,7 @@
 		7539A47A1CE7A57600505E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7539A47C1CE7A57600505E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7728B0D1782366C8CF929497 /* Pods-SpeakToMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakToMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe.release.xcconfig"; sourceTree = "<group>"; };
-		B56B3B031CEB85E1001766E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE0F746420FDEF03000D83DB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CE2563BE20FDAEE900C4F948 /* calender_show_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_white.png; sourceTree = "<group>"; };
 		CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_blue.png; sourceTree = "<group>"; };
@@ -80,14 +79,12 @@
 		CE4676C520F4C42C009DA351 /* CustomDrawerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomDrawerTableViewCell.xib; sourceTree = "<group>"; };
 		CE4676C620F4C42C009DA351 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CE4676C720F4C42C009DA351 /* XibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XibTableViewCell.xib; sourceTree = "<group>"; };
-		CE4676C820F4C42D009DA351 /* XibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 		CE4676C920F4C42D009DA351 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		CE4676CA20F4C42D009DA351 /* MyCustomDiaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomDiaryTableViewCell.swift; sourceTree = "<group>"; };
 		CE4676CB20F4C42D009DA351 /* MyCustomDiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomDiaryTableViewCell.xib; sourceTree = "<group>"; };
 		CE4676CC20F4C42D009DA351 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		CE4676CD20F4C42E009DA351 /* NameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		CE4676CE20F4C42E009DA351 /* XibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibTableViewCell.swift; sourceTree = "<group>"; };
-		CE4676CF20F4C42E009DA351 /* XibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XibViewController.xib; sourceTree = "<group>"; };
 		CE4676D020F4C42E009DA351 /* CustomDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		CE4676DD20F4C43A009DA351 /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		CE4676DF20F4C474009DA351 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
@@ -124,7 +121,6 @@
 		7539A4641CE7A57600505E8B = {
 			isa = PBXGroup;
 			children = (
-				B56B3B031CEB85E1001766E2 /* README.md */,
 				7539A46F1CE7A57600505E8B /* SpeakToMe */,
 				7539A46E1CE7A57600505E8B /* Products */,
 				B47E02D9695204BD0B98BCD9 /* Pods */,
@@ -220,8 +216,6 @@
 				CE4676CD20F4C42E009DA351 /* NameTableViewCell.xib */,
 				CE4676CE20F4C42E009DA351 /* XibTableViewCell.swift */,
 				CE4676C720F4C42C009DA351 /* XibTableViewCell.xib */,
-				CE4676C820F4C42D009DA351 /* XibViewController.swift */,
-				CE4676CF20F4C42E009DA351 /* XibViewController.xib */,
 			);
 			path = CustomLayout;
 			sourceTree = "<group>";
@@ -260,6 +254,7 @@
 				CE2563C120FDAEEC00C4F948 /* calender_add_white.png */,
 				CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */,
 				CE2563BE20FDAEE900C4F948 /* calender_show_white.png */,
+				CE0F746420FDEF03000D83DB /* background1.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -327,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
-				CE4676DB20F4C42E009DA351 /* XibViewController.xib in Resources */,
 				CE2563C420FDAEEE00C4F948 /* calender_add_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
@@ -339,6 +333,7 @@
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
+				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +406,6 @@
 				CE4676B920F4C34B009DA351 /* DrawerViewController.swift in Sources */,
 				CE4676B520F4C34B009DA351 /* TopViewController.swift in Sources */,
 				CE4676B620F4C34B009DA351 /* AllMyDiaryViewController.swift in Sources */,
-				CE4676D420F4C42E009DA351 /* XibViewController.swift in Sources */,
 				CE4676D620F4C42E009DA351 /* MyCustomDiaryTableViewCell.swift in Sources */,
 				CE4676D820F4C42E009DA351 /* NameTableViewCell.swift in Sources */,
 				CE24278920BD5DDE009955AB /* Util.swift in Sources */,

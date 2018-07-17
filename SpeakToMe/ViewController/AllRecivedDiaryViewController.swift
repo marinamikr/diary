@@ -26,6 +26,11 @@ class AllRecivedDiaryViewController: UIViewController {
     var urlArray = [String]()
     var likeArray = [Int]()
     
+    var keyArray = [String]()
+    var uuIdArray = [String]()
+    
+    var handler: UInt = 0
+    
     let ref = Database.database().reference()
     
     override func viewDidLoad() {
@@ -46,7 +51,7 @@ class AllRecivedDiaryViewController: UIViewController {
         
         for id in idArray {
             print(id)
-            self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
+            handler = self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
                 print(snapshot)
                 let postDict = snapshot.value as! [String : Bool]
                 print(postDict)
@@ -69,15 +74,27 @@ class AllRecivedDiaryViewController: UIViewController {
                                 self.contentsArray.append(postDict["contents"] as! String)
                                 self.urlArray.append(postDict["URL"] as! String)
                                 self.likeArray.append(postDict["like"] as! Int)
+                                self.keyArray.append((child as! DataSnapshot).key)
+                                self.uuIdArray.append(id)
+                                
                             }
                             
                         }
                         self.ref.child(id).removeAllObservers()
                         self.table.reloadData()
+                        
+                        self.ref.child("permission").child(id).removeObserver(withHandle: self.handler)
+                        
+                        print(self.keyArray)
+                        print(self.uuIdArray)
+                        print(self.contentsArray)
     
                     })
                 }
             })
+            
+            
+        
         }
     }
     
@@ -119,6 +136,15 @@ extension AllRecivedDiaryViewController :UITableViewDataSource, UITableViewDeleg
         cell?.honbunLabel.text = contentsArray[indexPath.row]
         cell?.urlImage.loadImage(urlString: urlArray[indexPath.row])
         cell?.likeLabel.text = String(likeArray[indexPath.row])
+        
+        cell?.uuId = uuIdArray[indexPath.row]
+        cell?.key = keyArray[indexPath.row]
+        cell?.userName = userNameArray[indexPath.row]
+        cell?.contents = contentsArray[indexPath.row]
+        cell?.date = dateArray[indexPath.row]
+        cell?.URL = urlArray[indexPath.row]
+        cell?.like = likeArray[indexPath.row]
+        
         
         return cell!
     }

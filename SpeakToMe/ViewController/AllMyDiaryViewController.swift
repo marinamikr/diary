@@ -45,10 +45,24 @@ class AllMyDiaryViewController: UIViewController{
         let resultArray = realm.objects(RealmModel.self)
         
         for result in resultArray {
-            dateArray.append(result.hizuke)
-            contentsArray.append(result.honbunn)
-            imageArray.append(result.image)
+            
+            if Util.differenceOfDate(date1: Date(), date2: (result.hizuke.getDate())) > 3 {
+                //書き込みは必ずrealm.write内
+                try! realm.write {
+                    realm.delete(result)
+                }
+                
+            }else{
+                print("koko")
+                dateArray.append(result.hizuke)
+                contentsArray.append(result.honbunn)
+                imageArray.append(result.image)
+            }
         }
+        
+        dateArray.reverse()
+        contentsArray.reverse()
+        imageArray.reverse()
         
         table.reloadData()
         

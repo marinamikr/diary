@@ -61,39 +61,42 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本文" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cf-K7-sWz">
-                                        <rect key="frame" x="53" y="0.0" width="158.5" height="56"/>
+                                        <rect key="frame" x="53" y="0.0" width="105.5" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3B-Ft-bMB" userLabel="favorite">
+                                        <rect key="frame" x="158.5" y="0.0" width="53" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TXq-Hf-aTl"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szL-NC-WtV">
                                         <rect key="frame" x="211.5" y="0.0" width="52.5" height="56"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.6" id="3jL-FO-tgt"/>
-                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="5RQ-Gx-MyV"/>
-                                    <constraint firstItem="szL-NC-WtV" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="77L-AX-lJ2"/>
-                                    <constraint firstItem="szL-NC-WtV" firstAttribute="leading" secondItem="0cf-K7-sWz" secondAttribute="trailing" id="7fg-ts-gsk"/>
-                                    <constraint firstAttribute="trailing" secondItem="szL-NC-WtV" secondAttribute="trailing" id="8cg-7O-Xcg"/>
-                                    <constraint firstAttribute="bottom" secondItem="szL-NC-WtV" secondAttribute="bottom" id="BID-6H-hZP"/>
-                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="GJm-gf-KHJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="0cf-K7-sWz" secondAttribute="bottom" id="R7l-Um-mWM"/>
-                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.2" id="imD-rX-j8W"/>
-                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="leading" secondItem="8uN-Vf-ml7" secondAttribute="leading" id="rCj-sJ-5Wm"/>
-                                    <constraint firstAttribute="bottom" secondItem="Zu1-dv-jtj" secondAttribute="bottom" id="zWO-eO-xz8"/>
+                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.2" id="7kt-rB-M9Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="d3B-Ft-bMB" secondAttribute="bottom" id="HMa-UB-cmB"/>
+                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.4" id="IxY-r4-q88"/>
+                                    <constraint firstItem="szL-NC-WtV" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="JtF-Qe-wtN"/>
+                                    <constraint firstAttribute="bottom" secondItem="szL-NC-WtV" secondAttribute="bottom" id="P9H-hc-q8Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zu1-dv-jtj" secondAttribute="bottom" id="h1n-KM-cDs"/>
+                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="i9F-2s-GKR"/>
+                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="ibS-J5-z29"/>
+                                    <constraint firstAttribute="bottom" secondItem="0cf-K7-sWz" secondAttribute="bottom" id="kMm-2J-XHI"/>
+                                    <constraint firstItem="d3B-Ft-bMB" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="wRI-SH-yhM"/>
+                                    <constraint firstItem="d3B-Ft-bMB" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.2" id="yvG-HQ-b1p"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="EJs-go-nHL" firstAttribute="top" secondItem="6Tu-9r-L9m" secondAttribute="top" id="6mv-8q-ye4"/>
-                            <constraint firstAttribute="trailing" secondItem="8uN-Vf-ml7" secondAttribute="trailing" id="9az-rT-Uz9"/>
                             <constraint firstItem="EJs-go-nHL" firstAttribute="height" secondItem="6Tu-9r-L9m" secondAttribute="height" multiplier="0.25" id="AaY-LA-ElW"/>
                             <constraint firstAttribute="trailing" secondItem="EJs-go-nHL" secondAttribute="trailing" id="J7e-QE-wJd"/>
                             <constraint firstItem="EJs-go-nHL" firstAttribute="leading" secondItem="6Tu-9r-L9m" secondAttribute="leading" id="Laf-Ow-cnh"/>
-                            <constraint firstItem="8uN-Vf-ml7" firstAttribute="leading" secondItem="6Tu-9r-L9m" secondAttribute="leading" id="OVQ-tx-dEL"/>
-                            <constraint firstItem="8uN-Vf-ml7" firstAttribute="top" secondItem="EJs-go-nHL" secondAttribute="bottom" id="PdM-bM-lI8"/>
-                            <constraint firstAttribute="bottom" secondItem="8uN-Vf-ml7" secondAttribute="bottom" id="jkD-Eo-oGO"/>
                         </constraints>
                     </stackView>
                 </subviews>

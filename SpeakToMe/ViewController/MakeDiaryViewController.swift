@@ -64,9 +64,10 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         print(yearString)
         
         
-        
+        picture.image = UIImage(named: "background1.png")
         picture.isUserInteractionEnabled = true
         picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MakeDiaryViewController.picturetap(_:))))
+        
         
         // Disable the record buttons until authorization has been granted.
         recordButton.isEnabled = false
@@ -218,45 +219,48 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     
     @IBAction func savebutton (){
         
-        // デフォルトのRealmを取得
-        let realm = try! Realm()
-        
-        let dateReturn = dateManager.format(date: Date())
-        
-        
-        // 通常のSwiftのオブジェクトと同じように扱える
-        let realmModel : RealmModel = RealmModel()
-        realmModel.hizuke = dateReturn
-        realmModel.honbunn = textView.text
-        if picture.image != nil{
-            realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
-        }
-        
-        
-        //書き込みは必ずrealm.write内
-        try! realm.write {
-            realm.add(realmModel)
-        }
-        
-        print(dateReturn)
-        let alert: UIAlertController = UIAlertController(title:"保存が完了しました。共有しますか？",message:"",preferredStyle: .alert)
-        let shareAction = UIAlertAction(title: "YES", style: .default) {
-            action in
-            Util.printLog(viewC: self, tag: "共有アラート", contents: "共有する")
+        if textView.text != ""{
             
-            self.sendMyDiary()
-            self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
-        }
-        
-        let closeAction = UIAlertAction(title: "NO", style: .default) {
-            action in
-            Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
+            // デフォルトのRealmを取得
+            let realm = try! Realm()
             
-            self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+            let dateReturn = dateManager.format(date: Date())
+        
+            
+            
+            // 通常のSwiftのオブジェクトと同じように扱える
+            let realmModel : RealmModel = RealmModel()
+            realmModel.hizuke = dateReturn
+            realmModel.honbunn = textView.text
+            if picture.image != nil{
+                realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
+            }
+            
+            
+            //書き込みは必ずrealm.write内
+            try! realm.write {
+                realm.add(realmModel)
+            }
+            
+            print(dateReturn)
+            let alert: UIAlertController = UIAlertController(title:"保存が完了しました。共有しますか？",message:"",preferredStyle: .alert)
+            let shareAction = UIAlertAction(title: "YES", style: .default) {
+                action in
+                Util.printLog(viewC: self, tag: "共有アラート", contents: "共有する")
+                
+                self.sendMyDiary()
+                self.navigationController?.popViewController(animated: true)        }
+            
+            let closeAction = UIAlertAction(title: "NO", style: .default) {
+                action in
+                Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
+                
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(shareAction)
+            alert.addAction(closeAction)
+            present(alert, animated: true, completion: nil)
         }
-        alert.addAction(shareAction)
-        alert.addAction(closeAction)
-        present(alert, animated: true, completion: nil)
         
     }
     func sendMyDiary() -> Void {
@@ -300,5 +304,5 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     @IBAction func toSecondViewController(_ sender: Any){
         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
     }
-  
+    
 }
