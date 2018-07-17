@@ -1,5 +1,5 @@
 //
-//  QRViewController.swift
+//  CollectionViewCell.swift
 //  SpeakToMe
 //
 //  Created by User on 2018/06/05.

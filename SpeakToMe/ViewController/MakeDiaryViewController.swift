@@ -13,13 +13,11 @@ import FirebaseDatabase
 import FirebaseStorage
 import Firebase
 
-
 public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var dateManager: DateManager = DateManager()
     
     let userDefaults = UserDefaults.standard
-    
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
     
@@ -218,7 +216,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     }
     
     
-    @IBAction func hozonbutton (){
+    @IBAction func savebutton (){
         
         // デフォルトのRealmを取得
         let realm = try! Realm()
@@ -261,9 +259,6 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         present(alert, animated: true, completion: nil)
         
     }
-    
-    
-    
     func sendMyDiary() -> Void {
         
         // strageの一番トップのReferenceを指定
@@ -283,7 +278,6 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                 // トップReferenceの一つ下の固有IDの枝を指定
                 let riversRef = storageRef.child(myUUID).child(String.getRandomStringWithLength(length: 60))
                 
-                
                 // strageに画像をアップロード
                 riversRef.putData(data, metadata: nil, completion: { metaData, error in
                     let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
@@ -291,20 +285,17 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                     let name = self.userDefaults.string(forKey: "UserName")
                     let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL,"like": 0] as [String : Any]
                     
-                    
                     let ref = Database.database().reference()
                     
                     ref.child(self.myUUID).childByAutoId().setValue(data)
                     
                 })
                 
-                
             }
         }
         
         
     }
-    
     
     @IBAction func toSecondViewController(_ sender: Any){
         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)

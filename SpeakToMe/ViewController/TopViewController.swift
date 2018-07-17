@@ -19,8 +19,6 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameText.delegate = self
-        
-        
 
         // Do any additional setup after loading the view.
     }
@@ -54,8 +52,6 @@ class TopViewController: UIViewController {
         userDefaults.set(name, forKey: "UserName")
         self.performSegue(withIdentifier: "toMainViewController", sender: nil)
     }
-    
- 
     
     /*
     // MARK: - Navigation

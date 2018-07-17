@@ -14,7 +14,7 @@ class DrawerViewController: UIViewController {
     
     @IBOutlet weak var table: UITableView!
     
-    var array:[String] = ["自分の日記","友達の日記","QRコード","カメラ","設定画面"]
+    var array:[String] = ["MyDiary","FriendDiary","MyQRCode","camera","setting"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

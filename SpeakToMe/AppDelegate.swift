@@ -3,7 +3,7 @@
 //  samplefirebase
 //
 //  Created by User on 2018/05/22.
-//  Copyright © 2018年 marina harada. All rights reserved.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
 import UIKit

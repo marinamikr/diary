@@ -12,6 +12,10 @@
 		7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4771CE7A57600505E8B /* Assets.xcassets */; };
 		7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */; };
 		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
+		CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563BE20FDAEE900C4F948 /* calender_show_white.png */; };
+		CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */; };
+		CE2563C420FDAEEE00C4F948 /* calender_add_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563C020FDAEEB00C4F948 /* calender_add_blue.png */; };
+		CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563C120FDAEEC00C4F948 /* calender_add_white.png */; };
 		CE4676A620F4C2EC009DA351 /* AllDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */; };
 		CE4676B520F4C34B009DA351 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676A920F4C349009DA351 /* TopViewController.swift */; };
 		CE4676B620F4C34B009DA351 /* AllMyDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */; };
@@ -43,10 +47,6 @@
 		CE4676ED20F4C4DF009DA351 /* CurrentDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676E920F4C4DE009DA351 /* CurrentDateSetting.swift */; };
 		CE4676EE20F4C4DF009DA351 /* CalendarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EA20F4C4DE009DA351 /* CalendarSetting.swift */; };
 		CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */; };
-		CE4676F520F4C580009DA351 /* calender_add_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4676F120F4C57F009DA351 /* calender_add_pink.png */; };
-		CE4676F620F4C580009DA351 /* calender_show_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4676F220F4C57F009DA351 /* calender_show_pink.png */; };
-		CE4676F720F4C580009DA351 /* calender_add_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4676F320F4C57F009DA351 /* calender_add_white.png */; };
-		CE4676F820F4C580009DA351 /* calender_show_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4676F420F4C580009DA351 /* calender_show_white.png */; };
 		CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D06B820E2305B00E87A14 /* Main.storyboard */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -62,6 +62,10 @@
 		7728B0D1782366C8CF929497 /* Pods-SpeakToMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakToMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe.release.xcconfig"; sourceTree = "<group>"; };
 		B56B3B031CEB85E1001766E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		CE2563BE20FDAEE900C4F948 /* calender_show_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_white.png; sourceTree = "<group>"; };
+		CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_blue.png; sourceTree = "<group>"; };
+		CE2563C020FDAEEB00C4F948 /* calender_add_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_add_blue.png; sourceTree = "<group>"; };
+		CE2563C120FDAEEC00C4F948 /* calender_add_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_add_white.png; sourceTree = "<group>"; };
 		CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllDiaryViewController.swift; sourceTree = "<group>"; };
 		CE4676A920F4C349009DA351 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMyDiaryViewController.swift; sourceTree = "<group>"; };
@@ -93,10 +97,6 @@
 		CE4676E920F4C4DE009DA351 /* CurrentDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDateSetting.swift; sourceTree = "<group>"; };
 		CE4676EA20F4C4DE009DA351 /* CalendarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSetting.swift; sourceTree = "<group>"; };
 		CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
-		CE4676F120F4C57F009DA351 /* calender_add_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_add_pink.png; sourceTree = "<group>"; };
-		CE4676F220F4C57F009DA351 /* calender_show_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_pink.png; sourceTree = "<group>"; };
-		CE4676F320F4C57F009DA351 /* calender_add_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_add_white.png; sourceTree = "<group>"; };
-		CE4676F420F4C580009DA351 /* calender_show_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_white.png; sourceTree = "<group>"; };
 		CE4D06B820E2305B00E87A14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,10 +256,10 @@
 		CE4676F020F4C4E4009DA351 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				CE4676F120F4C57F009DA351 /* calender_add_pink.png */,
-				CE4676F320F4C57F009DA351 /* calender_add_white.png */,
-				CE4676F220F4C57F009DA351 /* calender_show_pink.png */,
-				CE4676F420F4C580009DA351 /* calender_show_white.png */,
+				CE2563C020FDAEEB00C4F948 /* calender_add_blue.png */,
+				CE2563C120FDAEEC00C4F948 /* calender_add_white.png */,
+				CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */,
+				CE2563BE20FDAEE900C4F948 /* calender_show_white.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -326,20 +326,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4676F620F4C580009DA351 /* calender_show_pink.png in Resources */,
+				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				CE4676DB20F4C42E009DA351 /* XibViewController.xib in Resources */,
+				CE2563C420FDAEEE00C4F948 /* calender_add_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
-				CE4676F520F4C580009DA351 /* calender_add_pink.png in Resources */,
-				CE4676F820F4C580009DA351 /* calender_show_white.png in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */,
 				CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */,
 				CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */,
+				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
+				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
-				CE4676F720F4C580009DA351 /* calender_add_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

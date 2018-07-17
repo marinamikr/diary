@@ -13,21 +13,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="CustomDrawerTableViewCell" customModule="SpeakToMe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="CustomDrawerTableViewCell" customModule="SpeakToMe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="94"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="115.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="315" height="93.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVy-6f-Y4d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="115.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="93.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tH4-Uz-AOY">
-                                <rect key="frame" x="0.0" y="0.0" width="112" height="115.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="93.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOF-Lp-yot">
-                                <rect key="frame" x="112" y="0.0" width="208" height="115.5"/>
+                                <rect key="frame" x="94.5" y="0.0" width="220.5" height="93.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                         <constraints>
                             <constraint firstItem="tH4-Uz-AOY" firstAttribute="leading" secondItem="qVy-6f-Y4d" secondAttribute="leading" id="Au9-TJ-yNa"/>
                             <constraint firstAttribute="bottom" secondItem="tH4-Uz-AOY" secondAttribute="bottom" id="Gnh-YJ-xvU"/>
-                            <constraint firstItem="tH4-Uz-AOY" firstAttribute="width" secondItem="qVy-6f-Y4d" secondAttribute="width" multiplier="0.35" id="HPh-Bb-6D6"/>
+                            <constraint firstItem="tH4-Uz-AOY" firstAttribute="width" secondItem="qVy-6f-Y4d" secondAttribute="width" multiplier="0.3" id="HPh-Bb-6D6"/>
                             <constraint firstAttribute="bottom" secondItem="vOF-Lp-yot" secondAttribute="bottom" id="IQH-bX-Jfe"/>
                             <constraint firstItem="tH4-Uz-AOY" firstAttribute="top" secondItem="qVy-6f-Y4d" secondAttribute="top" id="JIw-n9-jQa"/>
                             <constraint firstItem="vOF-Lp-yot" firstAttribute="top" secondItem="qVy-6f-Y4d" secondAttribute="top" id="NT8-42-ohh"/>
@@ -57,7 +57,7 @@
                 <outlet property="icon" destination="tH4-Uz-AOY" id="4qT-66-ZY6"/>
                 <outlet property="label" destination="vOF-Lp-yot" id="Ycn-IB-5qW"/>
             </connections>
-            <point key="canvasLocation" x="-7" y="86"/>
+            <point key="canvasLocation" x="-9.5" y="97"/>
         </tableViewCell>
     </objects>
 </document>

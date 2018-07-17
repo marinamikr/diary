@@ -2,8 +2,8 @@
 //  CurrentDateSetting.swift
 //  SpeakToMe
 //
-//  Created by User on 2017/11/28.
-//  Copyright © 2017年 Henry Mason. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
 import Foundation

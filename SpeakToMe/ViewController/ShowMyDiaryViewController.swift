@@ -22,7 +22,7 @@ class ShowMyDiaryViewController: UIViewController {
     
     @IBOutlet weak var realmimageview: UIImageView!
     
-    @IBAction func karendahe(_ sender: Any) {
+    @IBAction func toCalendar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
