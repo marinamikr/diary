@@ -24,10 +24,13 @@ class AllRecivedDiaryViewController: UIViewController {
     var dateArray = [String]()
     var contentsArray = [String]()
     var urlArray = [String]()
+    var iconURLArray = [String]()
     var likeArray = [Int]()
     
     var keyArray = [String]()
     var uuIdArray = [String]()
+    
+    
     
     var handler: UInt = 0
     
@@ -53,9 +56,10 @@ class AllRecivedDiaryViewController: UIViewController {
             print(id)
             handler = self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
                 print(snapshot)
-                let postDict = snapshot.value as! [String : Bool]
+                let postDict = snapshot.value as! [String : Any]
                 print(postDict)
-                if postDict["read"]!  {
+                var permission : Bool = postDict["read"] as! Bool
+                if permission {
                     self.ref.child(id).observe(.value, with: {snapshot  in
                         
                         for child in snapshot.children {
@@ -76,6 +80,7 @@ class AllRecivedDiaryViewController: UIViewController {
                                 self.likeArray.append(postDict["like"] as! Int)
                                 self.keyArray.append((child as! DataSnapshot).key)
                                 self.uuIdArray.append(id)
+                                self.iconURLArray.append(postDict["iconURL"] as! String)
                                 
                             }
                             
@@ -134,7 +139,7 @@ extension AllRecivedDiaryViewController :UITableViewDataSource, UITableViewDeleg
         cell?.userNameLabel.text = userNameArray[indexPath.row]
         cell?.dateLabel.text = dateArray[indexPath.row]
         cell?.honbunLabel.text = contentsArray[indexPath.row]
-        cell?.urlImage.loadImage(urlString: urlArray[indexPath.row])
+        cell?.urlImage.loadImage(urlString: iconURLArray[indexPath.row])
         cell?.likeLabel.text = String(likeArray[indexPath.row])
         
         cell?.uuId = uuIdArray[indexPath.row]

@@ -56,7 +56,7 @@ extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
         let cell = self.table.dequeueReusableCell(withIdentifier: "customDrawerTableViewCell") as? CustomDrawerTableViewCell
         cell?.label.text = array[indexPath.row]
         
-        cell?.icon.image = UIImage(named: imageArray[indexPath.row])
+        cell?.icon.image =  UIImage(named: imageArray[indexPath.row])
         
        return cell!
     }

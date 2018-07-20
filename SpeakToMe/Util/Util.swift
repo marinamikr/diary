@@ -19,10 +19,10 @@ class Util: NSObject {
     }
     
     /// イメージのサイズを変更
-    static func resizeImage(src: UIImage!) -> UIImage! {
+    static func resizeImage(src: UIImage!,max:Int) -> UIImage! {
         
         var resizedSize : CGSize!
-        let maxLongSide : CGFloat = 500
+        let maxLongSide : CGFloat = CGFloat(max)
         
         // リサイズが必要か？
         let ss = src.size

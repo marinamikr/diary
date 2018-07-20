@@ -9,6 +9,7 @@
 
 import UIKit
 import KYDrawerController
+import RealmSwift
 
 class CalenderViewController: UIViewController{
     
@@ -31,7 +32,7 @@ class CalenderViewController: UIViewController{
     var sideBackView: UIView!
 
     @IBAction func toMakeDiaryViewController(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMakeDiaryViewController", sender: nil)
+       
     }
     
     @IBAction func nowMonth() {
@@ -97,15 +98,13 @@ class CalenderViewController: UIViewController{
         
         updateDataSource()
         // 影を消すには両方必要
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
         
         
         let elDrawer = self.navigationController?.parent as! KYDrawerController
         (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
-        
-        
-        
+        setUpNavigation()
         
     }
     
@@ -116,6 +115,44 @@ class CalenderViewController: UIViewController{
     
     
     @IBAction func open(_ sender: Any) {
+       
+    }
+    
+    func setUpNavigation() {
+        let button = UIBarButtonItem()
+        var image = UIImage(named:"calender_add_blue1.png")
+        var resizeImage = Util.resizeImage(src:image!,max: 40)
+        button.image = resizeImage?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        button.style = UIBarButtonItemStyle.plain
+        button.action = #selector(rightBarBtnClicked(sender:))
+        button.target = self
+        self.navigationItem.rightBarButtonItem = button
+        
+        let realm = try! Realm()
+        let result = realm.objects(UserModel.self).first
+        var iconImage = UIImage(data: result?.icon  as! Data)
+        var resizeIcon = Util.resizeImage(src: iconImage, max: 40).maskCorner(radius: 20)
+        
+        let button2 = UIBarButtonItem()
+        button2.image = resizeIcon?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        button2.style = UIBarButtonItemStyle.plain
+        button2.action = #selector(leftBarBtnClicked(sender:))
+        button2.target = self
+        self.navigationItem.leftBarButtonItem = button2
+        
+
+        
+    }
+    
+    //右側のボタンが押されたら呼ばれる
+    internal func rightBarBtnClicked(sender: UIButton){
+        print("rightBarBtnClicked")
+         self.performSegue(withIdentifier: "toMakeDiaryViewController", sender: nil)
+    }
+    
+    //左側のボタンが押されたら呼ばれる
+    internal func leftBarBtnClicked(sender: UIButton){
+        print("leftBarBtnClicked")
         let elDrawer = self.navigationController?.parent as! KYDrawerController
         elDrawer.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
     }

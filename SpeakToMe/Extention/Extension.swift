@@ -55,27 +55,66 @@ extension String {
 }
 
 extension UIImageView{
-
-//画像を非同期で読み込む
-    func loadImage(urlString: String){
-    let CACHE_SEC : TimeInterval = 5 * 60; //5分キャッシュ
-    let req = URLRequest(url: NSURL(string:urlString)! as URL,
-                         cachePolicy: .returnCacheDataElseLoad,
-                         timeoutInterval: CACHE_SEC);
-    let conf =  URLSessionConfiguration.default;
-    let session = URLSession(configuration: conf, delegate: nil, delegateQueue: OperationQueue.main);
     
-    session.dataTask(with: req, completionHandler:
-        { (data, resp, err) in
-            if((err) == nil){ //Success
-                let image = UIImage(data:data!)
-                self.image = image;
-                
-            }else{ //Error
-                print("SimpleAsyncImageView:Error \(err?.localizedDescription)");
-            }
-    }).resume();
+    //画像を非同期で読み込む
+    func loadImage(urlString: String){
+        let CACHE_SEC : TimeInterval = 5 * 60; //5分キャッシュ
+        let req = URLRequest(url: NSURL(string:urlString)! as URL,
+                             cachePolicy: .returnCacheDataElseLoad,
+                             timeoutInterval: CACHE_SEC);
+        let conf =  URLSessionConfiguration.default;
+        let session = URLSession(configuration: conf, delegate: nil, delegateQueue: OperationQueue.main);
+        
+        session.dataTask(with: req, completionHandler:
+            { (data, resp, err) in
+                if((err) == nil){ //Success
+                    let image = UIImage(data:data!)
+                    self.image = image;
+                    
+                }else{ //Error
+                    print("SimpleAsyncImageView:Error \(err?.localizedDescription)");
+                }
+        }).resume();
+    }
 }
+
+extension UIImage {
+    func maskCorner(radius r: CGFloat) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, UIScreen.main.scale)
+        
+        let rect = CGRect(origin:  CGPoint.zero, size: self.size)
+        UIBezierPath(roundedRect: rect, cornerRadius: r).addClip()
+        draw(in: rect)
+        let clippedImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        return clippedImage
+    }
+    
+    func cropImage(w:Int, h:Int)  -> UIImage?{
+        // リサイズ処理
+        let origRef    = self.cgImage
+        let origWidth  = Int(origRef!.width)
+        let origHeight = Int(origRef!.height)
+        var resizeWidth:Int = 0, resizeHeight:Int = 0
+        
+        if (origWidth < origHeight) {
+            resizeWidth = w
+            resizeHeight = origHeight * resizeWidth / origWidth
+        } else {
+            resizeHeight = h
+            resizeWidth = origWidth * resizeHeight / origHeight
+        }
+        
+        
+        let resizeImage = self
+        // 切り抜き処理
+        let cropRect  = CGRect.init(x: CGFloat((resizeWidth - w) / 2), y: CGFloat((resizeHeight - h) / 2), width: CGFloat(w), height: CGFloat(h))
+        let cropRef   = resizeImage.cgImage!.cropping(to: cropRect)
+        let cropImage = UIImage(cgImage: cropRef!)
+        
+        return cropImage
+    }
 }
 
 

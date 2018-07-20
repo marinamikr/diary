@@ -271,7 +271,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         let storageRef = storage.reference(forURL: "gs://diary-fbba6.appspot.com")
         
         //変数picに画像を設定
-        if let pic = Util.resizeImage(src:picture.image!){
+        if let pic = Util.resizeImage(src:picture.image!,max: 500){
             
             //変数dataにpicをNSDataにしたものを指定
             if let data = UIImagePNGRepresentation(pic) {
@@ -287,7 +287,10 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                     let downloadURL: String = (metaData?.downloadURL()?.absoluteString)!
                     Util.printLog(viewC: self, tag: "download", contents: downloadURL)
                     let name = self.userDefaults.string(forKey: "UserName")
-                    let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL,"like": 0] as [String : Any]
+                    let realm = try! Realm()
+                    let result = realm.objects(UserModel.self).first
+                    let iconURL = result?.iconURL
+                    let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL,"like": 0,"iconURL":iconURL] as [String : Any]
                     
                     let ref = Database.database().reference()
                     
