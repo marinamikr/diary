@@ -446,11 +446,15 @@
                         <segue destination="gee-2s-KOa" kind="show" identifier="toShowMyDiaryViewController" id="w2C-kx-Xh8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMakeDiaryViewController" id="ofx-tw-SX9"/>
                         <segue destination="Gg0-vT-ZF2" kind="show" identifier="toAllMyDiaryViewController" id="MLS-Bp-Wsz"/>
+                        <segue destination="uwm-hf-1Kx" kind="show" identifier="toSettingViewController" id="Scu-JQ-pa4"/>
+                        <segue destination="Q0q-F8-fbb" kind="show" identifier="toQRViewController" id="IvV-Ct-smf"/>
+                        <segue destination="cwJ-LQ-vk5" kind="show" identifier="toAllRecivedDiaryViewController" id="RfT-cI-kdC"/>
+                        <segue destination="afD-yH-7Ur" kind="show" identifier="toAddFriendViewController" id="3Jh-bE-jQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-Ye-raM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893.75" y="-228.16901408450704"/>
+            <point key="canvasLocation" x="1733" y="-184"/>
         </scene>
         <!--Drawer Controller-->
         <scene sceneID="faF-tr-8KT">
@@ -533,10 +537,6 @@
                     <value key="contentSizeForViewInPopover" type="size" width="160" height="568"/>
                     <connections>
                         <outlet property="table" destination="WMs-IF-oXT" id="Ven-7s-bG8"/>
-                        <segue destination="Q0q-F8-fbb" kind="show" identifier="toQRViewController" id="7Nw-yW-TC9"/>
-                        <segue destination="afD-yH-7Ur" kind="show" identifier="toAddFriendViewController" id="tfN-3L-n17"/>
-                        <segue destination="cwJ-LQ-vk5" kind="show" identifier="toAllRecivedDiaryViewController" id="wVn-Nz-If3"/>
-                        <segue destination="uwm-hf-1Kx" kind="show" identifier="toSettingViewController" id="5sj-lP-Wez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phR-Rf-omS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -603,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVB-Oq-2vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="612"/>
+            <point key="canvasLocation" x="2220" y="1057"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="ktG-eR-ffu">
@@ -928,37 +928,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yCB-2d-Ef6">
-                                <rect key="frame" x="10" y="30" width="300" height="528"/>
+                                <rect key="frame" x="10" y="74" width="300" height="484"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iml-MD-ZrZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cKy-Hq-42A">
-                                        <rect key="frame" x="0.0" y="26.5" width="300" height="237.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="300" height="217.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFE-k9-Bmm">
-                                        <rect key="frame" x="0.0" y="264" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="242" width="300" height="24.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va9-MQ-W5X">
-                                        <rect key="frame" x="0.0" y="290.5" width="300" height="211"/>
+                                        <rect key="frame" x="0.0" y="266.5" width="300" height="193"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-m5-iNP" userLabel="View1">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="211"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="193"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-ea-jqG">
-                                                <rect key="frame" x="30" y="0.0" width="240" height="211"/>
+                                                <rect key="frame" x="30" y="0.0" width="240" height="193"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Qh-TZ-ntO" userLabel="View2">
-                                                <rect key="frame" x="270" y="0.0" width="30" height="211"/>
+                                                <rect key="frame" x="270" y="0.0" width="30" height="193"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -977,7 +977,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aU-Nh-svZ">
-                                        <rect key="frame" x="0.0" y="501.5" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="459.5" width="300" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

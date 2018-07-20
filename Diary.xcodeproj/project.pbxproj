@@ -20,8 +20,9 @@
 		CE2E6D862101D4540065CCBB /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E6D852101D4540065CCBB /* Camera.png */; };
 		CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E6D872101D4BC0065CCBB /* Setting.png */; };
 		CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E6D882101D4BD0065CCBB /* QRcode.png */; };
+		CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E6D8B2101DB7E0065CCBB /* MyDiary.png */; };
+		CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E6D8D2101DD0B0065CCBB /* MyFriendDiary.png */; };
 		CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FD43C20FEE8EF00CF07F8 /* calender_add_blue1.png */; };
-		CE3FD43F20FEEF8400CF07F8 /* MyDiary.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FD43E20FEEF8300CF07F8 /* MyDiary.png */; };
 		CE4676A620F4C2EC009DA351 /* AllDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */; };
 		CE4676B520F4C34B009DA351 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676A920F4C349009DA351 /* TopViewController.swift */; };
 		CE4676B620F4C34B009DA351 /* AllMyDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */; };
@@ -73,8 +74,9 @@
 		CE2E6D852101D4540065CCBB /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
 		CE2E6D872101D4BC0065CCBB /* Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setting.png; sourceTree = "<group>"; };
 		CE2E6D882101D4BD0065CCBB /* QRcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRcode.png; sourceTree = "<group>"; };
+		CE2E6D8B2101DB7E0065CCBB /* MyDiary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyDiary.png; sourceTree = "<group>"; };
+		CE2E6D8D2101DD0B0065CCBB /* MyFriendDiary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyFriendDiary.png; sourceTree = "<group>"; };
 		CE3FD43C20FEE8EF00CF07F8 /* calender_add_blue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_add_blue1.png; sourceTree = "<group>"; };
-		CE3FD43E20FEEF8300CF07F8 /* MyDiary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyDiary.png; sourceTree = "<group>"; };
 		CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllDiaryViewController.swift; sourceTree = "<group>"; };
 		CE4676A920F4C349009DA351 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMyDiaryViewController.swift; sourceTree = "<group>"; };
@@ -274,7 +276,8 @@
 				CE2563BF20FDAEEA00C4F948 /* calender_show_blue.png */,
 				CE2563BE20FDAEE900C4F948 /* calender_show_white.png */,
 				CE0F746420FDEF03000D83DB /* background1.png */,
-				CE3FD43E20FEEF8300CF07F8 /* MyDiary.png */,
+				CE2E6D8B2101DB7E0065CCBB /* MyDiary.png */,
+				CE2E6D8D2101DD0B0065CCBB /* MyFriendDiary.png */,
 				CE2E6D852101D4540065CCBB /* Camera.png */,
 				CE2E6D882101D4BD0065CCBB /* QRcode.png */,
 				CE2E6D872101D4BC0065CCBB /* Setting.png */,
@@ -359,9 +362,10 @@
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
-				CE3FD43F20FEEF8400CF07F8 /* MyDiary.png in Resources */,
 				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
+				CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
+				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -106,6 +106,7 @@ class CalenderViewController: UIViewController{
         
         
         
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -284,8 +285,36 @@ extension CalenderViewController: UICollectionViewDataSource, UICollectionViewDe
 extension CalenderViewController: CustomDelegate {
     
     func toMyDiary() {
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
         performSegue(withIdentifier: "toAllMyDiaryViewController", sender: nil)
+        
     }
+    
+    func toMyFriendDiary() {
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
+        performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)
+    }
+    
+    func tocamera() {
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
+        performSegue(withIdentifier: "toAddFriendViewController", sender: nil)
+    }
+    
+    func toqrcode() {
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
+        performSegue(withIdentifier: "toQRViewController", sender: nil)
+    }
+    
+    func tosetting() {
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
+        performSegue(withIdentifier: "toSettingViewController", sender: nil)
+    }
+    
 }
 
 

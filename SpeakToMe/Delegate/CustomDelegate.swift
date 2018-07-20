@@ -10,5 +10,8 @@ import Foundation
 
 protocol CustomDelegate {
     func toMyDiary() -> Void
-    
+    func toMyFriendDiary() -> Void
+    func tocamera() -> Void
+    func toqrcode() -> Void
+    func tosetting() -> Void
 }

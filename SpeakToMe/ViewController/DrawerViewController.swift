@@ -16,7 +16,7 @@ class DrawerViewController: UIViewController {
     
     var array:[String] = ["MyDiary","FriendDiary","MyQRCode","camera","setting"]
 
-    var imageArray:[String] = ["MyDiary.png","MyDiary.png","QRcode.png","Camera.png","Setting.png"]
+    var imageArray:[String] = ["MyDiary.png","MyFriendDiary.png","QRcode.png","Camera.png","Setting.png"]
     
     var dalegate : CustomDelegate!
     
@@ -73,16 +73,20 @@ extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
             dalegate.toMyDiary()
             
         case 1:
-            performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)
+            //performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)
+            dalegate.toMyFriendDiary()
             
         case 2:
-            performSegue(withIdentifier: "toQRViewController", sender: nil)
+            //performSegue(withIdentifier: "toQRViewController", sender: nil)
+            dalegate.toqrcode()
             
         case 3:
-            performSegue(withIdentifier: "toAddFriendViewController", sender: nil)
-            
+            //performSegue(withIdentifier: "toAddFriendViewController", sender: nil)
+            dalegate.tocamera()
+
         case 4:
-            performSegue(withIdentifier: "toSettingViewController", sender: nil)
+            //performSegue(withIdentifier: "toSettingViewController", sender: nil)
+            dalegate.tosetting()
             
         default: break
             
