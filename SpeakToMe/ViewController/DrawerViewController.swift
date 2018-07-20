@@ -15,6 +15,10 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     var array:[String] = ["MyDiary","FriendDiary","MyQRCode","camera","setting"]
+
+    var imageArray:[String] = ["MyDiary.png","MyDiary.png","QRcode.png","Camera.png","Setting.png"]
+    
+    var dalegate : CustomDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,6 @@ class DrawerViewController: UIViewController {
         
         //テーブルビューのデリゲートメソッドはViewControllerメソッドに書くよ、という設定
         table.delegate = self
-        
         
         
     }
@@ -53,8 +56,11 @@ extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
         let cell = self.table.dequeueReusableCell(withIdentifier: "customDrawerTableViewCell") as? CustomDrawerTableViewCell
         cell?.label.text = array[indexPath.row]
         
-        return cell!
+        cell?.icon.image = UIImage(named: imageArray[indexPath.row])
+        
+       return cell!
     }
+    
     //セルが押された時に呼ばれるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(array[indexPath.row])が選ばれました")
@@ -63,7 +69,8 @@ extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
         //ここ
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "toAllMyDiaryViewController", sender: nil)
+            //performSegue(withIdentifier: "toAllMyDiaryViewController", sender: nil)
+            dalegate.toMyDiary()
             
         case 1:
             performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)

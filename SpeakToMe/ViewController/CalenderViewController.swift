@@ -10,7 +10,7 @@
 import UIKit
 import KYDrawerController
 
-class CalenderViewController: UIViewController {
+class CalenderViewController: UIViewController{
     
     var number: Int = 0
     
@@ -99,6 +99,12 @@ class CalenderViewController: UIViewController {
         // 影を消すには両方必要
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
+        
+        
         
     }
     
@@ -274,3 +280,12 @@ extension CalenderViewController: UICollectionViewDataSource, UICollectionViewDe
     
     
 }
+
+extension CalenderViewController: CustomDelegate {
+    
+    func toMyDiary() {
+        performSegue(withIdentifier: "toAllMyDiaryViewController", sender: nil)
+    }
+}
+
+

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RhG-wZ-bwy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RhG-wZ-bwy">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XD2-Vl-agt">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.56078431370000004" green="0.68443467879999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -367,7 +367,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="Cell" id="reX-zj-UGv" customClass="CollectionViewCell" customModule="SpeakToMe" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="reX-zj-UGv" customClass="CollectionViewCell" customModule="SpeakToMe" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="84" height="89"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -388,6 +388,7 @@
                                 <constraints>
                                     <constraint firstItem="FAT-kk-Cas" firstAttribute="leading" secondItem="nf4-re-0Zi" secondAttribute="leading" id="0Da-6b-Xgk"/>
                                     <constraint firstItem="FAT-kk-Cas" firstAttribute="height" secondItem="nf4-re-0Zi" secondAttribute="height" multiplier="0.7" id="7FI-V6-rtk"/>
+                                    <constraint firstItem="FAT-kk-Cas" firstAttribute="top" secondItem="Bqh-D3-eyX" secondAttribute="bottom" id="H97-Fi-8Ni"/>
                                     <constraint firstItem="qCA-Cr-MhG" firstAttribute="top" secondItem="nf4-re-0Zi" secondAttribute="top" id="HFI-TG-fiK"/>
                                     <constraint firstItem="Bqh-D3-eyX" firstAttribute="top" secondItem="qCA-Cr-MhG" secondAttribute="bottom" id="JQa-fd-ZTz"/>
                                     <constraint firstItem="VwK-YE-YHh" firstAttribute="leading" secondItem="nf4-re-0Zi" secondAttribute="leading" id="MQj-OX-uuJ"/>
@@ -398,7 +399,10 @@
                                     <constraint firstAttribute="trailing" secondItem="VwK-YE-YHh" secondAttribute="trailing" id="gbB-DY-aPZ"/>
                                     <constraint firstItem="qCA-Cr-MhG" firstAttribute="leading" secondItem="nf4-re-0Zi" secondAttribute="leading" id="mK9-Zu-IHM"/>
                                     <constraint firstItem="FAT-kk-Cas" firstAttribute="top" secondItem="Bqh-D3-eyX" secondAttribute="bottom" id="og8-nZ-UjH"/>
+                                    <constraint firstItem="FAT-kk-Cas" firstAttribute="leading" secondItem="nf4-re-0Zi" secondAttribute="leading" id="ojY-Hk-1tR"/>
                                     <constraint firstItem="VwK-YE-YHh" firstAttribute="top" secondItem="FAT-kk-Cas" secondAttribute="bottom" id="qzF-Kk-KcQ"/>
+                                    <constraint firstItem="VwK-YE-YHh" firstAttribute="top" secondItem="FAT-kk-Cas" secondAttribute="bottom" id="rYo-76-eMm"/>
+                                    <constraint firstAttribute="trailing" secondItem="FAT-kk-Cas" secondAttribute="trailing" id="vML-NQ-udp"/>
                                     <constraint firstItem="Bqh-D3-eyX" firstAttribute="leading" secondItem="nf4-re-0Zi" secondAttribute="leading" id="xoo-Ck-RuI"/>
                                     <constraint firstAttribute="trailing" secondItem="Bqh-D3-eyX" secondAttribute="trailing" id="y3h-3r-bW5"/>
                                 </constraints>
@@ -409,7 +413,7 @@
                                     <constraint firstAttribute="width" constant="40" id="aGa-UR-vPb"/>
                                     <constraint firstAttribute="height" constant="40" id="b3x-0O-a3c"/>
                                 </constraints>
-                                <state key="normal" image="calender_add_blue.png"/>
+                                <state key="normal" image="calender_add_blue1.png"/>
                                 <connections>
                                     <action selector="toMakeDiaryViewController:" destination="sJm-EP-6ti" eventType="touchUpInside" id="2Jl-bG-vzG"/>
                                 </connections>
@@ -441,11 +445,12 @@
                         <outlet property="yearlabel" destination="wTr-WM-3cq" id="iXR-jG-Am1"/>
                         <segue destination="gee-2s-KOa" kind="show" identifier="toShowMyDiaryViewController" id="w2C-kx-Xh8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMakeDiaryViewController" id="ofx-tw-SX9"/>
+                        <segue destination="Gg0-vT-ZF2" kind="show" identifier="toAllMyDiaryViewController" id="MLS-Bp-Wsz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-Ye-raM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="-228"/>
+            <point key="canvasLocation" x="1893.75" y="-228.16901408450704"/>
         </scene>
         <!--Drawer Controller-->
         <scene sceneID="faF-tr-8KT">
@@ -494,6 +499,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLC-t5-yvc">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-5Y-4kI">
+                                        <rect key="frame" x="0.0" y="109.5" width="320" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-IF-oXT">
                                         <rect key="frame" x="0.0" y="109.5" width="320" height="438.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -525,7 +536,6 @@
                         <segue destination="Q0q-F8-fbb" kind="show" identifier="toQRViewController" id="7Nw-yW-TC9"/>
                         <segue destination="afD-yH-7Ur" kind="show" identifier="toAddFriendViewController" id="tfN-3L-n17"/>
                         <segue destination="cwJ-LQ-vk5" kind="show" identifier="toAllRecivedDiaryViewController" id="wVn-Nz-If3"/>
-                        <segue destination="Gg0-vT-ZF2" kind="show" identifier="toAllMyDiaryViewController" id="BZk-9D-GvA"/>
                         <segue destination="uwm-hf-1Kx" kind="show" identifier="toSettingViewController" id="5sj-lP-Wez"/>
                     </connections>
                 </viewController>
@@ -811,37 +821,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Nj-Cc-eVH">
-                                <rect key="frame" x="10" y="30" width="300" height="528"/>
+                                <rect key="frame" x="10" y="74" width="300" height="484"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-tu-SMy">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SB8-AA-R2p">
-                                        <rect key="frame" x="0.0" y="26.5" width="300" height="237.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="300" height="217.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKx-Wu-5G7">
-                                        <rect key="frame" x="0.0" y="264" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="242" width="300" height="24.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Teg-Mo-Ocv">
-                                        <rect key="frame" x="0.0" y="290.5" width="300" height="211"/>
+                                        <rect key="frame" x="0.0" y="266.5" width="300" height="193"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBr-eX-t8f" userLabel="View1">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="211"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="193"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxL-EV-eFr">
-                                                <rect key="frame" x="30" y="0.0" width="240" height="211"/>
+                                                <rect key="frame" x="30" y="0.0" width="240" height="193"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6C-le-KT4" userLabel="View2">
-                                                <rect key="frame" x="270" y="0.0" width="30" height="211"/>
+                                                <rect key="frame" x="270" y="0.0" width="30" height="193"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -860,7 +870,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-2v-VFK">
-                                        <rect key="frame" x="0.0" y="501.5" width="300" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="459.5" width="300" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1036,7 +1046,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calender_add_blue.png" width="100" height="100"/>
+        <image name="calender_add_blue1.png" width="1363" height="1363"/>
         <image name="calender_show_blue.png" width="1334" height="1333"/>
     </resources>
 </document>
