@@ -58,6 +58,7 @@
 		CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */; };
 		CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D06B820E2305B00E87A14 /* Main.storyboard */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
+		CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE4F11F211F68800008FC2A /* TopViewController1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
 		CE4D06B820E2305B00E87A14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEE4F11F211F68800008FC2A /* TopViewController1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewController1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +163,8 @@
 		7539A46F1CE7A57600505E8B /* SpeakToMe */ = {
 			isa = PBXGroup;
 			children = (
+				CE82E1AF2102894C00860F53 /* Font */,
 				AA4F33AF2101F35D00B410FE /* CustomView */,
-				AA4F33AC2101E6F900B410FE /* Font */,
 				CE2E6D822101D33A0065CCBB /* Delegate */,
 				CE4676F020F4C4E4009DA351 /* Image */,
 				CE4676E720F4C4D0009DA351 /* Calender */,
@@ -180,13 +182,6 @@
 				CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */,
 			);
 			path = SpeakToMe;
-			sourceTree = "<group>";
-		};
-		AA4F33AC2101E6F900B410FE /* Font */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 		AA4F33AF2101F35D00B410FE /* CustomView */ = {
@@ -309,8 +304,16 @@
 				CE2E6D852101D4540065CCBB /* Camera.png */,
 				CE2E6D882101D4BD0065CCBB /* QRcode.png */,
 				CE2E6D872101D4BC0065CCBB /* Setting.png */,
+				CEE4F11F211F68800008FC2A /* TopViewController1.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		CE82E1AF2102894C00860F53 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +397,7 @@
 				CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
 				AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */,
+				CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */,
 				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

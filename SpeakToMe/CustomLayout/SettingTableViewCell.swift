@@ -2,8 +2,8 @@
 //  SettingTableViewCell.swift
 //  SpeakToMe
 //
-//  Created by 橋詰明宗 on 2018/07/20.
-//  Copyright © 2018年 Henry Mason. All rights reserved.
+//  Created by User on 2018/07/20.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
 import UIKit
