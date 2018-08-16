@@ -60,7 +60,7 @@ class TopViewController: UIViewController {
             uploadIcon(pic: icon,name: name)
             
             
-           
+            
             
         } else if name == "" && icon == nil {
             let alert: UIAlertController = UIAlertController(title:"ニックネームとアイコンを入力してください",message:"",preferredStyle: .alert)
@@ -153,8 +153,13 @@ class TopViewController: UIViewController {
                 }
                 // デフォルトのRealmを取得
                 let realm = try! Realm()
+                
+                
+                
+                
                 //書き込みは必ずrealm.write内
                 try! realm.write {
+                    
                     realm.add(userModel)
                 }
                 

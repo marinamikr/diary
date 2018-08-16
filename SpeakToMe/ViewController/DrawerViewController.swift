@@ -8,12 +8,15 @@
 
 
 import UIKit
+import RealmSwift
 
 class DrawerViewController: UIViewController {
     
+//    @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet weak var userIcon: UIImageView!
     var array:[String] = ["MyDiary","FriendDiary","MyQRCode","camera","setting"]
 
     var imageArray:[String] = ["MyDiary.png","MyFriendDiary.png","QRcode.png","Camera.png","Setting.png"]
@@ -31,6 +34,12 @@ class DrawerViewController: UIViewController {
         //テーブルビューのデリゲートメソッドはViewControllerメソッドに書くよ、という設定
         table.delegate = self
         
+        let realm = try! Realm()
+        let result = realm.objects(UserModel.self).first
+        var iconImage = UIImage(data: result?.icon  as! Data)
+        userIcon.image = iconImage
+//        userName.text = result?.nickName
+    
         
     }
     

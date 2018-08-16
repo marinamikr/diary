@@ -20,7 +20,7 @@ class AllDiaryViewController: UIViewController {
     var date = String()
     var contents = String()
     var url = String()
-    var like = Int()
+    var like = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class AllDiaryViewController: UIViewController {
         diaryTextView.text = contents
         diaryImageView.loadImage(urlString: url)
         dateLabel.text = date
-        likeLabel.text = String(like)
+        likeLabel.text = like
 
         // Do any additional setup after loading the view.
     }

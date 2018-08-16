@@ -129,7 +129,7 @@ class CalenderViewController: UIViewController{
         self.navigationItem.rightBarButtonItem = button
         
         let realm = try! Realm()
-        let result = realm.objects(UserModel.self).first
+        let result = realm.objects(UserModel.self).last
         var iconImage = UIImage(data: result?.icon  as! Data)
         var resizeIcon = Util.resizeImage(src: iconImage, max: 40).maskCorner(radius: 20)
         

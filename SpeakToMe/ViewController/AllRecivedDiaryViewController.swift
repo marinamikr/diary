@@ -16,6 +16,7 @@ class AllRecivedDiaryViewController: UIViewController {
     var tableViewArray = [UITableViewCell]()
     var userDefaults:UserDefaults = UserDefaults.standard
     var position = 0
+    var cellArray:[XibTableViewCell] = Array()
     //StoryBoadで扱うTableViewを宣言
     @IBOutlet var table: UITableView!
     
@@ -115,7 +116,8 @@ class AllRecivedDiaryViewController: UIViewController {
             allDiaryViewController.date = dateArray[position]
             allDiaryViewController.contents = contentsArray[position]
             allDiaryViewController.url = urlArray[position]
-            allDiaryViewController.like = likeArray[position]
+//            allDiaryViewController.like = likeArray[position]
+            allDiaryViewController.like = cellArray[position].likeLabel.text!
             
         }
     }
@@ -150,7 +152,7 @@ extension AllRecivedDiaryViewController :UITableViewDataSource, UITableViewDeleg
         cell?.URL = urlArray[indexPath.row]
         cell?.like = likeArray[indexPath.row]
         
-        
+        cellArray.append(cell!)
         return cell!
     }
     //セルが押された時に呼ばれるデリゲートメソッド

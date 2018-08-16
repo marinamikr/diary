@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,41 +55,72 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uN-Vf-ml7" userLabel="Stack View2">
                                 <rect key="frame" x="0.0" y="18.5" width="264" height="56"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-dv-jtj">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="56"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szL-NC-WtV" customClass="CircleImageView" customModule="SpeakToMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="szL-NC-WtV" secondAttribute="height" multiplier="1:1" id="3P3-hP-dpX"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本文" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cf-K7-sWz">
-                                        <rect key="frame" x="53" y="0.0" width="105.5" height="56"/>
+                                        <rect key="frame" x="56.5" y="-0.5" width="154.5" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3B-Ft-bMB" userLabel="favorite">
-                                        <rect key="frame" x="158.5" y="0.0" width="53" height="56"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TXq-Hf-aTl"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szL-NC-WtV" customClass="CircleImageView" customModule="SpeakToMe" customModuleProvider="target">
-                                        <rect key="frame" x="211.5" y="0.0" width="52.5" height="56"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z1i-zx-zpE" userLabel="Stack View1">
+                                        <rect key="frame" x="211" y="0.0" width="26.5" height="56"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx3-bX-ayn">
+                                                <rect key="frame" x="0.0" y="0.0" width="26.5" height="29.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3B-Ft-bMB" userLabel="favorite">
+                                                <rect key="frame" x="0.0" y="29.5" width="26.5" height="26.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="d3B-Ft-bMB" secondAttribute="height" multiplier="1:1" id="SLh-Sq-fXn"/>
+                                                </constraints>
+                                                <state key="normal" image="hearts.png"/>
+                                                <connections>
+                                                    <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TXq-Hf-aTl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-SV-XCD" userLabel="Stack View2">
+                                        <rect key="frame" x="237.5" y="0.0" width="26.5" height="56"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZZ-wb-9xN">
+                                                <rect key="frame" x="0.0" y="0.0" width="26.5" height="29.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-dv-jtj">
+                                                <rect key="frame" x="0.0" y="29.5" width="26.5" height="26.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Zu1-dv-jtj" secondAttribute="height" multiplier="1:1" id="KRU-fU-YRq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WZZ-wb-9xN" firstAttribute="leading" secondItem="g5i-SV-XCD" secondAttribute="leading" id="3xd-Dh-Sur"/>
+                                            <constraint firstItem="WZZ-wb-9xN" firstAttribute="top" secondItem="g5i-SV-XCD" secondAttribute="top" id="9CK-4y-xf8"/>
+                                            <constraint firstAttribute="trailing" secondItem="WZZ-wb-9xN" secondAttribute="trailing" id="rd4-DO-yVO"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.2" id="7kt-rB-M9Y"/>
-                                    <constraint firstAttribute="bottom" secondItem="d3B-Ft-bMB" secondAttribute="bottom" id="HMa-UB-cmB"/>
-                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.4" id="IxY-r4-q88"/>
-                                    <constraint firstItem="szL-NC-WtV" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="JtF-Qe-wtN"/>
-                                    <constraint firstAttribute="bottom" secondItem="szL-NC-WtV" secondAttribute="bottom" id="P9H-hc-q8Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="Zu1-dv-jtj" secondAttribute="bottom" id="h1n-KM-cDs"/>
-                                    <constraint firstItem="Zu1-dv-jtj" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="i9F-2s-GKR"/>
-                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="ibS-J5-z29"/>
-                                    <constraint firstAttribute="bottom" secondItem="0cf-K7-sWz" secondAttribute="bottom" id="kMm-2J-XHI"/>
-                                    <constraint firstItem="d3B-Ft-bMB" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="wRI-SH-yhM"/>
-                                    <constraint firstItem="d3B-Ft-bMB" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.2" id="yvG-HQ-b1p"/>
+                                    <constraint firstAttribute="bottom" secondItem="szL-NC-WtV" secondAttribute="bottom" id="4a4-tx-aBd"/>
+                                    <constraint firstItem="g5i-SV-XCD" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="CAX-DP-He7"/>
+                                    <constraint firstItem="g5i-SV-XCD" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.1" id="CjS-WB-XJh"/>
+                                    <constraint firstAttribute="trailing" secondItem="g5i-SV-XCD" secondAttribute="trailing" id="Ih7-pB-Vgl"/>
+                                    <constraint firstAttribute="bottom" secondItem="g5i-SV-XCD" secondAttribute="bottom" id="J5i-20-dfV"/>
+                                    <constraint firstItem="0cf-K7-sWz" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="LQi-Kj-0jg"/>
+                                    <constraint firstItem="szL-NC-WtV" firstAttribute="top" secondItem="8uN-Vf-ml7" secondAttribute="top" id="O1f-Tm-aV3"/>
+                                    <constraint firstItem="szL-NC-WtV" firstAttribute="leading" secondItem="8uN-Vf-ml7" secondAttribute="leading" id="tcI-Co-bEu"/>
+                                    <constraint firstItem="z1i-zx-zpE" firstAttribute="width" secondItem="8uN-Vf-ml7" secondAttribute="width" multiplier="0.1" id="v82-Zg-1ZR"/>
+                                    <constraint firstAttribute="bottom" secondItem="0cf-K7-sWz" secondAttribute="bottom" id="zJ1-Hy-UpG"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -120,4 +152,7 @@
             <point key="canvasLocation" x="6" y="69.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="hearts.png" width="100" height="100"/>
+    </resources>
 </document>

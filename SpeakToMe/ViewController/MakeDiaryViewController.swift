@@ -37,13 +37,13 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     var myUUID: String!
     
     
-    @IBAction func keyboard() {
-        self.textView.becomeFirstResponder()
-    }
-    
-    @IBAction func buttonHide() {
-        self.textView.resignFirstResponder()
-    }
+//    @IBAction func keyboard() {
+//        self.textView.becomeFirstResponder()
+//    }
+//
+//    @IBAction func buttonHide() {
+//        self.textView.resignFirstResponder()
+//    }
     
     @IBOutlet weak var picture: UIImageView!
     
@@ -64,7 +64,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         print(yearString)
         
         
-        picture.image = UIImage(named: "background1.png")
+        picture.image = UIImage(named: "imageBack.png")
         picture.isUserInteractionEnabled = true
         picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MakeDiaryViewController.picturetap(_:))))
         
@@ -209,11 +209,23 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
             audioEngine.stop()
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
-            recordButton.setTitle("Stop", for: .disabled)
+            recordButton.setTitle("Start", for: .disabled)
+            
         } else {
             try! startRecording()
             recordButton.setTitle("Stop", for: [])
+            
+            let alert: UIAlertController = UIAlertController(title:"音声認識を開始します。終了するにはstopを押してください",message:"",preferredStyle: .alert)
+            let startAction = UIAlertAction(title: "OK", style: .default) {
+                action in
+                print("START")
+            }
+            alert.addAction(startAction)
+           
+            present(alert, animated: true, completion: nil)
         }
+            
+        
     }
     
     

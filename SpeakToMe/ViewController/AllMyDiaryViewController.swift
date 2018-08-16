@@ -96,7 +96,6 @@ extension AllMyDiaryViewController :UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
-        
     }
     
     //セルの数を設定
