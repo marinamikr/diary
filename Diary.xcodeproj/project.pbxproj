@@ -59,6 +59,9 @@
 		CE4676EE20F4C4DF009DA351 /* CalendarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EA20F4C4DE009DA351 /* CalendarSetting.swift */; };
 		CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */; };
 		CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D06B820E2305B00E87A14 /* Main.storyboard */; };
+		CE7AF50421265CB30057A925 /* TopView.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7AF50321265CB30057A925 /* TopView.png */; };
+		CE7AF50621265E250057A925 /* uzura.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE7AF50521265E010057A925 /* uzura.ttf */; };
+		CE7AF508212662CD0057A925 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7AF507212662CD0057A925 /* icon.png */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
 		CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE4F11F211F68800008FC2A /* TopViewController1.png */; };
 /* End PBXBuildFile section */
@@ -120,6 +123,9 @@
 		CE4676EA20F4C4DE009DA351 /* CalendarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSetting.swift; sourceTree = "<group>"; };
 		CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
 		CE4D06B820E2305B00E87A14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE7AF50321265CB30057A925 /* TopView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopView.png; sourceTree = "<group>"; };
+		CE7AF50521265E010057A925 /* uzura.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uzura.ttf; sourceTree = "<group>"; };
+		CE7AF507212662CD0057A925 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE4F11F211F68800008FC2A /* TopViewController1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewController1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,7 +173,6 @@
 		7539A46F1CE7A57600505E8B /* SpeakToMe */ = {
 			isa = PBXGroup;
 			children = (
-				CE82E1AF2102894C00860F53 /* Font */,
 				AA4F33AF2101F35D00B410FE /* CustomView */,
 				CE2E6D822101D33A0065CCBB /* Delegate */,
 				CE4676F020F4C4E4009DA351 /* Image */,
@@ -310,16 +315,12 @@
 				CE2E6D852101D4540065CCBB /* Camera.png */,
 				CE2E6D882101D4BD0065CCBB /* QRcode.png */,
 				CE2E6D872101D4BC0065CCBB /* Setting.png */,
+				CE7AF50321265CB30057A925 /* TopView.png */,
 				CEE4F11F211F68800008FC2A /* TopViewController1.png */,
+				CE7AF507212662CD0057A925 /* icon.png */,
+				CE7AF50521265E010057A925 /* uzura.ttf */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		CE82E1AF2102894C00860F53 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7AF508212662CD0057A925 /* icon.png in Resources */,
+				CE7AF50621265E250057A925 /* uzura.ttf in Resources */,
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
@@ -396,6 +399,7 @@
 				CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */,
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
 				CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */,
+				CE7AF50421265CB30057A925 /* TopView.png in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
@@ -614,8 +618,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.SpeakToMe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.ComDiaryyi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -632,8 +637,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.SpeakToMe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.ComDiaryyi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
