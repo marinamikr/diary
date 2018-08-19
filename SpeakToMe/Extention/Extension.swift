@@ -115,6 +115,74 @@ extension UIImage {
         
         return cropImage
     }
+    
+    func cropping2square()-> UIImage!{
+        let cgImage    = self.cgImage
+        let width = (cgImage?.width)!
+        let height = (cgImage?.height)!
+        let resizeSize = min(height,width)
+        
+        let cropCGImage = self.cgImage?.cropping(to: CGRect(x: (width - resizeSize) / 2, y: (height - resizeSize) / 2, width: resizeSize, height: resizeSize))
+        
+        let cropImage = UIImage(cgImage: cropCGImage!)
+        
+        return cropImage
+    }
+    
+    func rotate(angle: CGFloat) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: self.size.width, height: self.size.height), false, 0.0)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        context.translateBy(x: self.size.width/2, y: self.size.height/2)
+        context.scaleBy(x: 1.0, y: -1.0)
+        
+        let radian: CGFloat = (-angle) * CGFloat.pi / 180.0
+        context.rotate(by: radian)
+        context.draw(self.cgImage!, in: CGRect(x: -self.size.width/2, y: -self.size.height/2, width: self.size.width, height: self.size.height))
+        
+        let rotatedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return rotatedImage
+    }
+    
+    private func min(_ a : Int, _ b : Int ) -> Int {
+        if a < b { return a}
+        else { return b}
+    }
+    
+    /// イメージのサイズを変更
+    func resizeImage() -> UIImage {
+        
+        var resizedSize : CGSize!
+        let maxLongSide : CGFloat = 300
+        
+        // リサイズが必要か？
+        let ss = self.size
+        if maxLongSide == 0 || ( ss.width <= maxLongSide && ss.height <= maxLongSide ) {
+            resizedSize = ss
+            return self
+        }
+        
+        // TODO: リサイズ回りの処理を切りだし
+        
+        // リサイズ後のサイズを計算
+        let ax = ss.width / maxLongSide
+        let ay = ss.height / maxLongSide
+        let ar = ax > ay ? ax : ay
+        let re = CGRect(x: 0, y: 0, width: ss.width / ar, height: ss.height / ar)
+        
+        // リサイズ
+        UIGraphicsBeginImageContext(re.size)
+        self.draw(in: re)
+        let dst = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        resizedSize = dst?.size
+        
+        return dst!
+    }
+    
+
 }
 
 

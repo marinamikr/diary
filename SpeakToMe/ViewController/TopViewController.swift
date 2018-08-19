@@ -22,6 +22,8 @@ class TopViewController: UIViewController {
     
     let userDefaults = UserDefaults.standard
     
+    var selectedImage:UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameText.delegate = self
@@ -51,8 +53,16 @@ class TopViewController: UIViewController {
     
     @IBAction func toMain(_ sender: Any){
         var name : String! = userNameText.text
-        var icon : UIImage! = iconImage.image?.cropImage(w: 300, h: 300)
         
+        let width : Int = Int(selectedImage.size.width)
+        let height : Int = Int(selectedImage.size.height)
+        let smallSize = width < height ? width : height
+        print(width)
+        print(height)
+        print(smallSize)
+        let ratio = smallSize / 300
+        
+        var icon : UIImage! = selectedImage.resizeImage().cropping2square()
         
         if name != "" && icon != nil {
             
@@ -187,9 +197,9 @@ extension TopViewController :UIImagePickerControllerDelegate ,UINavigationContro
     // 写真を選んだ後に呼ばれる処理
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // 選択した写真を取得する
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         // ビューに表示する
-        self.iconImage.image = image
+        self.iconImage.image = selectedImage
         // 写真を選ぶビューを引っ込める
         self.dismiss(animated: true)
     }

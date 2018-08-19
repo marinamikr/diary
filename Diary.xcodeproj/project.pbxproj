@@ -620,7 +620,7 @@
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.ComDiaryyi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -639,7 +639,7 @@
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.marina.apple-samplecode.ComDiaryyi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
