@@ -28,7 +28,7 @@ class AllDiaryViewController: UIViewController {
         diaryTextView.text = contents
         diaryImageView.loadImage(urlString: url)
         dateLabel.text = date
-        likeLabel.text = like
+        likeLabel.text = like + " likes"
 
         // Do any additional setup after loading the view.
     }

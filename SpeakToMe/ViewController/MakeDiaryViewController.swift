@@ -36,6 +36,8 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     
     var myUUID: String!
     
+    var picFlag : Bool = false
+    
     
 //    @IBAction func keyboard() {
 //        self.textView.becomeFirstResponder()
@@ -85,6 +87,8 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         // ビューに表示する
         self.picture.image = image
+        
+        picFlag = true
         // 写真を選ぶビューを引っ込める
         self.dismiss(animated: true)
     }
@@ -244,6 +248,12 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
             let realmModel : RealmModel = RealmModel()
             realmModel.hizuke = dateReturn
             realmModel.honbunn = textView.text
+            
+            if !picFlag {
+                picture.image = UIImage(named: "background1.png")
+                print("imageSet")
+            }
+            
             if picture.image != nil{
                 realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
             }

@@ -27,6 +27,8 @@ class XibTableViewCell: UITableViewCell {
     var date :String!
     var URL :String!
     var like : Int!
+//    var allRecivedDiaryViewController:AllRecivedDiaryViewController!
+//    var position:Int = 0
     
     let ref = Database.database().reference()
     
@@ -50,6 +52,7 @@ class XibTableViewCell: UITableViewCell {
         let data = ["userName":userName,"contents": contents,"date": date,"URL": URL,"like": like] as [String : Any]
         print(data)
         self.ref.child(uuId).child(key).updateChildValues(data)
+//        allRecivedDiaryViewController.likeArray[position] = like
 
     }
 }

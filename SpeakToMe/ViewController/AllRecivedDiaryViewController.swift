@@ -151,6 +151,8 @@ extension AllRecivedDiaryViewController :UITableViewDataSource, UITableViewDeleg
         cell?.date = dateArray[indexPath.row]
         cell?.URL = urlArray[indexPath.row]
         cell?.like = likeArray[indexPath.row]
+//        cell?.allRecivedDiaryViewController = self
+//        cell?.position = indexPath.row
         
         cellArray.append(cell!)
         return cell!
