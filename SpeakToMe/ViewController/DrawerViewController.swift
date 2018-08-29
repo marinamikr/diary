@@ -11,7 +11,7 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var userIcon: UIImageView!
-    var array:[String] = ["MyDiary","FriendDiary","MyQRCode","camera","setting"]
+    var array:[String] = ["自分の愚痴一覧","友達の愚痴一覧","MyQRコード","QRコード読み取り","設定"]
 
     var imageArray:[String] = ["MyDiary.png","MyFriendDiary.png","QRcode.png","Camera.png","Setting.png"]
     

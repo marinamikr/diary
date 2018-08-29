@@ -62,7 +62,7 @@ class TopViewController: UIViewController {
         print(smallSize)
         let ratio = smallSize / 300
         
-        var icon : UIImage! = selectedImage.resizeImage().cropping2square()
+        var icon : UIImage! = selectedImage.resizeImage(maxLong: 300).cropping2square()
         
         if name != "" && icon != nil {
             

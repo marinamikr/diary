@@ -151,10 +151,10 @@ extension UIImage {
     }
     
     /// イメージのサイズを変更
-    func resizeImage() -> UIImage {
+    func resizeImage(maxLong : Int) -> UIImage {
         
         var resizedSize : CGSize!
-        let maxLongSide : CGFloat = 300
+        let maxLongSide : CGFloat = CGFloat(maxLong)
         
         // リサイズが必要か？
         let ss = self.size

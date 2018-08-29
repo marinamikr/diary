@@ -38,6 +38,9 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     
     var picFlag : Bool = false
     
+
+//    var hizukeTest = "2018/08/25"
+    
     
 //    @IBAction func keyboard() {
 //        self.textView.becomeFirstResponder()
@@ -241,6 +244,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
             let realm = try! Realm()
             
             let dateReturn = dateManager.format(date: Date())
+//            let dateReturn = hizukeTest
         
             
             
@@ -314,6 +318,9 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                     let iconURL = result?.iconURL
                     let data = ["userName":name,"contents": self.textView.text!,"date": self.dateManager.format(date: Date()),"URL": downloadURL,"like": 0,"iconURL":iconURL] as [String : Any]
                     
+//                    let data = ["userName":name,"contents": self.textView.text!,"date": self.hizukeTest,"URL": downloadURL,"like": 0,"iconURL":iconURL] as [String : Any]
+                    
+                   
                     let ref = Database.database().reference()
                     
                     ref.child(self.myUUID).childByAutoId().setValue(data)

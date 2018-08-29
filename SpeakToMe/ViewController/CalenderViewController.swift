@@ -14,6 +14,7 @@ import RealmSwift
 class CalenderViewController: UIViewController{
     
     var number: Int = 0
+    let realm = try! Realm()
     
     
     var datemanager2: DateManager = DateManager()
@@ -128,7 +129,7 @@ class CalenderViewController: UIViewController{
         button.target = self
         self.navigationItem.rightBarButtonItem = button
         
-        let realm = try! Realm()
+        
         let result = realm.objects(UserModel.self).last
         var iconImage = UIImage(data: result?.icon  as! Data)
         var resizeIcon = Util.resizeImage(src: iconImage, max: 40).maskCorner(radius: 20)
@@ -257,7 +258,7 @@ extension CalenderViewController: UICollectionViewDataSource, UICollectionViewDe
             //曜日を表示する
             cell.setCell(
                 cellText: CalendarSetting.weekList[indexPath.row],
-                cellTextColor: CalendarSetting.getCalendarColor(indexPath.row)
+                cellTextColor: CalendarSetting.getCalendarColor(indexPath.row),image:nil
             )
             return cell
             
@@ -265,17 +266,33 @@ extension CalenderViewController: UICollectionViewDataSource, UICollectionViewDe
             //該当年月の日付を表示する
             let day: String? = dayCellLists[indexPath.row]
             if isCellUsing(indexPath.row) {
+                
                 let isHoliday: Bool = holidayObj.judgeJapaneseHoliday(year: targetYear, month: targetMonth, day: Int(day!)!)
-                cell.setCell(
-                    cellText: day!,
-                    cellTextColor: CalendarSetting.getCalendarColor(indexPath.row, isHoliday: isHoliday)
-                )
+                
+                let dateText = datemanager2.toDateString(year: targetYear, month: targetMonth, day: Int(day!)!)
+                
+                let result = realm.objects(RealmModel).filter("hizuke == %@",dateText).last
+
+                
+                if result?.image != nil{
+                    cell.setCell(
+                        cellText: day!,
+                        cellTextColor: CalendarSetting.getCalendarColor(indexPath.row, isHoliday: isHoliday),image:UIImage(data: result?.image as! Data)?.resizeImage(maxLong: 100))
+                }else {
+                    cell.setCell(
+                        cellText: day!,
+                        cellTextColor: CalendarSetting.getCalendarColor(indexPath.row, isHoliday: isHoliday),image:nil)
+                }
+            
+               
+                
+                
             } else {
                 cell.setCell(
                     cellText: "",
-                    cellTextColor: CalendarSetting.getCalendarColor(indexPath.row)
-                )
+                    cellTextColor: CalendarSetting.getCalendarColor(indexPath.row),image:nil)
             }
+            
             return cell
         default:
             return cell
