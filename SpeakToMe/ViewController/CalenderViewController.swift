@@ -369,6 +369,12 @@ extension CalenderViewController: CustomDelegate {
         performSegue(withIdentifier: "toSettingViewController", sender: nil)
     }
     
+    func toTimeLine(){
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
+        performSegue(withIdentifier: "toTimeLineViewController", sender: nil)
+    }
+    
 }
 
 

@@ -14,4 +14,5 @@ protocol CustomDelegate {
     func tocamera() -> Void
     func toqrcode() -> Void
     func tosetting() -> Void
+    func toTimeLine() -> Void
 }

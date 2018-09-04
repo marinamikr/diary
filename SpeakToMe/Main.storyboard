@@ -393,6 +393,7 @@
                         <segue destination="Q0q-F8-fbb" kind="show" identifier="toQRViewController" id="IvV-Ct-smf"/>
                         <segue destination="cwJ-LQ-vk5" kind="show" identifier="toAllRecivedDiaryViewController" id="RfT-cI-kdC"/>
                         <segue destination="afD-yH-7Ur" kind="show" identifier="toAddFriendViewController" id="3Jh-bE-jQC"/>
+                        <segue destination="yjY-hJ-08w" kind="show" identifier="toTimeLineViewController" id="k6Z-9o-JfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-Ye-raM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -972,6 +973,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3245.5999999999999" y="-228.93553223388307"/>
+        </scene>
+        <!--Time Line View Controller-->
+        <scene sceneID="K3e-1V-FBj">
+            <objects>
+                <viewController id="yjY-hJ-08w" customClass="TimeLineViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ctx-LD-PEb"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0p-wq-1om"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JR3-P2-TDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihD-MD-qZd">
+                                <rect key="frame" x="164" y="639" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="yjY-hJ-08w" eventType="touchUpInside" id="sMK-JE-cgu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ids-Rc-X6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="-872"/>
         </scene>
         <!--My Diary View Controller-->
         <scene sceneID="GRa-qp-VKV">

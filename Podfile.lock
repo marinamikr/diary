@@ -1,4 +1,5 @@
 PODS:
+  - Cartography (1.1.0)
   - Firebase/Core (4.13.0):
     - FirebaseAnalytics (= 4.2.0)
     - FirebaseCore (= 4.0.20)
@@ -41,16 +42,20 @@ PODS:
   - Realm/Headers (3.0.1)
   - RealmSwift (3.0.1):
     - Realm (= 3.0.1)
+  - "UIColor+FlatColors (0.0.2)"
 
 DEPENDENCIES:
+  - Cartography (~> 1.1.0)
   - Firebase/Core (~> 4.13.0)
   - Firebase/Database (~> 4.13.0)
   - Firebase/Storage (~> 4.13.0)
   - KYDrawerController
   - RealmSwift
+  - "UIColor+FlatColors"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Cartography
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -64,8 +69,10 @@ SPEC REPOS:
     - nanopb
     - Realm
     - RealmSwift
+    - "UIColor+FlatColors"
 
 SPEC CHECKSUMS:
+  Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
   FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
   FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
@@ -79,7 +86,8 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Realm: ba6144c74f835f7497791f6599d63a7755377b83
   RealmSwift: 7d13b1ac4b6022a13f841e3143e7789c9e40ad0d
+  "UIColor+FlatColors": 6c699df7a575281794c688c64cee6c44fd1f93b4
 
-PODFILE CHECKSUM: 4480236f15548628eea2e8588c97b792842f7c95
+PODFILE CHECKSUM: 6505a7a7b76ab1e019dcac01d72e46f96ad6d425
 
 COCOAPODS: 1.5.3

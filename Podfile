@@ -12,5 +12,8 @@ pod 'Firebase/Core', '~> 4.13.0'
 pod 'Firebase/Storage', '~> 4.13.0'
 pod 'Firebase/Database', '~> 4.13.0'
 pod 'KYDrawerController'
+pod 'UIColor+FlatColors'
+pod 'Cartography', '~> 1.1.0'
+
 
 end

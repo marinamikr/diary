@@ -15,6 +15,13 @@
 		AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B02101F37B00B410FE /* CircleImageView.swift */; };
 		AA4F33B42102005500B410FE /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B22102005500B410FE /* SettingTableViewCell.swift */; };
 		AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4F33B32102005500B410FE /* SettingTableViewCell.xib */; };
+		AA76C039213E8B9A0061DE38 /* ZLSwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C035213E8B990061DE38 /* ZLSwipeableView.swift */; };
+		AA76C03A213E8B9A0061DE38 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C036213E8B990061DE38 /* Scheduler.swift */; };
+		AA76C03B213E8B9A0061DE38 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C037213E8B990061DE38 /* Direction.swift */; };
+		AA76C03C213E8B9A0061DE38 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C038213E8B9A0061DE38 /* ViewManager.swift */; };
+		AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03D213E8D6F0061DE38 /* CardView.swift */; };
+		AA76C040213E8ED40061DE38 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03F213E8ED40061DE38 /* TimeLineViewController.swift */; };
+		AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */; };
 		AABA9D082125A85800D4AEE3 /* hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D072125A85800D4AEE3 /* hearts.png */; };
 		AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D092125B31E00D4AEE3 /* imageBack.png */; };
 		CE0F746520FDEF04000D83DB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0F746420FDEF03000D83DB /* background1.png */; };
@@ -79,6 +86,13 @@
 		AA4F33B02101F37B00B410FE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		AA4F33B22102005500B410FE /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		AA4F33B32102005500B410FE /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		AA76C035213E8B990061DE38 /* ZLSwipeableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableView.swift; sourceTree = "<group>"; };
+		AA76C036213E8B990061DE38 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		AA76C037213E8B990061DE38 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		AA76C038213E8B9A0061DE38 /* ViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
+		AA76C03D213E8D6F0061DE38 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AA76C03F213E8ED40061DE38 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViewController.swift; sourceTree = "<group>"; };
 		AABA9D072125A85800D4AEE3 /* hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearts.png; sourceTree = "<group>"; };
 		AABA9D092125B31E00D4AEE3 /* imageBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBack.png; sourceTree = "<group>"; };
 		CE0F746420FDEF03000D83DB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
@@ -173,6 +187,7 @@
 		7539A46F1CE7A57600505E8B /* SpeakToMe */ = {
 			isa = PBXGroup;
 			children = (
+				AA66CB92213E88D600723C44 /* ZLSwipeableViewSwift */,
 				AA4F33AF2101F35D00B410FE /* CustomView */,
 				CE2E6D822101D33A0065CCBB /* Delegate */,
 				CE4676F020F4C4E4009DA351 /* Image */,
@@ -196,9 +211,22 @@
 		AA4F33AF2101F35D00B410FE /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				AA76C03D213E8D6F0061DE38 /* CardView.swift */,
 				AA4F33B02101F37B00B410FE /* CircleImageView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		AA66CB92213E88D600723C44 /* ZLSwipeableViewSwift */ = {
+			isa = PBXGroup;
+			children = (
+				AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */,
+				AA76C037213E8B990061DE38 /* Direction.swift */,
+				AA76C036213E8B990061DE38 /* Scheduler.swift */,
+				AA76C038213E8B9A0061DE38 /* ViewManager.swift */,
+				AA76C035213E8B990061DE38 /* ZLSwipeableView.swift */,
+			);
+			path = ZLSwipeableViewSwift;
 			sourceTree = "<group>";
 		};
 		B47E02D9695204BD0B98BCD9 /* Pods */ = {
@@ -241,6 +269,7 @@
 				CE4676A920F4C349009DA351 /* TopViewController.swift */,
 				CE4676AC20F4C34A009DA351 /* MakeDiaryViewController.swift */,
 				CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */,
+				AA76C03F213E8ED40061DE38 /* TimeLineViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -357,7 +386,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 66M7BL3A9M;
+						DevelopmentTeam = KRD3HBM28P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -442,21 +471,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor+FlatColors/UIColor_FlatColors.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_FlatColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -476,18 +509,23 @@
 				CE4676E320F4C491009DA351 /* DateManager.swift in Sources */,
 				CE4676DA20F4C42E009DA351 /* XibTableViewCell.swift in Sources */,
 				CE4676DC20F4C42E009DA351 /* CustomDrawerTableViewCell.swift in Sources */,
+				AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */,
+				AA76C039213E8B9A0061DE38 /* ZLSwipeableView.swift in Sources */,
 				CE4676B720F4C34B009DA351 /* CalenderViewController.swift in Sources */,
 				CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */,
 				AA4F33B42102005500B410FE /* SettingTableViewCell.swift in Sources */,
 				CE4676E020F4C474009DA351 /* RealmModel.swift in Sources */,
 				CE4676B920F4C34B009DA351 /* DrawerViewController.swift in Sources */,
+				AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */,
 				CE4676B520F4C34B009DA351 /* TopViewController.swift in Sources */,
 				CE4676B620F4C34B009DA351 /* AllMyDiaryViewController.swift in Sources */,
 				CE4676D620F4C42E009DA351 /* MyCustomDiaryTableViewCell.swift in Sources */,
 				CE4676D820F4C42E009DA351 /* NameTableViewCell.swift in Sources */,
 				CE24278920BD5DDE009955AB /* Util.swift in Sources */,
 				CE4676D220F4C42E009DA351 /* CollectionViewCell.swift in Sources */,
+				AA76C040213E8ED40061DE38 /* TimeLineViewController.swift in Sources */,
 				CE4676BB20F4C34B009DA351 /* SettingViewController.swift in Sources */,
+				AA76C03C213E8B9A0061DE38 /* ViewManager.swift in Sources */,
 				AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */,
 				CE4676B820F4C34B009DA351 /* MakeDiaryViewController.swift in Sources */,
 				CE4676E620F4C4A7009DA351 /* Extension.swift in Sources */,
@@ -496,6 +534,8 @@
 				CE4676BA20F4C34B009DA351 /* MyDiaryViewController.swift in Sources */,
 				CE4676BC20F4C34B009DA351 /* AddFriendViewController.swift in Sources */,
 				CE4676DE20F4C43A009DA351 /* QRViewController.swift in Sources */,
+				AA76C03A213E8B9A0061DE38 /* Scheduler.swift in Sources */,
+				AA76C03B213E8B9A0061DE38 /* Direction.swift in Sources */,
 				AA4F33AE2101EA8900B410FE /* UserModel.swift in Sources */,
 				CE4676ED20F4C4DF009DA351 /* CurrentDateSetting.swift in Sources */,
 				7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */,
@@ -616,11 +656,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 66M7BL3A9M;
+				DEVELOPMENT_TEAM = KRD3HBM28P;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zume.school.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -635,11 +675,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 66M7BL3A9M;
+				DEVELOPMENT_TEAM = KRD3HBM28P;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zume.school.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

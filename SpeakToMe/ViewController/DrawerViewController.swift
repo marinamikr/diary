@@ -11,9 +11,9 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var userIcon: UIImageView!
-    var array:[String] = ["自分の愚痴一覧","友達の愚痴一覧","MyQRコード","QRコード読み取り","設定"]
+    var array:[String] = ["自分の愚痴一覧","友達の愚痴一覧","MyQRコード","QRコード読み取り","設定","タイムライン"]
 
-    var imageArray:[String] = ["MyDiary.png","MyFriendDiary.png","QRcode.png","Camera.png","Setting.png"]
+    var imageArray:[String] = ["MyDiary.png","MyFriendDiary.png","QRcode.png","Camera.png","Setting.png","Setting.png"]
     
     var dalegate : CustomDelegate!
     
@@ -90,6 +90,8 @@ extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
         case 4:
             //performSegue(withIdentifier: "toSettingViewController", sender: nil)
             dalegate.tosetting()
+        case 5:
+            dalegate.toTimeLine()
             
         default: break
             
