@@ -20,10 +20,11 @@
 		AA76C03B213E8B9A0061DE38 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C037213E8B990061DE38 /* Direction.swift */; };
 		AA76C03C213E8B9A0061DE38 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C038213E8B9A0061DE38 /* ViewManager.swift */; };
 		AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03D213E8D6F0061DE38 /* CardView.swift */; };
-		AA76C040213E8ED40061DE38 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03F213E8ED40061DE38 /* TimeLineViewController.swift */; };
 		AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */; };
 		AABA9D082125A85800D4AEE3 /* hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D072125A85800D4AEE3 /* hearts.png */; };
 		AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D092125B31E00D4AEE3 /* imageBack.png */; };
+		AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */ = {isa = PBXBuildFile; fileRef = AABB5A762147C2C50010BCF5 /* TimeLine.png */; };
+		AAF53FF32147DAC700102816 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF53FF22147DAC700102816 /* TimeLineViewController.swift */; };
 		CE0F746520FDEF04000D83DB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0F746420FDEF03000D83DB /* background1.png */; };
 		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
 		CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2563BE20FDAEE900C4F948 /* calender_show_white.png */; };
@@ -91,10 +92,11 @@
 		AA76C037213E8B990061DE38 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		AA76C038213E8B9A0061DE38 /* ViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 		AA76C03D213E8D6F0061DE38 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AA76C03F213E8ED40061DE38 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViewController.swift; sourceTree = "<group>"; };
 		AABA9D072125A85800D4AEE3 /* hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearts.png; sourceTree = "<group>"; };
 		AABA9D092125B31E00D4AEE3 /* imageBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBack.png; sourceTree = "<group>"; };
+		AABB5A762147C2C50010BCF5 /* TimeLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeLine.png; sourceTree = "<group>"; };
+		AAF53FF22147DAC700102816 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		CE0F746420FDEF03000D83DB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CE2563BE20FDAEE900C4F948 /* calender_show_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calender_show_white.png; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				CE4676DD20F4C43A009DA351 /* QRViewController.swift */,
 				CE4676B020F4C34A009DA351 /* AddFriendViewController.swift */,
 				CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */,
+				AAF53FF22147DAC700102816 /* TimeLineViewController.swift */,
 				CE4676B220F4C34B009DA351 /* AllRecivedDiaryViewController.swift */,
 				CE4676AD20F4C34A009DA351 /* DrawerViewController.swift */,
 				CE4676AE20F4C34A009DA351 /* MyDiaryViewController.swift */,
@@ -269,7 +272,6 @@
 				CE4676A920F4C349009DA351 /* TopViewController.swift */,
 				CE4676AC20F4C34A009DA351 /* MakeDiaryViewController.swift */,
 				CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */,
-				AA76C03F213E8ED40061DE38 /* TimeLineViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -348,6 +350,7 @@
 				CEE4F11F211F68800008FC2A /* TopViewController1.png */,
 				CE7AF507212662CD0057A925 /* icon.png */,
 				CE7AF50521265E010057A925 /* uzura.ttf */,
+				AABB5A762147C2C50010BCF5 /* TimeLine.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -386,7 +389,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KRD3HBM28P;
+						DevelopmentTeam = V7EPKJW7KG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -429,6 +432,7 @@
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
 				CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */,
 				CE7AF50421265CB30057A925 /* TopView.png in Resources */,
+				AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
@@ -523,7 +527,6 @@
 				CE4676D820F4C42E009DA351 /* NameTableViewCell.swift in Sources */,
 				CE24278920BD5DDE009955AB /* Util.swift in Sources */,
 				CE4676D220F4C42E009DA351 /* CollectionViewCell.swift in Sources */,
-				AA76C040213E8ED40061DE38 /* TimeLineViewController.swift in Sources */,
 				CE4676BB20F4C34B009DA351 /* SettingViewController.swift in Sources */,
 				AA76C03C213E8B9A0061DE38 /* ViewManager.swift in Sources */,
 				AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */,
@@ -535,6 +538,7 @@
 				CE4676BC20F4C34B009DA351 /* AddFriendViewController.swift in Sources */,
 				CE4676DE20F4C43A009DA351 /* QRViewController.swift in Sources */,
 				AA76C03A213E8B9A0061DE38 /* Scheduler.swift in Sources */,
+				AAF53FF32147DAC700102816 /* TimeLineViewController.swift in Sources */,
 				AA76C03B213E8B9A0061DE38 /* Direction.swift in Sources */,
 				AA4F33AE2101EA8900B410FE /* UserModel.swift in Sources */,
 				CE4676ED20F4C4DF009DA351 /* CurrentDateSetting.swift in Sources */,
@@ -656,7 +660,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,7 +679,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

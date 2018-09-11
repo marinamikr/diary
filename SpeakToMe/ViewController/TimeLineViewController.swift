@@ -26,6 +26,7 @@ class TimeLineViewController: UIViewController {
     var urlArray = [String]()
     var iconURLArray = [String]()
     var likeArray = [Int]()
+    var likeImage = [String]()
     
     var keyArray = [String]()
     var uuIdArray = [String]()
@@ -96,11 +97,13 @@ class TimeLineViewController: UIViewController {
         swipeableView.didRewinded = {view in
             
         }
+        
+        
         constrain(swipeableView, view) { view1, view2 in
             view1.left == view2.left+10
             view1.right == view2.right - 10
-            view1.top == view2.top + 90
-            view1.height == view1.width
+            view1.top == view2.top + 180
+            view1.height == view1.width + 90
         }
     }
     
@@ -116,7 +119,19 @@ class TimeLineViewController: UIViewController {
             cardView.setContentsText(text: contentsArray[index])
             cardView.setIconImage(url: iconURLArray[index])
             cardView.setPicture(url: urlArray[index])
+            cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
+            cardView.setDateLabel(dateText: dateArray[index])
+            cardView.setHeartLabel(heartText: String(likeArray[index]))
+            cardView.setBackGroundColor(hex: "FF0000")
+            
+           
+           
+
+
             index = index + 1
+            if index == userNameArray.count {
+                index = 0
+            }
         }
         return cardView
         

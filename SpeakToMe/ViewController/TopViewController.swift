@@ -37,6 +37,9 @@ class TopViewController: UIViewController {
         if (self.userDefaults.string(forKey: "UserName") != nil) {
             self.performSegue(withIdentifier: "toMainViewController", sender: nil)
         }
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

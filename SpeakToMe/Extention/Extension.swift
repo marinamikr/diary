@@ -185,7 +185,33 @@ extension UIImage {
 
 }
 
+extension UIView {
+    func innerShadow() {
+        let path = UIBezierPath(rect: CGRect(x: -5.0, y: self.bounds.size.height-5.0, width: self.bounds.size.width + 5.0, height: 5.0 ))
+        let innerLayer = CALayer()
+        innerLayer.frame = self.bounds
+        innerLayer.masksToBounds = true
+        innerLayer.shadowColor = UIColor.black.cgColor
+        innerLayer.shadowOffset = CGSize(width: 2.5, height: 2.5)
+        innerLayer.shadowOpacity = 0.5
+        innerLayer.shadowPath = path.cgPath
+        self.layer.addSublayer(innerLayer)
+    }
+}
 
+extension UIColor {
+    convenience init(hex: String, alpha: CGFloat) {
+        let v = hex.map { String($0) } + Array(repeating: "0", count: max(6 - hex.count, 0))
+        let r = CGFloat(Int(v[0] + v[1], radix: 16) ?? 0) / 255.0
+        let g = CGFloat(Int(v[2] + v[3], radix: 16) ?? 0) / 255.0
+        let b = CGFloat(Int(v[4] + v[5], radix: 16) ?? 0) / 255.0
+        self.init(red: r, green: g, blue: b, alpha: alpha)
+    }
+    
+    convenience init(hex: String) {
+        self.init(hex: hex, alpha: 1.0)
+    }
+}
 
 
 
