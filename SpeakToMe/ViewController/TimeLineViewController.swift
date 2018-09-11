@@ -100,7 +100,7 @@ class TimeLineViewController: UIViewController {
             view1.left == view2.left+10
             view1.right == view2.right - 10
             view1.top == view2.top + 90
-            view1.height == 245
+            view1.height == view1.width
         }
     }
     
@@ -183,6 +183,7 @@ class TimeLineViewController: UIViewController {
                         print(self.keyArray)
                         print(self.uuIdArray)
                         print(self.contentsArray)
+                       
                         
                     })
                     
