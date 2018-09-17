@@ -11,6 +11,7 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var userIcon: UIImageView!
+    @IBOutlet weak var userName: UILabel!
     var array:[String] = ["自分の愚痴一覧","MyQRコード","QRコード読み取り","設定"]
 
     var imageArray:[String] = ["MyDiary.png","QRcode.png","Camera.png","Setting.png"]
@@ -32,7 +33,7 @@ class DrawerViewController: UIViewController {
         let result = realm.objects(UserModel.self).first
         var iconImage = UIImage(data: result?.icon  as! Data)
         userIcon.image = iconImage
-//        userName.text = result?.nickName
+        userName.text = result?.nickName
     
         
     }

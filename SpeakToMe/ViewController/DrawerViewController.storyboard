@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o6b-x9-2Aj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o6b-x9-2Aj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mamelon.otf">
+            <string>Mamelon</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Drawer View Controller-->
         <scene sceneID="KYi-WN-lF8">
@@ -15,36 +23,51 @@
                         <viewControllerLayoutGuide type="bottom" id="zof-W3-Ttj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XRP-Ta-D5c">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wxY-Pf-req">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLC-t5-yvc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="QLC-t5-yvc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QLC-t5-yvc" secondAttribute="height" multiplier="1:1" id="fHB-tW-nOF"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-5Y-4kI">
-                                        <rect key="frame" x="0.0" y="375" width="375" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCf-Uf-Dkx">
+                                        <rect key="frame" x="0.0" y="375" width="375" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NR-es-jb4">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="b6M-cI-rNO"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まりな" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-5Y-4kI">
+                                                <rect key="frame" x="15" y="0.0" width="360" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" name="Mamelon" family="Mamelon" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="YXU-Sf-nN1"/>
+                                        </constraints>
+                                    </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-IF-oXT">
-                                        <rect key="frame" x="0.0" y="375" width="375" height="393"/>
+                                        <rect key="frame" x="0.0" y="415" width="375" height="232"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="WMs-IF-oXT" firstAttribute="leading" secondItem="wxY-Pf-req" secondAttribute="leading" id="DfJ-St-LVm"/>
+                                    <constraint firstAttribute="trailing" secondItem="WMs-IF-oXT" secondAttribute="trailing" id="Rn8-1N-7ei"/>
                                     <constraint firstItem="QLC-t5-yvc" firstAttribute="leading" secondItem="wxY-Pf-req" secondAttribute="leading" id="WDl-Xv-n06"/>
-                                    <constraint firstAttribute="bottom" secondItem="WMs-IF-oXT" secondAttribute="bottom" id="Zpr-wG-S66"/>
+                                    <constraint firstAttribute="bottom" secondItem="WMs-IF-oXT" secondAttribute="bottom" id="eC3-Yc-Waq"/>
                                     <constraint firstAttribute="trailing" secondItem="QLC-t5-yvc" secondAttribute="trailing" id="frY-bb-rmb"/>
-                                    <constraint firstAttribute="trailing" secondItem="WMs-IF-oXT" secondAttribute="trailing" id="iy6-dR-zyx"/>
-                                    <constraint firstItem="WMs-IF-oXT" firstAttribute="top" secondItem="QLC-t5-yvc" secondAttribute="bottom" id="xhi-p0-o40"/>
+                                    <constraint firstItem="WMs-IF-oXT" firstAttribute="leading" secondItem="wxY-Pf-req" secondAttribute="leading" id="nyR-3n-jzx"/>
                                     <constraint firstItem="QLC-t5-yvc" firstAttribute="top" secondItem="wxY-Pf-req" secondAttribute="top" id="zAR-Hn-Spq"/>
                                 </constraints>
                             </stackView>
@@ -61,11 +84,15 @@
                     <connections>
                         <outlet property="table" destination="WMs-IF-oXT" id="Ven-7s-bG8"/>
                         <outlet property="userIcon" destination="QLC-t5-yvc" id="BdO-vu-99q"/>
+                        <outlet property="userName" destination="F9Q-5Y-4kI" id="Ihm-t4-wVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phR-Rf-omS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="421"/>
+            <point key="canvasLocation" x="138.40000000000001" y="419.64017991004499"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="QRcode.png" width="156" height="156"/>
+    </resources>
 </document>

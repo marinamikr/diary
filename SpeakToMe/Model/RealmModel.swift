@@ -14,4 +14,8 @@ class RealmModel: Object {
     dynamic var hizuke = String()
     dynamic var honbunn = String()
     dynamic var image =  NSData()
+    
+    dynamic var UUID = String()
+    dynamic var key = String()
+    
 }

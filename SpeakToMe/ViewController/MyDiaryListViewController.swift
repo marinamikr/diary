@@ -17,21 +17,25 @@ class MyDiaryListViewController: UIViewController {
     
     var swipeableView : ZLSwipeableView! = nil
     let realm = try! Realm()
+    var ref:DatabaseReference!
     
     var userDefaults:UserDefaults = UserDefaults.standard
     
     //本文、ユーザー名、日付の配列
-   
+    
     var dateArray = [String]()
     var contentsArray = [String]()
     var imageArray = [UIImage]()
+    var keyArray = [String]()
+    var myID :String!
     var myName :String!
     var iconImage :UIImage!
-   
+    
     
     var index = 0
     
     var isFinish = false
+    var handler: UInt = 0
     
     
     
@@ -49,10 +53,11 @@ class MyDiaryListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         getUserData()
         getUserContents()
         setUpSwipeableView()
-       
+        
     }
     
     
@@ -71,6 +76,7 @@ class MyDiaryListViewController: UIViewController {
         var icon = UIImage(data: result?.icon  as! Data)
         iconImage = icon
         myName = result?.nickName
+        myID = Util.getUUID()
     }
     
     func setUpSwipeableView() {
@@ -133,11 +139,17 @@ class MyDiaryListViewController: UIViewController {
             cardView.setContentsText(text: contentsArray[index])
             cardView.setIconImage(image: iconImage.maskCorner(radius: iconImage.size.width / 2)!)
             
-//            cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
+            //            cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
             cardView.setDateLabel(dateText: dateArray[index])
             cardView.setIndex(index: index)
             cardView.setPicture(image: imageArray[index])
             cardView.setShadow()
+            
+            if keyArray[index] != ""{
+                getLikeData(UUID: myID, key: keyArray[index], card: cardView)
+            }
+            
+            
             
             
             //ランダムにbackgroundのcolorを指定する
@@ -206,21 +218,26 @@ class MyDiaryListViewController: UIViewController {
                 dateArray.append(result.hizuke)
                 contentsArray.append(result.honbunn)
                 imageArray.append(UIImage(data:result.image as Data)!)
+                keyArray.append(result.key)
             }
         }
         
-        dateArray.reverse()
-        contentsArray.reverse()
-        imageArray.reverse()
+//        dateArray.reverse()
+//        contentsArray.reverse()
+//        imageArray.reverse()
         
     }
     
-    @IBAction func test(_ sender: Any) {
-        index = 0
-        setUpSwipeableView()
+    func getLikeData(UUID:String,key:String,card:MyCardView) -> Void {
+        
+        handler = self.ref.child(UUID).child(key).observe(.value, with: {snapshot  in
+            let postDict = snapshot.value as! [String : AnyObject]
+            print("ログ" + String(postDict["like"] as! Int))
+            card.setHeartLabel(heartText:String(postDict["like"] as! Int))
+            card.setHeartImage(image: UIImage(named: "hearts.png")!)
+            self.ref.child(UUID).child(key).removeObserver(withHandle: self.handler)
+        })
     }
-    
-    
     
     //右側のボタンが押されたら呼ばれる
     internal func rightBarBtnClicked(sender: UIButton){

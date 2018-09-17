@@ -38,6 +38,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     
     var picFlag : Bool = false
     
+    let realm = try! Realm()
 
 //    var hizukeTest = "2018/08/25"
     
@@ -244,47 +245,20 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         
         if textView.text != ""{
             
-            // デフォルトのRealmを取得
-            let realm = try! Realm()
-            
-            let dateReturn = dateManager.format(date: Date())
-//            let dateReturn = hizukeTest
-        
             
             
-            // 通常のSwiftのオブジェクトと同じように扱える
-            let realmModel : RealmModel = RealmModel()
-            realmModel.hizuke = dateReturn
-            realmModel.honbunn = textView.text
-            
-            if !picFlag {
-                picture.image = UIImage(named: "background1.png")
-                print("imageSet")
-            }
-            
-            if picture.image != nil{
-                realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
-            }
-            
-            
-            //書き込みは必ずrealm.write内
-            try! realm.write {
-                realm.add(realmModel)
-            }
-            
-            print(dateReturn)
             let alert: UIAlertController = UIAlertController(title:"保存が完了しました。共有しますか？",message:"",preferredStyle: .alert)
             let shareAction = UIAlertAction(title: "YES", style: .default) {
                 action in
                 Util.printLog(viewC: self, tag: "共有アラート", contents: "共有する")
-                
                 self.sendMyDiary()
                 self.navigationController?.popViewController(animated: true)        }
             
             let closeAction = UIAlertAction(title: "NO", style: .default) {
                 action in
-                Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
                 
+                Util.printLog(viewC: self, tag: "共有アラート", contents: "共有しない")
+                self.saveMyDiary()
                 self.navigationController?.popViewController(animated: true)
             }
             alert.addAction(shareAction)
@@ -293,6 +267,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         }
         
     }
+    
     func sendMyDiary() -> Void {
         
         // strageの一番トップのReferenceを指定
@@ -326,8 +301,34 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                     
                    
                     let ref = Database.database().reference()
+                    let sendRef = ref.child(self.myUUID).childByAutoId()
+                    sendRef.setValue(data)
                     
-                    ref.child(self.myUUID).childByAutoId().setValue(data)
+                
+                    //保存処理
+                    let dateReturn = self.dateManager.format(date: Date())
+                    //            let dateReturn = hizukeTest
+                    let realmModel : RealmModel = RealmModel()
+                    realmModel.hizuke = dateReturn
+                    realmModel.honbunn = self.textView.text
+                    realmModel.UUID = Util.getUUID()
+                    realmModel.key = sendRef.key
+                    
+                    if !self.picFlag {
+                        self.picture.image = UIImage(named: "background1.png")
+                        print("imageSet")
+                    }
+                    
+                    if self.picture.image != nil{
+                        realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
+                    }
+                    
+                    print(realmModel)
+                    
+                    try! realm.write {
+                        realm.add(realmModel)
+                    }
+                    
                     
                 })
                 
@@ -336,6 +337,33 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         
         
     }
+    
+    func saveMyDiary() -> Void {
+        
+        let dateReturn = dateManager.format(date: Date())
+        //            let dateReturn = hizukeTest
+        // 通常のSwiftのオブジェクトと同じように扱える
+        let realmModel : RealmModel = RealmModel()
+        realmModel.hizuke = dateReturn
+        realmModel.honbunn = textView.text
+        realmModel.UUID = Util.getUUID()
+        realmModel.key = ""
+        
+        if !picFlag {
+            picture.image = UIImage(named: "background1.png")
+            print("imageSet")
+        }
+        
+        if picture.image != nil{
+            realmModel.image = UIImageJPEGRepresentation(self.picture.image!, 1.0) as! NSData
+        }
+        //書き込みは必ずrealm.write内
+        print(realmModel)
+        try! realm.write {
+            realm.add(realmModel)
+        }
+    }
+    
     
     @IBAction func toSecondViewController(_ sender: Any){
         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
