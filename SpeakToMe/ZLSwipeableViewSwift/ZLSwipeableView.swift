@@ -37,7 +37,7 @@ public struct Movement {
 open class ZLSwipeableView: UIView {
     
     // MARK: Data Source
-    open var numberOfActiveView = UInt(4)
+    open var numberOfActiveView = UInt(2)
     open var nextView: NextViewHandler? {
         didSet {
             loadViews()
@@ -129,6 +129,7 @@ open class ZLSwipeableView: UIView {
     
     // top view first
     open func activeViews() -> [UIView] {
+        
         return allViews().filter() {
             view in
             guard let viewManager = viewManagers[view] else { return false }

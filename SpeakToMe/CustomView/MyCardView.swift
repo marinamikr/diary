@@ -1,9 +1,9 @@
 //
-//  CardView.swift
-//  DatabaseApp
+//  MyCardView.swift
+//  SpeakToMe
 //
-//  Created by 橋詰明宗 on 2017/09/07.
-//  Copyright © 2017年 橋詰明宗. All rights reserved.
+//  Created by User on 2018/07/20.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,6 @@ import Cartography
 import Firebase
 
 class MyCardView: UIView {
-    
     
     let iconImageView = UIImageView()
     let userNameLabel = UILabel()
@@ -23,11 +22,8 @@ class MyCardView: UIView {
     let view1 = UIView()
     let view2 = UIView()
     var contentView : UIView!
-    
     let ref = Database.database().reference()
-    
     var postDict :[String : AnyObject]!
-    
     var UUID: String!
     var key: String!
     var userName :String!
@@ -56,16 +52,12 @@ class MyCardView: UIView {
         layer.shadowRadius = 4.0
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
-        
         // Corner Radius
         layer.cornerRadius = 10.0;
         self.clipsToBounds = true
-        
         contentView = UIView(frame: self.bounds)
         contentView.backgroundColor = UIColor.white
-        
         self.addSubview(contentView)
-        
         //SetFont
         contentsLabel.font = UIFont(name: "Mamelon", size: contentsLabel.font.pointSize)
         userNameLabel.font = UIFont(name: "Mamelon", size: userNameLabel.font.pointSize)
@@ -97,11 +89,6 @@ class MyCardView: UIView {
         dateLabel.adjustsFontSizeToFitWidth = true
         dateLabel.minimumScaleFactor = 0.3
         
-        
-        
-        
-        
-        
         contentView.addSubview(pictureImageView)
         contentView.addSubview(userNameLabel)
         contentView.addSubview(heartImageView)
@@ -111,10 +98,6 @@ class MyCardView: UIView {
         contentView.addSubview(contentsLabel)
         contentView.addSubview(view1)
         contentView.addSubview(view2)
-        
-        
-        
-        
         
         constrain(iconImageView, contentView) { view1, view2 in
             view1.left == view2.left + 10
@@ -128,7 +111,6 @@ class MyCardView: UIView {
             view1.height == 35
             view1.width == (view3.width - 35) * 0.4
         }
-        
         constrain(view1, userNameLabel,dateLabel) { view1, view2 ,view3 in
             view1.left == view2.right
             view1.top == view2.top
@@ -136,7 +118,6 @@ class MyCardView: UIView {
             view1.height == 35
             
         }
-        
         constrain(dateLabel, contentView,contentView) { view1, view2,view3 in
             view1.right == view2.right - 10
             view1.top == view2.top + 10
@@ -149,7 +130,6 @@ class MyCardView: UIView {
             view1.height == view2.height - 130
             view1.width == view2.width
         }
-        
         constrain(contentsLabel, contentView) { view1, view2 in
             view1.left == view2.left +  10
             view1.bottom == view2.bottom - 10
@@ -163,15 +143,12 @@ class MyCardView: UIView {
             view1.height == view2.height * 0.5
             
         }
-        
         constrain(heartImageView, contentsLabel) { view1, view2 in
             view1.left == view2.right + 10
             view1.bottom == view2.bottom
             view1.height == view2.height * 0.5
             view1.width == view1.height
         }
-        
-        
         constrain(heartLabel, heartImageView,contentView) { view1, view2,view3 in
             view1.left == view2.right
             view1.right == view3.right
@@ -179,12 +156,6 @@ class MyCardView: UIView {
             view1.height == view2.height
             
         }
-        
-        
-        
-        
-        
-        
     }
     
     func setPicture(image: UIImage){
@@ -204,10 +175,12 @@ class MyCardView: UIView {
         self.userName = userName
         userNameLabel.text = userName
     }
+    
     func setHeartLabel(heartText: String){
         self.like = Int(heartText)
         heartLabel.text = heartText
     }
+    
     func setDateLabel(dateText: String){
         self.date = dateText
         dateLabel.text = dateText
@@ -220,8 +193,6 @@ class MyCardView: UIView {
     func setIndex(index: Int){
         self.index = index
     }
-    
-    
     
     func setBackGroundColor(hex:String){
         userNameLabel.backgroundColor = UIColor(hex: hex)

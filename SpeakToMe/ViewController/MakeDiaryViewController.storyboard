@@ -162,12 +162,13 @@
                     <connections>
                         <outlet property="picture" destination="vQL-IX-aC4" id="GYG-8K-2K4"/>
                         <outlet property="recordButton" destination="7xe-MP-Nm9" id="WtH-Dp-x5U"/>
+                        <outlet property="saveButton" destination="yON-hj-b55" id="fnu-dg-yeo"/>
                         <outlet property="textView" destination="ggL-NT-4I1" id="FcW-fL-5hR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3245.5999999999999" y="-229.06403940886702"/>
+            <point key="canvasLocation" x="3010" y="-307"/>
         </scene>
     </scenes>
     <resources>

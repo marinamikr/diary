@@ -1,11 +1,10 @@
 //
-//  ViewController.swift
-//  DatabaseApp
+//  TimeLineViewController.swift
+//  SpeakToMe
 //
-//  Created by 橋詰明宗 on 2017/09/07.
-//  Copyright © 2017年 橋詰明宗. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
-
 import UIKit
 import Cartography
 import RealmSwift
@@ -17,9 +16,7 @@ class TimeLineViewController: UIViewController {
     
     var swipeableView : ZLSwipeableView! = nil
     let realm = try! Realm()
-    
     var userDefaults:UserDefaults = UserDefaults.standard
-    
     //本文、ユーザー名、日付の配列
     var userNameArray = [String]()
     var dateArray = [String]()
@@ -28,17 +25,13 @@ class TimeLineViewController: UIViewController {
     var iconURLArray = [String]()
     var likeArray = [Int]()
     var likeImage = [String]()
-    
     var keyArray = [String]()
     var uuIdArray = [String]()
-    
     var handler: UInt = 0
     var ref:DatabaseReference!
-    
     var index = 0
-    
-    var isFinish = false
-    
+    var isSetUpZLSwipeableView = false
+    static var isRenew = false
     
     
     override func viewDidLayoutSubviews() {
@@ -52,32 +45,46 @@ class TimeLineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
-        getUserContents()
-        
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
-        setUpNavigation()
-        
-        
+        if (self.userDefaults.string(forKey: "UserName") == nil) {
+            self.performSegue(withIdentifier: "toTopViewController", sender: nil)
+        }
     }
     
-    
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-//        while !isFinish {
-//            print("hoge")
-//        }
-//        setUpSwipeableView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (self.userDefaults.string(forKey: "UserName") != nil) {
+            let elDrawer = self.navigationController?.parent as! KYDrawerController
+            (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
+            ref = Database.database().reference()
+            setUpNavigation()
+            if TimeLineViewController.isRenew{
+                index = 0
+                var delview = self.view.viewWithTag(1)
+                delview?.removeFromSuperview()
+                setUpSwipeableView()
+                getUserContents()
+                TimeLineViewController.isRenew = false
+            }else{
+                getUserContents()
+            }
+            if !isSetUpZLSwipeableView{
+                setUpSwipeableView()
+                isSetUpZLSwipeableView = true
+            }
+        }
+        if TimeLineViewController.isRenew{
+            var delview = self.view.viewWithTag(1)
+            delview?.removeFromSuperview()
+            setUpSwipeableView()
+            getUserContents()
+            TimeLineViewController.isRenew = false
+        }
     }
     
     func setUpSwipeableView() {
-        
         swipeableView = ZLSwipeableView()
-        print("追加")
+        swipeableView.tag = 1
         view.addSubview(swipeableView)
-        
         swipeableView.didStart = {view, location in
             print("Did start swiping view at location: \(location)")
         }
@@ -91,12 +98,15 @@ class TimeLineViewController: UIViewController {
         swipeableView.didSwipe = {view, direction, vector in
             print("Did swipe view in direction: \(direction), vector: \(vector)")
             let card = self.swipeableView.history.last as! CardView
-           
-            
             if direction == Direction.Left{
                 card.addLike()
             }
-            
+            if let nextCard = self.swipeableView.topView(){
+                if (nextCard as! CardView).userName == nil {
+                    print("karate")
+                    self.swipeableView.swipeTopView(inDirection: Direction.Right)
+                }
+            }
         }
         swipeableView.didCancel = {view in
             print("Did cancel swiping view")
@@ -104,17 +114,10 @@ class TimeLineViewController: UIViewController {
         swipeableView.didTap = {view, location in
             print("Did tap at location \(location)")
         }
-        
         swipeableView.didDisappear = { view in
             print("Did disappear swiping view")
             
         }
-        //
-        swipeableView.didRewinded = {view in
-            
-        }
-        
-        
         constrain(swipeableView, view) { view1, view2 in
             view1.left == view2.left + 30
             view1.right == view2.right - 30
@@ -123,13 +126,9 @@ class TimeLineViewController: UIViewController {
         }
     }
     
-    // MARK: ()
     func nextCardView() -> UIView? {
-        
         let cardView = CardView(frame: swipeableView.bounds)
         cardView.backgroundColor = UIColor.white
-        
-        
         if userNameArray.count > index{
             cardView.setUserName(userName: userNameArray[index])
             cardView.setContentsText(text: contentsArray[index])
@@ -142,8 +141,6 @@ class TimeLineViewController: UIViewController {
             cardView.setkey(key: keyArray[index])
             cardView.setIndex(index: index)
             cardView.setShadow()
-            
-            
             //ランダムにbackgroundのcolorを指定する
             var number = Int(arc4random_uniform(5))
             if number == 0 {
@@ -159,34 +156,18 @@ class TimeLineViewController: UIViewController {
             } else {
                 cardView.setBackGroundColor(hex: "ffb7b7")
             }
-            
-            
-            
-            
             index = index + 1
             if index == userNameArray.count {
-//                index = 0
+                //                index = 0
             }
         }else{
             cardView.setClear()
         }
         return cardView
-        
     }
-    
-    
     
     func getTopView() -> CardView {
         return swipeableView.topView() as! CardView
-    }
-    
-    
-    @IBAction func back(_ sender: UIButton) {
-        
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func redo(_ sender: UIButton) {
-        swipeableView.rewind()
     }
     
     func getUserContents(){
@@ -198,33 +179,22 @@ class TimeLineViewController: UIViewController {
         iconURLArray = [String]()
         likeArray = [Int]()
         likeImage = [String]()
-        
         keyArray = [String]()
         uuIdArray = [String]()
-        
         userDefaults.register(defaults: ["FriendsIDArray" : Array<String>()])
         var idArray = userDefaults.array(forKey: "FriendsIDArray") as! Array<String>
-        
         for id in idArray {
             handler = self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
-                print(snapshot)
                 let postDict = snapshot.value as! [String : Any]
-                print(postDict)
                 var permission : Bool = postDict["read"] as! Bool
                 if permission {
                     self.ref.child(id).observe(.value, with: {snapshot  in
-                        
-                        for child in snapshot.children {
-                            
+                        for i in 0 ..< snapshot.children.allObjects.count {
+                            let child = snapshot.children.allObjects[i]
                             let postDict = (child as! DataSnapshot).value as! [String : AnyObject]
-                            Util.printLog(viewC: self, tag: "URL", contents: postDict)
-                            Util.printLog(viewC: self, tag: "URL", contents: postDict["URL"])
-                            
                             if Util.differenceOfDate(date1: Date(), date2: (postDict["date"] as! String).getDate()) > 3 {
                                 self.ref.child(id).child((child as AnyObject).key).removeValue()
-                                
                             }else{
-                                print((postDict["date"] as! String).getDate())
                                 self.userNameArray.append(postDict["userName"] as! String)
                                 self.dateArray.append(postDict["date"] as! String)
                                 self.contentsArray.append(postDict["contents"] as! String)
@@ -233,40 +203,23 @@ class TimeLineViewController: UIViewController {
                                 self.keyArray.append((child as! DataSnapshot).key)
                                 self.uuIdArray.append(id)
                                 self.iconURLArray.append(postDict["iconURL"] as! String)
-                                
                             }
-//                            print(id)
-//                            print(idArray.last)
-//                            if id == idArray.last{
-//                                self.isFinish = true
-//                            }
-                            
+                            if id == idArray.last && i == snapshot.children.allObjects.count - 1 {
+                                if self.userNameArray.count > self.index{
+                                    self.swipeableView.nextView = {
+                                        return self.nextCardView()
+                                    }
+                                }
+                            }
                         }
-                        
                         self.ref.child(id).removeAllObservers()
                         self.ref.child("permission").child(id).removeObserver(withHandle: self.handler)
-                        
-                        
                     })
-                    
-                    
                 }
             })
-            
-           
-            
-            
         }
-        
-        
-        
     }
-    
-    @IBAction func test(_ sender: Any) {
-        index = 0
-        setUpSwipeableView()
-    }
-    
+  
     func setUpNavigation() {
         let button = UIBarButtonItem()
         var image = UIImage(named:"add_diary.png")
@@ -276,12 +229,9 @@ class TimeLineViewController: UIViewController {
         button.action = #selector(rightBarBtnClicked(sender:))
         button.target = self
         self.navigationItem.rightBarButtonItem = button
-        
-        
         let result = realm.objects(UserModel.self).last
         var iconImage = UIImage(data: result?.icon  as! Data)
         var resizeIcon = Util.resizeImage(src: iconImage, max: 40).maskCorner(radius: 20)
-        
         let button2 = UIBarButtonItem()
         button2.image = resizeIcon?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         button2.style = UIBarButtonItemStyle.plain
@@ -289,24 +239,20 @@ class TimeLineViewController: UIViewController {
         button2.target = self
         self.navigationItem.leftBarButtonItem = button2
         
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)!]
         
     }
     
     //右側のボタンが押されたら呼ばれる
     internal func rightBarBtnClicked(sender: UIButton){
-        print("rightBarBtnClicked")
         self.performSegue(withIdentifier: "toMakeDiaryViewController", sender: nil)
     }
     
     //左側のボタンが押されたら呼ばれる
     internal func leftBarBtnClicked(sender: UIButton){
-        print("leftBarBtnClicked")
         let elDrawer = self.navigationController?.parent as! KYDrawerController
         elDrawer.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
     }
-    
-    
-    
     
 }
 
@@ -348,6 +294,4 @@ extension TimeLineViewController: CustomDelegate {
         elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
         performSegue(withIdentifier: "toTimeLineViewController", sender: nil)
     }
-    
-    
 }

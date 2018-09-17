@@ -28,6 +28,7 @@
 		AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B02101F37B00B410FE /* CircleImageView.swift */; };
 		AA4F33B42102005500B410FE /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B22102005500B410FE /* SettingTableViewCell.swift */; };
 		AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4F33B32102005500B410FE /* SettingTableViewCell.xib */; };
+		AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA63BE302150157C001A9496 /* TopViewController.storyboard */; };
 		AA76C039213E8B9A0061DE38 /* ZLSwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C035213E8B990061DE38 /* ZLSwipeableView.swift */; };
 		AA76C03A213E8B9A0061DE38 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C036213E8B990061DE38 /* Scheduler.swift */; };
 		AA76C03B213E8B9A0061DE38 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C037213E8B990061DE38 /* Direction.swift */; };
@@ -116,6 +117,7 @@
 		AA4F33B02101F37B00B410FE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		AA4F33B22102005500B410FE /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		AA4F33B32102005500B410FE /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		AA63BE302150157C001A9496 /* TopViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
 		AA76C035213E8B990061DE38 /* ZLSwipeableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableView.swift; sourceTree = "<group>"; };
 		AA76C036213E8B990061DE38 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		AA76C037213E8B990061DE38 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -127,7 +129,7 @@
 		AABB5A762147C2C50010BCF5 /* TimeLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeLine.png; sourceTree = "<group>"; };
 		AAC0B644214FA2C300D9F723 /* MyDiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryListViewController.swift; sourceTree = "<group>"; };
 		AAC0B648214FA41B00D9F723 /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
-		AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MyDiaryListViewController.storyboard; path = ViewController/MyDiaryListViewController.storyboard; sourceTree = "<group>"; };
+		AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyDiaryListViewController.storyboard; sourceTree = "<group>"; };
 		AADFC8EA214FB28F00554EBD /* add_diary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_diary.png; sourceTree = "<group>"; };
 		AAF53FF22147DAC700102816 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		CE0F746420FDEF03000D83DB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
@@ -235,7 +237,6 @@
 				CE24278720BD5DC6009955AB /* Util */,
 				7539A4701CE7A57600505E8B /* AppDelegate.swift */,
 				CE4D06B820E2305B00E87A14 /* Main.storyboard */,
-				AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */,
 				7539A4771CE7A57600505E8B /* Assets.xcassets */,
 				7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */,
 				7539A47C1CE7A57600505E8B /* Info.plist */,
@@ -313,6 +314,8 @@
 				AA10BC48214F6F5C00C86ED8 /* AllDiaryViewController.storyboard */,
 				AA10BC46214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard */,
 				AA10BC44214F6EF200C86ED8 /* MakeDiaryViewController.storyboard */,
+				AA63BE302150157C001A9496 /* TopViewController.storyboard */,
+				AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */,
 				CE4676DD20F4C43A009DA351 /* QRViewController.swift */,
 				CE4676B020F4C34A009DA351 /* AddFriendViewController.swift */,
 				CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */,
@@ -484,6 +487,7 @@
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
+				AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */,
 				CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */,
 				CE2E6D862101D4540065CCBB /* Camera.png in Resources */,
 				CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */,

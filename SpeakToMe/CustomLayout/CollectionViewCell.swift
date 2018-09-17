@@ -10,14 +10,14 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var cellLabel: UILabel!
     
+    @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
     //セルの表示を行うメソッド
     func setCell(cellText: String, cellTextColor: UIColor,image:UIImage!) {
         cellLabel?.text = cellText
@@ -26,5 +26,4 @@ class CollectionViewCell: UICollectionViewCell {
             cellImage.image = image
         }
     }
-    
 }

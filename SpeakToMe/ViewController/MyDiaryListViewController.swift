@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
-//  DatabaseApp
+//  MyDiaryListViewController.swift
+//  SpeakToMe
 //
-//  Created by 橋詰明宗 on 2017/09/07.
-//  Copyright © 2017年 橋詰明宗. All rights reserved.
+//  Created by User on 2018/06/05.
+//  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
 import UIKit
@@ -18,11 +18,8 @@ class MyDiaryListViewController: UIViewController {
     var swipeableView : ZLSwipeableView! = nil
     let realm = try! Realm()
     var ref:DatabaseReference!
-    
     var userDefaults:UserDefaults = UserDefaults.standard
-    
     //本文、ユーザー名、日付の配列
-    
     var dateArray = [String]()
     var contentsArray = [String]()
     var imageArray = [UIImage]()
@@ -30,20 +27,13 @@ class MyDiaryListViewController: UIViewController {
     var myID :String!
     var myName :String!
     var iconImage :UIImage!
-    
-    
     var index = 0
-    
     var isFinish = false
     var handler: UInt = 0
     
     
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print(imageArray.count)
-        print(index)
-        
         if contentsArray.count > index{
             swipeableView.nextView = {
                 return self.nextCardView()
@@ -57,17 +47,6 @@ class MyDiaryListViewController: UIViewController {
         getUserData()
         getUserContents()
         setUpSwipeableView()
-        
-    }
-    
-    
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //        while !isFinish {
-        //            print("hoge")
-        //        }
-        //        setUpSwipeableView()
     }
     
     func getUserData()  {
@@ -80,11 +59,9 @@ class MyDiaryListViewController: UIViewController {
     }
     
     func setUpSwipeableView() {
-        
         swipeableView = ZLSwipeableView()
-        print("追加")
+        swipeableView.numberOfActiveView = 2
         view.addSubview(swipeableView)
-        
         swipeableView.didStart = {view, location in
             print("Did start swiping view at location: \(location)")
         }
@@ -93,13 +70,9 @@ class MyDiaryListViewController: UIViewController {
         }
         swipeableView.didEnd = {view, location in
             print("Did end swiping view at location: \(location)")
-            
         }
         swipeableView.didSwipe = {view, direction, vector in
             print("Did swipe view in direction: \(direction), vector: \(vector)")
-            let card = self.swipeableView.history.last as! MyCardView
-            
-            
         }
         swipeableView.didCancel = {view in
             print("Did cancel swiping view")
@@ -107,17 +80,9 @@ class MyDiaryListViewController: UIViewController {
         swipeableView.didTap = {view, location in
             print("Did tap at location \(location)")
         }
-        
         swipeableView.didDisappear = { view in
             print("Did disappear swiping view")
-            
         }
-        //
-        swipeableView.didRewinded = {view in
-            
-        }
-        
-        
         constrain(swipeableView, view) { view1, view2 in
             view1.left == view2.left + 30
             view1.right == view2.right - 30
@@ -126,32 +91,20 @@ class MyDiaryListViewController: UIViewController {
         }
     }
     
-    // MARK: ()
     func nextCardView() -> UIView? {
-        
         let cardView = MyCardView(frame: swipeableView.bounds)
         cardView.backgroundColor = UIColor.white
-        
-        
         if contentsArray.count > index{
-            
             cardView.setUserName(userName: myName)
             cardView.setContentsText(text: contentsArray[index])
             cardView.setIconImage(image: iconImage.maskCorner(radius: iconImage.size.width / 2)!)
-            
-            //            cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
             cardView.setDateLabel(dateText: dateArray[index])
             cardView.setIndex(index: index)
             cardView.setPicture(image: imageArray[index])
             cardView.setShadow()
-            
             if keyArray[index] != ""{
                 getLikeData(UUID: myID, key: keyArray[index], card: cardView)
             }
-            
-            
-            
-            
             //ランダムにbackgroundのcolorを指定する
             var number = Int(arc4random_uniform(5))
             if number == 0 {
@@ -167,34 +120,18 @@ class MyDiaryListViewController: UIViewController {
             } else {
                 cardView.setBackGroundColor(hex: "ffb7b7")
             }
-            
-            
-            
-            
             index = index + 1
             if index == contentsArray.count {
-                //                index = 0
+                index = 0
             }
         }else{
             cardView.setClear()
         }
         return cardView
-        
     }
-    
-    
     
     func getTopView() -> MyCardView {
         return swipeableView.topView() as! MyCardView
-    }
-    
-    
-    @IBAction func back(_ sender: UIButton) {
-        
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func redo(_ sender: UIButton) {
-        swipeableView.rewind()
     }
     
     func getUserContents(){
@@ -202,37 +139,26 @@ class MyDiaryListViewController: UIViewController {
         dateArray = [String]()
         contentsArray = [String]()
         imageArray = [UIImage]()
-        
         let realm = try! Realm()
         let resultArray = realm.objects(RealmModel.self)
         for result in resultArray {
-            
             if Util.differenceOfDate(date1: Date(), date2: (result.hizuke.getDate())) > 3 {
                 //書き込みは必ずrealm.write内
                 try! realm.write {
                     realm.delete(result)
                 }
-                
             }else{
-                print("koko")
                 dateArray.append(result.hizuke)
                 contentsArray.append(result.honbunn)
                 imageArray.append(UIImage(data:result.image as Data)!)
                 keyArray.append(result.key)
             }
         }
-        
-//        dateArray.reverse()
-//        contentsArray.reverse()
-//        imageArray.reverse()
-        
     }
     
     func getLikeData(UUID:String,key:String,card:MyCardView) -> Void {
-        
         handler = self.ref.child(UUID).child(key).observe(.value, with: {snapshot  in
             let postDict = snapshot.value as! [String : AnyObject]
-            print("ログ" + String(postDict["like"] as! Int))
             card.setHeartLabel(heartText:String(postDict["like"] as! Int))
             card.setHeartImage(image: UIImage(named: "hearts.png")!)
             self.ref.child(UUID).child(key).removeObserver(withHandle: self.handler)
@@ -241,19 +167,13 @@ class MyDiaryListViewController: UIViewController {
     
     //右側のボタンが押されたら呼ばれる
     internal func rightBarBtnClicked(sender: UIButton){
-        print("rightBarBtnClicked")
         self.performSegue(withIdentifier: "toMakeDiaryViewController", sender: nil)
     }
     
     //左側のボタンが押されたら呼ばれる
     internal func leftBarBtnClicked(sender: UIButton){
-        print("leftBarBtnClicked")
         let elDrawer = self.navigationController?.parent as! KYDrawerController
         elDrawer.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
     }
-    
-    
-    
-    
 }
 
