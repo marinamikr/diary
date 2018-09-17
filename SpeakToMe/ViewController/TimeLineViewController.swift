@@ -238,9 +238,7 @@ class TimeLineViewController: UIViewController {
         button2.action = #selector(leftBarBtnClicked(sender:))
         button2.target = self
         self.navigationItem.leftBarButtonItem = button2
-        
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)!]
-        
     }
     
     //右側のボタンが押されたら呼ばれる
