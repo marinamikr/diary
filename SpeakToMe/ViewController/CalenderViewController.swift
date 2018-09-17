@@ -8,7 +8,6 @@
 
 
 import UIKit
-import KYDrawerController
 import RealmSwift
 
 class CalenderViewController: UIViewController{
@@ -103,9 +102,7 @@ class CalenderViewController: UIViewController{
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
         
         
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
-        setUpNavigation()
+       
         
     }
     
@@ -119,44 +116,9 @@ class CalenderViewController: UIViewController{
        
     }
     
-    func setUpNavigation() {
-        let button = UIBarButtonItem()
-        var image = UIImage(named:"calender_add_blue1.png")
-        var resizeImage = Util.resizeImage(src:image!,max: 40)
-        button.image = resizeImage?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        button.style = UIBarButtonItemStyle.plain
-        button.action = #selector(rightBarBtnClicked(sender:))
-        button.target = self
-        self.navigationItem.rightBarButtonItem = button
-        
-        
-        let result = realm.objects(UserModel.self).last
-        var iconImage = UIImage(data: result?.icon  as! Data)
-        var resizeIcon = Util.resizeImage(src: iconImage, max: 40).maskCorner(radius: 20)
-        
-        let button2 = UIBarButtonItem()
-        button2.image = resizeIcon?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        button2.style = UIBarButtonItemStyle.plain
-        button2.action = #selector(leftBarBtnClicked(sender:))
-        button2.target = self
-        self.navigationItem.leftBarButtonItem = button2
-        
-
-        
-    }
+  
     
-    //右側のボタンが押されたら呼ばれる
-    internal func rightBarBtnClicked(sender: UIButton){
-        print("rightBarBtnClicked")
-         self.performSegue(withIdentifier: "toMakeDiaryViewController", sender: nil)
-    }
-    
-    //左側のボタンが押されたら呼ばれる
-    internal func leftBarBtnClicked(sender: UIButton){
-        print("leftBarBtnClicked")
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
-    }
+   
     
     /*
      // MARK: - Navigation
@@ -336,45 +298,6 @@ extension CalenderViewController: UICollectionViewDataSource, UICollectionViewDe
     
 }
 
-extension CalenderViewController: CustomDelegate {
-    
-    func toMyDiary() {
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
-        performSegue(withIdentifier: "toAllMyDiaryViewController", sender: nil)
-        
-    }
-    
-    func toMyFriendDiary() {
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
-        performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)
-    }
-    
-    func tocamera() {
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
-        performSegue(withIdentifier: "toAddFriendViewController", sender: nil)
-    }
-    
-    func toqrcode() {
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
-        performSegue(withIdentifier: "toQRViewController", sender: nil)
-    }
-    
-    func tosetting() {
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
-        performSegue(withIdentifier: "toSettingViewController", sender: nil)
-    }
-    
-    func toTimeLine(){
-        let elDrawer = self.navigationController?.parent as! KYDrawerController
-        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
-        performSegue(withIdentifier: "toTimeLineViewController", sender: nil)
-    }
-    
-}
+
 
 

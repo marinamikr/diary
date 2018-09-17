@@ -11,6 +11,7 @@
 		7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7539A4701CE7A57600505E8B /* AppDelegate.swift */; };
 		7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4771CE7A57600505E8B /* Assets.xcassets */; };
 		7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */; };
+		AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */; };
 		AA4F33AE2101EA8900B410FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33AD2101EA8900B410FE /* UserModel.swift */; };
 		AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B02101F37B00B410FE /* CircleImageView.swift */; };
 		AA4F33B42102005500B410FE /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B22102005500B410FE /* SettingTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		7539A47A1CE7A57600505E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7539A47C1CE7A57600505E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7728B0D1782366C8CF929497 /* Pods-SpeakToMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakToMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe.release.xcconfig"; sourceTree = "<group>"; };
+		AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "setting sun.JPG"; sourceTree = "<group>"; };
 		AA4F33AD2101EA8900B410FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AA4F33B02101F37B00B410FE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		AA4F33B22102005500B410FE /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				CE7AF507212662CD0057A925 /* icon.png */,
 				CE7AF50521265E010057A925 /* uzura.ttf */,
 				AABB5A762147C2C50010BCF5 /* TimeLine.png */,
+				AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
+				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
 				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
@@ -664,7 +668,7 @@
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zume.school.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -683,7 +687,7 @@
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zume.school.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

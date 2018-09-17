@@ -11,13 +11,15 @@ import Cartography
 
 class CardView: UIView {
     
-    let pictureImageView = UIImageView()
+    
     let iconImageView = UIImageView()
     let userNameLabel = UILabel()
+    let dateLabel = UILabel()
+    let pictureImageView = UIImageView()
     let contentsLabel = UILabel()
     let heartImageView = UIImageView()
-    let dateLabel = UILabel()
     let heartLabel = UILabel()
+    
     
     
     override init(frame: CGRect) {
@@ -47,8 +49,6 @@ class CardView: UIView {
         contentView.backgroundColor = UIColor.white
         contentView.innerShadow()
         self.addSubview(contentView)
-       
-        
         
         
         contentView.addSubview(pictureImageView)
@@ -60,94 +60,58 @@ class CardView: UIView {
         contentView.addSubview(contentsLabel)
         
         
-//        contentView.addSubview(iconImageView)
-//
-//
-//
-//        contentView.addSubview(contentsLabel)
-//        contentView.addSubview(heartLabel)
-//
-//        contentView.addSubview(dateLabel)
         
+        
+        
+        
+        constrain(iconImageView, contentView) { view1, view2 in
+            view1.left == view2.left
+            view1.top == view2.top
+            view1.height == 45
+            view1.width == 45
+        }
+        constrain(userNameLabel, iconImageView) { view1, view2 in
+            view1.left == view2.right
+            view1.top == view2.top
+            view1.height == 45
+            view1.width == 90
+            
+        }
+        
+        constrain(dateLabel, contentView) { view1, view2 in
+            view1.right == view2.right
+            view1.top == view2.top
+            view1.height == 45
+            view1.width == view2.width * 0.4
+        }
         constrain(pictureImageView, contentView) { view1, view2 in
             view1.left == view2.left
             view1.top == view2.top
             view1.height == view2.height - 90
             view1.width == view2.width
         }
-        constrain(userNameLabel, pictureImageView) { view1, view2 in
+        
+        constrain(contentsLabel, pictureImageView) { view1, view2 in
             view1.left == view2.left
             view1.top == view2.bottom
-            view1.height == 45
-            view1.width == view2.width * 0.4
-            
-        }
-        constrain(heartImageView, userNameLabel) { view1, view2 in
-            view1.left == view2.right
-            view1.top == view2.top
-            view1.height == 45
-            view1.width == view2.width * 0.25
-        }
-        constrain(heartLabel, heartImageView) { view1, view2 in
-            view1.left == view2.right
-            view1.top == view2.top
-            view1.height == 45
+            view1.height == 50
             view1.width == view2.width
         }
-        constrain(dateLabel, heartLabel) { view1, view2 in
-            view1.left == view2.right
-            view1.top == view2.top
-            view1.height == 45
-            view1.width == view2.width * 4
-        }
-        constrain(iconImageView, userNameLabel) { view1, view2 in
-            view1.left == view2.left
+        
+        constrain(heartLabel, contentsLabel) { view1, view2 in
+            view1.right == view2.right
             view1.top == view2.bottom
             view1.height == 45
             view1.width == 45
         }
-        constrain(contentsLabel, contentView) { view1, view2 in
-            view1.right == view2.right
-            view1.bottom == view2.bottom
+        
+        constrain(heartImageView, heartLabel) { view1, view2 in
+            view1.right == view2.left
+            view1.top == view2.top
             view1.height == 45
-            view1.width == view2.width - 45
+            view1.width == 45
         }
         
-        
-        
-        
-        
-//
-//        constrain(heartLabel, pictureImageView) { view1, view2 in
-//            view1.left == view2.left
-//            view1.top == view2.bottom
-//            view1.height == 90
-//            view1.width == view2.width * 0.6
-//        }
-//
-//        constrain(dateLabel, pictureImageView) { view1, view2 in
-//            view1.left == view2.left
-//            view1.top == view2.top
-//            view1.height == 90
-//            view1.width == view2.width
-//        }
-//
-//        constrain(iconImageView, contentView) { view1, view2 in
-//            view1.left == view2.left
-//            view1.bottom == view2.bottom
-//            view1.height == 60
-//            view1.width == 60
-//        }
-//        constrain(contentsLabel, contentView) { view1, view2 in
-//            view1.right == view2.right
-//            view1.bottom == view2.bottom
-//            view1.height == 60
-//            view1.width == view2.width - 70
-//        }
-       
-       
-       
-   
         
         
         
@@ -187,4 +151,6 @@ class CardView: UIView {
         dateLabel.backgroundColor = UIColor(hex: hex)
         heartLabel.backgroundColor = UIColor(hex: hex)
     }
+    
+    
 }
