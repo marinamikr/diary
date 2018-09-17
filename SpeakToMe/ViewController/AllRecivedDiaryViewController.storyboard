@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cwJ-LQ-vk5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--All Recived Diary View Controller-->
+        <scene sceneID="cdm-CH-7Yz">
+            <objects>
+                <viewController id="cwJ-LQ-vk5" customClass="AllRecivedDiaryViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CFw-Ta-rhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="m9A-qt-OiA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zE9-xj-IBv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6X-3G-WM4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.56078431370000004" green="0.68443467879999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="19" id="Ikk-UH-DbG">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="19"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ikk-UH-DbG" id="Irz-ty-adn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="18.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="g6X-3G-WM4" secondAttribute="bottom" id="24B-Dt-UxK"/>
+                            <constraint firstItem="g6X-3G-WM4" firstAttribute="top" secondItem="zE9-xj-IBv" secondAttribute="top" id="3qm-yP-Csb"/>
+                            <constraint firstItem="g6X-3G-WM4" firstAttribute="leading" secondItem="zE9-xj-IBv" secondAttribute="leading" id="9hv-mv-VCn"/>
+                            <constraint firstAttribute="trailing" secondItem="g6X-3G-WM4" secondAttribute="trailing" id="C1b-oR-5kU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="g6X-3G-WM4" id="44g-NT-a2l"/>
+                        <segue destination="A64-OR-PHw" kind="show" identifier="toDiaryViewController" id="JWj-po-mZX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tuf-bp-n0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3604" y="487"/>
+        </scene>
+        <!--AllDiaryViewController-->
+        <scene sceneID="BIT-ek-kie">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AllDiaryViewController" id="A64-OR-PHw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkf-xS-yVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4471.1999999999998" y="261.31934032983509"/>
+        </scene>
+    </scenes>
+</document>

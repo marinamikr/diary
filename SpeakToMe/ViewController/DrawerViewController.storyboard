@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o6b-x9-2Aj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawer View Controller-->
+        <scene sceneID="KYi-WN-lF8">
+            <objects>
+                <viewController id="o6b-x9-2Aj" customClass="DrawerViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6JE-Zg-vvR"/>
+                        <viewControllerLayoutGuide type="bottom" id="zof-W3-Ttj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XRP-Ta-D5c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wxY-Pf-req">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLC-t5-yvc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QLC-t5-yvc" secondAttribute="height" multiplier="1:1" id="fHB-tW-nOF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-5Y-4kI">
+                                        <rect key="frame" x="0.0" y="375" width="375" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-IF-oXT">
+                                        <rect key="frame" x="0.0" y="375" width="375" height="393"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WMs-IF-oXT" firstAttribute="leading" secondItem="wxY-Pf-req" secondAttribute="leading" id="DfJ-St-LVm"/>
+                                    <constraint firstItem="QLC-t5-yvc" firstAttribute="leading" secondItem="wxY-Pf-req" secondAttribute="leading" id="WDl-Xv-n06"/>
+                                    <constraint firstAttribute="bottom" secondItem="WMs-IF-oXT" secondAttribute="bottom" id="Zpr-wG-S66"/>
+                                    <constraint firstAttribute="trailing" secondItem="QLC-t5-yvc" secondAttribute="trailing" id="frY-bb-rmb"/>
+                                    <constraint firstAttribute="trailing" secondItem="WMs-IF-oXT" secondAttribute="trailing" id="iy6-dR-zyx"/>
+                                    <constraint firstItem="WMs-IF-oXT" firstAttribute="top" secondItem="QLC-t5-yvc" secondAttribute="bottom" id="xhi-p0-o40"/>
+                                    <constraint firstItem="QLC-t5-yvc" firstAttribute="top" secondItem="wxY-Pf-req" secondAttribute="top" id="zAR-Hn-Spq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wxY-Pf-req" firstAttribute="leading" secondItem="XRP-Ta-D5c" secondAttribute="leading" id="8dK-bq-hbg"/>
+                            <constraint firstItem="wxY-Pf-req" firstAttribute="top" secondItem="6JE-Zg-vvR" secondAttribute="bottom" id="Ewo-xM-K3Y"/>
+                            <constraint firstAttribute="bottom" secondItem="wxY-Pf-req" secondAttribute="bottom" id="jan-Ex-bCv"/>
+                            <constraint firstAttribute="trailing" secondItem="wxY-Pf-req" secondAttribute="trailing" id="k4O-Xf-Uo1"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="160" height="568"/>
+                    <connections>
+                        <outlet property="table" destination="WMs-IF-oXT" id="Ven-7s-bG8"/>
+                        <outlet property="userIcon" destination="QLC-t5-yvc" id="BdO-vu-99q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phR-Rf-omS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="421"/>
+        </scene>
+    </scenes>
+</document>

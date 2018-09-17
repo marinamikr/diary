@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gg0-vT-ZF2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--All My Diary View Controller-->
+        <scene sceneID="neC-3H-ldx">
+            <objects>
+                <viewController id="Gg0-vT-ZF2" customClass="AllMyDiaryViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ylL-7g-k2U"/>
+                        <viewControllerLayoutGuide type="bottom" id="I5W-Jg-0Tp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X0L-PD-Tqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XD2-Vl-agt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.56078431370000004" green="0.68443467879999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XD2-Vl-agt" secondAttribute="trailing" id="7dA-6k-avd"/>
+                            <constraint firstItem="XD2-Vl-agt" firstAttribute="top" secondItem="X0L-PD-Tqs" secondAttribute="top" id="Jek-tD-Gkc"/>
+                            <constraint firstAttribute="bottom" secondItem="XD2-Vl-agt" secondAttribute="bottom" id="c3d-hD-gyv"/>
+                            <constraint firstItem="XD2-Vl-agt" firstAttribute="leading" secondItem="X0L-PD-Tqs" secondAttribute="leading" id="gFa-dZ-dKs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="XD2-Vl-agt" id="orz-8e-ZjP"/>
+                        <segue destination="Fga-jR-BVC" kind="show" identifier="toMyDiaryViewController" id="dFh-w6-eRk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfo-zK-Fib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469.5999999999999" y="-1686.2068965517242"/>
+        </scene>
+        <!--MyDiaryViewController-->
+        <scene sceneID="ZRW-t5-Sjp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyDiaryViewController" id="Fga-jR-BVC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wis-Xp-QGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-1250"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,6 +12,17 @@
 		7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4771CE7A57600505E8B /* Assets.xcassets */; };
 		7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */; };
 		AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */; };
+		AA10BC45214F6EF200C86ED8 /* MakeDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC44214F6EF200C86ED8 /* MakeDiaryViewController.storyboard */; };
+		AA10BC47214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC46214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard */; };
+		AA10BC49214F6F5C00C86ED8 /* AllDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC48214F6F5C00C86ED8 /* AllDiaryViewController.storyboard */; };
+		AA10BC4B214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC4A214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard */; };
+		AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC4C214F6FA800C86ED8 /* AddFriendViewController.storyboard */; };
+		AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC4E214F6FCF00C86ED8 /* QRViewController.storyboard */; };
+		AA10BC51214F700B00C86ED8 /* DrawerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC50214F700B00C86ED8 /* DrawerViewController.storyboard */; };
+		AA10BC53214F703000C86ED8 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC52214F703000C86ED8 /* SettingViewController.storyboard */; };
+		AA10BC55214F704F00C86ED8 /* AllMyDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC54214F704F00C86ED8 /* AllMyDiaryViewController.storyboard */; };
+		AA10BC57214F70C000C86ED8 /* MyDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC56214F70C000C86ED8 /* MyDiaryViewController.storyboard */; };
+		AA10BC59214F712D00C86ED8 /* CalenderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10BC58214F712D00C86ED8 /* CalenderViewController.storyboard */; };
 		AA4F33AE2101EA8900B410FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33AD2101EA8900B410FE /* UserModel.swift */; };
 		AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B02101F37B00B410FE /* CircleImageView.swift */; };
 		AA4F33B42102005500B410FE /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F33B22102005500B410FE /* SettingTableViewCell.swift */; };
@@ -85,6 +96,17 @@
 		7539A47C1CE7A57600505E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7728B0D1782366C8CF929497 /* Pods-SpeakToMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakToMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeakToMe/Pods-SpeakToMe.release.xcconfig"; sourceTree = "<group>"; };
 		AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "setting sun.JPG"; sourceTree = "<group>"; };
+		AA10BC44214F6EF200C86ED8 /* MakeDiaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MakeDiaryViewController.storyboard; path = ViewController/MakeDiaryViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC46214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ShowMyDiaryViewController.storyboard; path = ViewController/ShowMyDiaryViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC48214F6F5C00C86ED8 /* AllDiaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllDiaryViewController.storyboard; path = ViewController/AllDiaryViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC4A214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllRecivedDiaryViewController.storyboard; path = ViewController/AllRecivedDiaryViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC4C214F6FA800C86ED8 /* AddFriendViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddFriendViewController.storyboard; path = ViewController/AddFriendViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC4E214F6FCF00C86ED8 /* QRViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QRViewController.storyboard; path = ViewController/QRViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC50214F700B00C86ED8 /* DrawerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DrawerViewController.storyboard; path = ViewController/DrawerViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC52214F703000C86ED8 /* SettingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SettingViewController.storyboard; path = ViewController/SettingViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC54214F704F00C86ED8 /* AllMyDiaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllMyDiaryViewController.storyboard; path = ViewController/AllMyDiaryViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC56214F70C000C86ED8 /* MyDiaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MyDiaryViewController.storyboard; path = ViewController/MyDiaryViewController.storyboard; sourceTree = "<group>"; };
+		AA10BC58214F712D00C86ED8 /* CalenderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CalenderViewController.storyboard; path = ViewController/CalenderViewController.storyboard; sourceTree = "<group>"; };
 		AA4F33AD2101EA8900B410FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AA4F33B02101F37B00B410FE /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		AA4F33B22102005500B410FE /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +226,17 @@
 				CE24278720BD5DC6009955AB /* Util */,
 				7539A4701CE7A57600505E8B /* AppDelegate.swift */,
 				CE4D06B820E2305B00E87A14 /* Main.storyboard */,
+				AA10BC58214F712D00C86ED8 /* CalenderViewController.storyboard */,
+				AA10BC56214F70C000C86ED8 /* MyDiaryViewController.storyboard */,
+				AA10BC54214F704F00C86ED8 /* AllMyDiaryViewController.storyboard */,
+				AA10BC52214F703000C86ED8 /* SettingViewController.storyboard */,
+				AA10BC50214F700B00C86ED8 /* DrawerViewController.storyboard */,
+				AA10BC4E214F6FCF00C86ED8 /* QRViewController.storyboard */,
+				AA10BC4C214F6FA800C86ED8 /* AddFriendViewController.storyboard */,
+				AA10BC4A214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard */,
+				AA10BC48214F6F5C00C86ED8 /* AllDiaryViewController.storyboard */,
+				AA10BC46214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard */,
+				AA10BC44214F6EF200C86ED8 /* MakeDiaryViewController.storyboard */,
 				7539A4771CE7A57600505E8B /* Assets.xcassets */,
 				7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */,
 				7539A47C1CE7A57600505E8B /* Info.plist */,
@@ -420,34 +453,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA10BC57214F70C000C86ED8 /* MyDiaryViewController.storyboard in Resources */,
+				AA10BC53214F703000C86ED8 /* SettingViewController.storyboard in Resources */,
 				CE7AF508212662CD0057A925 /* icon.png in Resources */,
 				CE7AF50621265E250057A925 /* uzura.ttf in Resources */,
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
+				AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
 				CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */,
 				CE2E6D862101D4540065CCBB /* Camera.png in Resources */,
 				CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */,
+				AA10BC49214F6F5C00C86ED8 /* AllDiaryViewController.storyboard in Resources */,
 				CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */,
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
 				CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */,
 				CE7AF50421265CB30057A925 /* TopView.png in Resources */,
+				AA10BC45214F6EF200C86ED8 /* MakeDiaryViewController.storyboard in Resources */,
 				AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */,
+				AA10BC4B214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard in Resources */,
+				AA10BC55214F704F00C86ED8 /* AllMyDiaryViewController.storyboard in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
+				AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */,
 				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
+				AA10BC51214F700B00C86ED8 /* DrawerViewController.storyboard in Resources */,
 				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
 				AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */,
 				CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
 				AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */,
 				CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */,
+				AA10BC47214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard in Resources */,
 				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,
+				AA10BC59214F712D00C86ED8 /* CalenderViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

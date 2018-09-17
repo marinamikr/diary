@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="afD-yH-7Ur">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Friend View Controller-->
+        <scene sceneID="WsK-u5-wUa">
+            <objects>
+                <viewController id="afD-yH-7Ur" customClass="AddFriendViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BAB-EI-GHj"/>
+                        <viewControllerLayoutGuide type="bottom" id="qbE-2q-UQZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bOk-4T-Cu3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-h3-RLL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OiS-h3-RLL" firstAttribute="top" secondItem="bOk-4T-Cu3" secondAttribute="top" id="BMN-dL-UJj"/>
+                            <constraint firstItem="qbE-2q-UQZ" firstAttribute="top" secondItem="OiS-h3-RLL" secondAttribute="bottom" id="Vni-VJ-WS2"/>
+                            <constraint firstItem="OiS-h3-RLL" firstAttribute="leading" secondItem="bOk-4T-Cu3" secondAttribute="leading" id="rKH-BD-1bW"/>
+                            <constraint firstAttribute="trailing" secondItem="OiS-h3-RLL" secondAttribute="trailing" id="sG4-Xc-ixx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="OiS-h3-RLL" id="zti-9O-PEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVB-Oq-2vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220" y="1057"/>
+        </scene>
+    </scenes>
+</document>

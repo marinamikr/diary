@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q0q-F8-fbb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="37Y-oO-j8v">
+            <objects>
+                <viewController id="Q0q-F8-fbb" customClass="QRViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ux3-PW-1dX"/>
+                        <viewControllerLayoutGuide type="bottom" id="wLe-2i-zsH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nh4-6T-JTz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopView.png" translatesAutoresizingMaskIntoConstraints="NO" id="wnH-dH-yI3">
+                                <rect key="frame" x="0.0" y="24" width="375" height="788"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pC6-9Y-GiH">
+                                <rect key="frame" x="37.666666666666657" y="256" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pC6-9Y-GiH" secondAttribute="height" multiplier="1:1" id="y8q-KN-aQi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56078431370000004" green="0.68443467879999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wnH-dH-yI3" secondAttribute="trailing" constant="-16" id="0cC-CB-uKG"/>
+                            <constraint firstItem="pC6-9Y-GiH" firstAttribute="centerY" secondItem="Nh4-6T-JTz" secondAttribute="centerY" id="5dn-Si-3an"/>
+                            <constraint firstItem="pC6-9Y-GiH" firstAttribute="centerX" secondItem="Nh4-6T-JTz" secondAttribute="centerX" id="Hy8-hL-Y3Y"/>
+                            <constraint firstAttribute="bottom" secondItem="wnH-dH-yI3" secondAttribute="bottom" id="QO9-nD-Vg8"/>
+                            <constraint firstItem="wnH-dH-yI3" firstAttribute="top" secondItem="ux3-PW-1dX" secondAttribute="bottom" constant="-64" id="Vhs-0A-ogz"/>
+                            <constraint firstItem="wnH-dH-yI3" firstAttribute="leading" secondItem="Nh4-6T-JTz" secondAttribute="leadingMargin" constant="-16" id="W6M-93-6bu"/>
+                            <constraint firstItem="pC6-9Y-GiH" firstAttribute="width" secondItem="Nh4-6T-JTz" secondAttribute="width" multiplier="0.8" id="e9M-gK-vKB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrImage" destination="pC6-9Y-GiH" id="WYi-Sm-BWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhM-26-AN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1338.4000000000001" y="514.99250374812596"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TopView.png" width="320" height="568"/>
+    </resources>
+</document>
