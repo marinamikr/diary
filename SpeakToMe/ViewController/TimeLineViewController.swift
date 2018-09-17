@@ -37,6 +37,8 @@ class TimeLineViewController: UIViewController {
     
     var index = 0
     
+    var isFinish = false
+    
     
     
     override func viewDidLayoutSubviews() {
@@ -61,8 +63,13 @@ class TimeLineViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        while !isFinish {
+//            print("hoge")
+//        }
+//        setUpSwipeableView()
     }
     
     func setUpSwipeableView() {
@@ -83,6 +90,12 @@ class TimeLineViewController: UIViewController {
         }
         swipeableView.didSwipe = {view, direction, vector in
             print("Did swipe view in direction: \(direction), vector: \(vector)")
+            let card = self.swipeableView.history.last as! CardView
+           
+            
+            if direction == Direction.Left{
+                card.addLike()
+            }
             
         }
         swipeableView.didCancel = {view in
@@ -103,21 +116,21 @@ class TimeLineViewController: UIViewController {
         
         
         constrain(swipeableView, view) { view1, view2 in
-            view1.left == view2.left+10
-            view1.right == view2.right - 10
-            view1.top == view2.top + 180
-            view1.height == view1.width + 90
+            view1.left == view2.left + 30
+            view1.right == view2.right - 30
+            view1.top == view2.top + 100
+            view1.height == view1.width + 130
         }
     }
     
     // MARK: ()
     func nextCardView() -> UIView? {
+        
         let cardView = CardView(frame: swipeableView.bounds)
         cardView.backgroundColor = UIColor.white
         
         
         if userNameArray.count > index{
-            print(urlArray[index])
             cardView.setUserName(userName: userNameArray[index])
             cardView.setContentsText(text: contentsArray[index])
             cardView.setIconImage(url: iconURLArray[index])
@@ -125,16 +138,37 @@ class TimeLineViewController: UIViewController {
             cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
             cardView.setDateLabel(dateText: dateArray[index])
             cardView.setHeartLabel(heartText: String(likeArray[index]))
-            cardView.setBackGroundColor(hex: "FF0000")
+            cardView.setUUID(UUID: uuIdArray[index])
+            cardView.setkey(key: keyArray[index])
+            cardView.setIndex(index: index)
+            cardView.setShadow()
             
-           
-           
-
-
+            
+            //ランダムにbackgroundのcolorを指定する
+            var number = Int(arc4random_uniform(5))
+            if number == 0 {
+                cardView.setBackGroundColor(hex: "dbffb7")
+            } else if number == 1 {
+                cardView.setBackGroundColor(hex: "b7dbff")
+            } else if number == 2 {
+                cardView.setBackGroundColor(hex: "ffb7db")
+            } else if number == 3 {
+                cardView.setBackGroundColor(hex: "ffdbb7")
+            } else if number == 4 {
+                cardView.setBackGroundColor(hex: "d6adff")
+            } else {
+                cardView.setBackGroundColor(hex: "ffb7b7")
+            }
+            
+            
+            
+            
             index = index + 1
             if index == userNameArray.count {
-                index = 0
+//                index = 0
             }
+        }else{
+            cardView.setClear()
         }
         return cardView
         
@@ -156,11 +190,22 @@ class TimeLineViewController: UIViewController {
     }
     
     func getUserContents(){
+        //本文、ユーザー名、日付の配列
+        userNameArray = [String]()
+        dateArray = [String]()
+        contentsArray = [String]()
+        urlArray = [String]()
+        iconURLArray = [String]()
+        likeArray = [Int]()
+        likeImage = [String]()
+        
+        keyArray = [String]()
+        uuIdArray = [String]()
+        
         userDefaults.register(defaults: ["FriendsIDArray" : Array<String>()])
         var idArray = userDefaults.array(forKey: "FriendsIDArray") as! Array<String>
         
         for id in idArray {
-            print(id)
             handler = self.ref.child("permission").child(id).observe(.value, with: {snapshot  in
                 print(snapshot)
                 let postDict = snapshot.value as! [String : Any]
@@ -190,18 +235,17 @@ class TimeLineViewController: UIViewController {
                                 self.iconURLArray.append(postDict["iconURL"] as! String)
                                 
                             }
+//                            print(id)
+//                            print(idArray.last)
+//                            if id == idArray.last{
+//                                self.isFinish = true
+//                            }
                             
                         }
+                        
                         self.ref.child(id).removeAllObservers()
-                        
-                        
                         self.ref.child("permission").child(id).removeObserver(withHandle: self.handler)
-                       
                         
-                        print(self.keyArray)
-                        print(self.uuIdArray)
-                        print(self.contentsArray)
-                       
                         
                     })
                     
@@ -209,20 +253,23 @@ class TimeLineViewController: UIViewController {
                 }
             })
             
-            
+           
             
             
         }
         
+        
+        
     }
     
     @IBAction func test(_ sender: Any) {
+        index = 0
         setUpSwipeableView()
     }
     
     func setUpNavigation() {
         let button = UIBarButtonItem()
-        var image = UIImage(named:"calender_add_blue1.png")
+        var image = UIImage(named:"add_diary.png")
         var resizeImage = Util.resizeImage(src:image!,max: 40)
         button.image = resizeImage?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         button.style = UIBarButtonItemStyle.plain
@@ -257,6 +304,8 @@ class TimeLineViewController: UIViewController {
         let elDrawer = self.navigationController?.parent as! KYDrawerController
         elDrawer.setDrawerState(KYDrawerController.DrawerState.opened, animated: true)
     }
+    
+    
     
     
 }
@@ -299,5 +348,6 @@ extension TimeLineViewController: CustomDelegate {
         elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
         performSegue(withIdentifier: "toTimeLineViewController", sender: nil)
     }
+    
     
 }

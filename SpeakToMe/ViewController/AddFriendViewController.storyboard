@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="afD-yH-7Ur">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,18 +18,18 @@
                         <viewControllerLayoutGuide type="bottom" id="qbE-2q-UQZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bOk-4T-Cu3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-h3-RLL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OiS-h3-RLL" firstAttribute="top" secondItem="bOk-4T-Cu3" secondAttribute="top" id="BMN-dL-UJj"/>
-                            <constraint firstItem="qbE-2q-UQZ" firstAttribute="top" secondItem="OiS-h3-RLL" secondAttribute="bottom" id="Vni-VJ-WS2"/>
+                            <constraint firstAttribute="bottom" secondItem="OiS-h3-RLL" secondAttribute="bottom" id="Vni-VJ-WS2"/>
                             <constraint firstItem="OiS-h3-RLL" firstAttribute="leading" secondItem="bOk-4T-Cu3" secondAttribute="leading" id="rKH-BD-1bW"/>
                             <constraint firstAttribute="trailing" secondItem="OiS-h3-RLL" secondAttribute="trailing" id="sG4-Xc-ixx"/>
                         </constraints>

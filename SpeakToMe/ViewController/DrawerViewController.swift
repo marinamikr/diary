@@ -11,9 +11,9 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var userIcon: UIImageView!
-    var array:[String] = ["自分の愚痴一覧","友達の愚痴一覧","MyQRコード","QRコード読み取り","設定","タイムライン"]
+    var array:[String] = ["自分の愚痴一覧","MyQRコード","QRコード読み取り","設定"]
 
-    var imageArray:[String] = ["MyDiary.png","MyFriendDiary.png","QRcode.png","Camera.png","Setting.png","Setting.png"]
+    var imageArray:[String] = ["MyDiary.png","QRcode.png","Camera.png","Setting.png"]
     
     var dalegate : CustomDelegate!
     
@@ -75,23 +75,23 @@ extension DrawerViewController :UITableViewDataSource, UITableViewDelegate {
             //performSegue(withIdentifier: "toAllMyDiaryViewController", sender: nil)
             dalegate.toMyDiary()
             
-        case 1:
-            //performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)
-            dalegate.toMyFriendDiary()
+//        case 1:
+//            //performSegue(withIdentifier: "toAllRecivedDiaryViewController", sender: nil)
+//            dalegate.toMyFriendDiary()
             
-        case 2:
+        case 1:
             //performSegue(withIdentifier: "toQRViewController", sender: nil)
             dalegate.toqrcode()
             
-        case 3:
+        case 2:
             //performSegue(withIdentifier: "toAddFriendViewController", sender: nil)
             dalegate.tocamera()
 
-        case 4:
+        case 3:
             //performSegue(withIdentifier: "toSettingViewController", sender: nil)
             dalegate.tosetting()
-        case 5:
-            dalegate.toTimeLine()
+//        case 5:
+//            dalegate.toTimeLine()
             
         default: break
             

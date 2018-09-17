@@ -63,15 +63,19 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        textView.font = UIFont(name: "Mamelon", size: (textView.font?.pointSize)!)
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = UIColor.gray.cgColor
+        
+        
         let now = Date()
         let yearString = now.getyear(date: now)
-        
         print(yearString)
         
         
-        picture.image = UIImage(named: "imageBack.png")
-        picture.isUserInteractionEnabled = true
-        picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MakeDiaryViewController.picturetap(_:))))
+//        picture.image = UIImage(named: "imageBack.png")
+//        picture.isUserInteractionEnabled = true
+//        picture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MakeDiaryViewController.picturetap(_:))))
         
         
         // Disable the record buttons until authorization has been granted.
@@ -96,7 +100,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
         self.dismiss(animated: true)
     }
     
-    func picturetap(_ sender: UITapGestureRecognizer) {
+    @IBAction func picturetap(_ sender: UIButton) {
         print("タップ")
         // カメラロールが利用可能か？
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
