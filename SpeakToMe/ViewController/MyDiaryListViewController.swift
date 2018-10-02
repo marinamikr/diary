@@ -47,6 +47,8 @@ class MyDiaryListViewController: UIViewController {
         getUserData()
         getUserContents()
         setUpSwipeableView()
+        self.navigationItem.title = "愚痴一覧"
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
     }
     
     func getUserData()  {

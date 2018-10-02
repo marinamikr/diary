@@ -16,6 +16,8 @@ class QRViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         qrImage.image = makeQRCodeImage(text: Util.getUUID())
+        self.navigationItem.title = "MyQRコード"
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
     }
     
     override func didReceiveMemoryWarning() {

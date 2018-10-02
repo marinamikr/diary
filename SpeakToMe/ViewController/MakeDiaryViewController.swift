@@ -35,6 +35,8 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "新規作成"
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
         textView.font = UIFont(name: "Mamelon", size: (textView.font?.pointSize)!)
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.gray.cgColor
@@ -227,6 +229,13 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                     try! realm.write {
                         realm.add(realmModel)
                     }
+                    //通知
+                    let handler :UInt = ref.child(Util.getUUID()).child(sendRef.key).observe(.childChanged, with: {
+                        snapshot in
+                        let likes = snapshot.value as! Int
+                        Util.showNotification(title: "いいねされました", subtitle:  String(likes) + "likes", body: self.textView.text as!
+                            String)
+                    })
                 })
             }
         }

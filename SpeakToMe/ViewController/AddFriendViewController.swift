@@ -23,6 +23,8 @@ class AddFriendViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "友達追加"
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
         // 入力（背面カメラ）
         let videoDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         let videoInput = try! AVCaptureDeviceInput.init(device: videoDevice)

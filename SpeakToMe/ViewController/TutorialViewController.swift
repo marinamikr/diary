@@ -14,6 +14,8 @@ class TutorialViewController: UIPageViewController {
         super.viewDidLoad()
         self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
+        self.navigationItem.title = "使い方"
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
     }
     
 }

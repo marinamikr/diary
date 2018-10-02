@@ -25,6 +25,7 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameText.delegate = self
+        self.navigationItem.title = "アカウント作成"
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
     }
     
@@ -121,6 +122,9 @@ class TopViewController: UIViewController {
                 try! realm.write {
                     realm.add(userModel)
                 }
+                
+                TimeLineViewController.isTutorial = true
+                //閉じる
                 self.dismiss(animated: true, completion: nil)
             })
         }

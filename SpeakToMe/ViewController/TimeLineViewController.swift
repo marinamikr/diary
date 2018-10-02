@@ -32,6 +32,7 @@ class TimeLineViewController: UIViewController {
     var index = 0
     var isSetUpZLSwipeableView = false
     static var isRenew = false
+    static var isTutorial = false
     
     
     override func viewDidLayoutSubviews() {
@@ -78,6 +79,11 @@ class TimeLineViewController: UIViewController {
             setUpSwipeableView()
             getUserContents()
             TimeLineViewController.isRenew = false
+        }
+        
+        if TimeLineViewController.isTutorial{
+            TimeLineViewController.isTutorial = false
+             self.performSegue(withIdentifier: "toTutorialViewController", sender: nil)
         }
     }
     
