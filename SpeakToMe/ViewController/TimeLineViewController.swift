@@ -10,10 +10,7 @@ import Cartography
 import RealmSwift
 import AVFoundation
 import Firebase
-import FirebaseDatabase
-import FirebaseStorage
 import KYDrawerController
-
 
 class TimeLineViewController: UIViewController {
     
@@ -51,11 +48,11 @@ class TimeLineViewController: UIViewController {
         if (self.userDefaults.string(forKey: "UserName") == nil) {
             self.performSegue(withIdentifier: "toTopViewController", sender: nil)
         }
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        Util.observeMyPost()
         if (self.userDefaults.string(forKey: "UserName") != nil) {
             let elDrawer = self.navigationController?.parent as! KYDrawerController
             (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
@@ -83,19 +80,7 @@ class TimeLineViewController: UIViewController {
             getUserContents()
             TimeLineViewController.isRenew = false
         }
-        Util.showNotification(title: "良いねされました", subtitle: "サブタイトル", body: "本文")
-        
-        Util.observeMyPost()
-        if (self.userDefaults.string(forKey: "UserName") != nil){
-            let elDrawer = self.navigationController?.parent as! KYDrawerController
-            (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
-            ref = Database.database().reference()
-            setUpNavigation()
-            if TimeLineViewController.isRenew{
-        }
-        }
     }
-    
     
     func setUpSwipeableView() {
         swipeableView = ZLSwipeableView()
@@ -235,7 +220,7 @@ class TimeLineViewController: UIViewController {
             })
         }
     }
-  
+    
     func setUpNavigation() {
         let button = UIBarButtonItem()
         var image = UIImage(named:"add_diary.png")
