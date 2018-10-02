@@ -60,7 +60,7 @@ class TimeLineViewController: UIViewController {
             if TimeLineViewController.isRenew{
                 index = 0
                 var delview = self.view.viewWithTag(1)
-            delview?.removeFromSuperview()
+                delview?.removeFromSuperview()
                 setUpSwipeableView()
                 getUserContents()
                 TimeLineViewController.isRenew = false
