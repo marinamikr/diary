@@ -15,4 +15,5 @@ protocol CustomDelegate {
     func toqrcode() -> Void
     func tosetting() -> Void
     func toTimeLine() -> Void
+    func toTutorial() -> Void
 }

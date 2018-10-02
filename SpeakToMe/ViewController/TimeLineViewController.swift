@@ -292,4 +292,10 @@ extension TimeLineViewController: CustomDelegate {
         elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
         performSegue(withIdentifier: "toTimeLineViewController", sender: nil)
     }
+    
+    func toTutorial(){
+        let elDrawer = self.navigationController?.parent as! KYDrawerController
+        elDrawer.setDrawerState(KYDrawerController.DrawerState.closed, animated: true)
+        performSegue(withIdentifier: "toTutorialViewController", sender: nil)
+    }
 }

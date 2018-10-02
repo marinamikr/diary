@@ -35,6 +35,12 @@
 		AA76C03C213E8B9A0061DE38 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C038213E8B9A0061DE38 /* ViewManager.swift */; };
 		AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03D213E8D6F0061DE38 /* CardView.swift */; };
 		AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */; };
+		AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */; };
+		AA9336542163BEF500E651D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336532163BEF500E651D0 /* TutorialViewController.swift */; };
+		AA9336562163C03300E651D0 /* FirstExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336552163C03300E651D0 /* FirstExplainViewController.swift */; };
+		AA9336592163C05400E651D0 /* SecondExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336582163C05400E651D0 /* SecondExplainViewController.swift */; };
+		AA93365B2163C06500E651D0 /* ThirdExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93365A2163C06500E651D0 /* ThirdExplainViewController.swift */; };
+		AA93365D2163C4D700E651D0 /* saba.PNG in Resources */ = {isa = PBXBuildFile; fileRef = AA93365C2163C4D700E651D0 /* saba.PNG */; };
 		AABA9D082125A85800D4AEE3 /* hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D072125A85800D4AEE3 /* hearts.png */; };
 		AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D092125B31E00D4AEE3 /* imageBack.png */; };
 		AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */ = {isa = PBXBuildFile; fileRef = AABB5A762147C2C50010BCF5 /* TimeLine.png */; };
@@ -124,6 +130,12 @@
 		AA76C038213E8B9A0061DE38 /* ViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 		AA76C03D213E8D6F0061DE38 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViewController.swift; sourceTree = "<group>"; };
+		AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
+		AA9336532163BEF500E651D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		AA9336552163C03300E651D0 /* FirstExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExplainViewController.swift; sourceTree = "<group>"; };
+		AA9336582163C05400E651D0 /* SecondExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondExplainViewController.swift; sourceTree = "<group>"; };
+		AA93365A2163C06500E651D0 /* ThirdExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdExplainViewController.swift; sourceTree = "<group>"; };
+		AA93365C2163C4D700E651D0 /* saba.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saba.PNG; sourceTree = "<group>"; };
 		AABA9D072125A85800D4AEE3 /* hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearts.png; sourceTree = "<group>"; };
 		AABA9D092125B31E00D4AEE3 /* imageBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBack.png; sourceTree = "<group>"; };
 		AABB5A762147C2C50010BCF5 /* TimeLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeLine.png; sourceTree = "<group>"; };
@@ -275,6 +287,17 @@
 			path = ZLSwipeableViewSwift;
 			sourceTree = "<group>";
 		};
+		AA9336572163C03900E651D0 /* ExplainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA9336552163C03300E651D0 /* FirstExplainViewController.swift */,
+				AA9336582163C05400E651D0 /* SecondExplainViewController.swift */,
+				AA93365A2163C06500E651D0 /* ThirdExplainViewController.swift */,
+			);
+			name = ExplainViewController;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B47E02D9695204BD0B98BCD9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +326,7 @@
 		CE4676A420F4C2DA009DA351 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AA9336572163C03900E651D0 /* ExplainViewController */,
 				AA10BC58214F712D00C86ED8 /* CalenderViewController.storyboard */,
 				AA10BC56214F70C000C86ED8 /* MyDiaryViewController.storyboard */,
 				AA10BC54214F704F00C86ED8 /* AllMyDiaryViewController.storyboard */,
@@ -316,6 +340,7 @@
 				AA10BC44214F6EF200C86ED8 /* MakeDiaryViewController.storyboard */,
 				AA63BE302150157C001A9496 /* TopViewController.storyboard */,
 				AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */,
+				AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */,
 				CE4676DD20F4C43A009DA351 /* QRViewController.swift */,
 				CE4676B020F4C34A009DA351 /* AddFriendViewController.swift */,
 				CE4676AA20F4C349009DA351 /* AllMyDiaryViewController.swift */,
@@ -330,6 +355,7 @@
 				CE4676AC20F4C34A009DA351 /* MakeDiaryViewController.swift */,
 				CE4676A520F4C2EC009DA351 /* AllDiaryViewController.swift */,
 				AAC0B644214FA2C300D9F723 /* MyDiaryListViewController.swift */,
+				AA9336532163BEF500E651D0 /* TutorialViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -392,6 +418,7 @@
 		CE4676F020F4C4E4009DA351 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				AA93365C2163C4D700E651D0 /* saba.PNG */,
 				AADFC8EA214FB28F00554EBD /* add_diary.png */,
 				AABA9D092125B31E00D4AEE3 /* imageBack.png */,
 				AABA9D072125A85800D4AEE3 /* hearts.png */,
@@ -485,6 +512,7 @@
 				AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
 				CEA3BBA22151062E00F0FDEB /* icon.png in Resources */,
+				AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
 				AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */,
@@ -505,6 +533,7 @@
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */,
 				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
+				AA93365D2163C4D700E651D0 /* saba.PNG in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
 				AA10BC51214F700B00C86ED8 /* DrawerViewController.storyboard in Resources */,
@@ -585,6 +614,7 @@
 			files = (
 				CE4676EC20F4C4DF009DA351 /* CalculateCalendarLogic.swift in Sources */,
 				CE4676E320F4C491009DA351 /* DateManager.swift in Sources */,
+				AA9336542163BEF500E651D0 /* TutorialViewController.swift in Sources */,
 				CE4676DA20F4C42E009DA351 /* XibTableViewCell.swift in Sources */,
 				CE4676DC20F4C42E009DA351 /* CustomDrawerTableViewCell.swift in Sources */,
 				AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */,
@@ -592,6 +622,7 @@
 				CE4676B720F4C34B009DA351 /* CalenderViewController.swift in Sources */,
 				CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */,
 				AA4F33B42102005500B410FE /* SettingTableViewCell.swift in Sources */,
+				AA9336592163C05400E651D0 /* SecondExplainViewController.swift in Sources */,
 				CE4676E020F4C474009DA351 /* RealmModel.swift in Sources */,
 				CE4676B920F4C34B009DA351 /* DrawerViewController.swift in Sources */,
 				AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */,
@@ -599,6 +630,7 @@
 				CE4676B620F4C34B009DA351 /* AllMyDiaryViewController.swift in Sources */,
 				CE4676D620F4C42E009DA351 /* MyCustomDiaryTableViewCell.swift in Sources */,
 				AAC0B649214FA41B00D9F723 /* MyCardView.swift in Sources */,
+				AA93365B2163C06500E651D0 /* ThirdExplainViewController.swift in Sources */,
 				CE4676D820F4C42E009DA351 /* NameTableViewCell.swift in Sources */,
 				CE24278920BD5DDE009955AB /* Util.swift in Sources */,
 				CE4676D220F4C42E009DA351 /* CollectionViewCell.swift in Sources */,
@@ -610,6 +642,7 @@
 				CE4676C020F4C34B009DA351 /* ShowMyDiaryViewController.swift in Sources */,
 				CE4676BE20F4C34B009DA351 /* AllRecivedDiaryViewController.swift in Sources */,
 				CE4676BA20F4C34B009DA351 /* MyDiaryViewController.swift in Sources */,
+				AA9336562163C03300E651D0 /* FirstExplainViewController.swift in Sources */,
 				AAC0B645214FA2C300D9F723 /* MyDiaryListViewController.swift in Sources */,
 				CE4676BC20F4C34B009DA351 /* AddFriendViewController.swift in Sources */,
 				CE4676DE20F4C43A009DA351 /* QRViewController.swift in Sources */,
