@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Mamelon.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -33,11 +29,15 @@
 	<key>NSCameraUsageDescription</key>
 	<string>QRcodeを読み取るためにカメラを使用します</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Your microphone will be used to record your speech when you press the &quot;Start Recording&quot; button.</string>
+	<string>喋って愚痴るためにマイクを使用します</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>カメラロールの写真を表示します</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Speech recognition will be used to determine which words you speak into this device&apos;s microphone.</string>
+	<string>喋って愚痴るために音声認識を使用します</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mamelon.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

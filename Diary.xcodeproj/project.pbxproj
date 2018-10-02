@@ -86,7 +86,7 @@
 		CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */; };
 		CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D06B820E2305B00E87A14 /* Main.storyboard */; };
 		CE7AF50421265CB30057A925 /* TopView.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7AF50321265CB30057A925 /* TopView.png */; };
-		CE7AF508212662CD0057A925 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7AF507212662CD0057A925 /* icon.png */; };
+		CEA3BBA22151062E00F0FDEB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA3BBA12151062E00F0FDEB /* icon.png */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
 		CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE4F11F211F68800008FC2A /* TopViewController1.png */; };
 /* End PBXBuildFile section */
@@ -175,7 +175,7 @@
 		CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
 		CE4D06B820E2305B00E87A14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE7AF50321265CB30057A925 /* TopView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopView.png; sourceTree = "<group>"; };
-		CE7AF507212662CD0057A925 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CEA3BBA12151062E00F0FDEB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE4F11F211F68800008FC2A /* TopViewController1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewController1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -407,9 +407,9 @@
 				CE2E6D872101D4BC0065CCBB /* Setting.png */,
 				CE7AF50321265CB30057A925 /* TopView.png */,
 				CEE4F11F211F68800008FC2A /* TopViewController1.png */,
-				CE7AF507212662CD0057A925 /* icon.png */,
 				AABB5A762147C2C50010BCF5 /* TimeLine.png */,
 				AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */,
+				CEA3BBA12151062E00F0FDEB /* icon.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = V7EPKJW7KG;
+						DevelopmentTeam = 4M937WB6VR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -479,12 +479,12 @@
 				AA10BC5D214F850800C86ED8 /* Mamelon.otf in Resources */,
 				AA10BC57214F70C000C86ED8 /* MyDiaryViewController.storyboard in Resources */,
 				AA10BC53214F703000C86ED8 /* SettingViewController.storyboard in Resources */,
-				CE7AF508212662CD0057A925 /* icon.png in Resources */,
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
 				AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
+				CEA3BBA22151062E00F0FDEB /* icon.png in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
 				AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */,
@@ -736,11 +736,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7EPKJW7KG;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.a.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -755,11 +754,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7EPKJW7KG;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.a.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

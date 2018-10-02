@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
+import UserNotifications
+import FirebaseDatabase
+import FirebaseStorage
+import Firebase
 
 class Util: NSObject {
     
@@ -80,8 +85,32 @@ class Util: NSObject {
         
         return image
     }
+    static func showNotification(title:String,subtitle:String,body:String){
+        let contents = UNMutableNotificationContent()
+        contents.title = "今日もお疲れ!"
+        contents.subtitle = ""
+        contents.body = " \(Date().description(with: NSLocale.system))"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let identifier = NSUUID().uuidString
+        let request = UNNotificationRequest(identifier: identifier, content: contents, trigger: trigger)
+        UNUserNotificationCenter.current().add(request){
+            error in
+            print(error?.localizedDescription)
+        }
+    }
+    static func observeMyPost(){
+        let realm = try! Realm()
+        let resultArray = realm.objects(RealmModel.self)
+        var ref:DatabaseReference! = Database.database().reference()
+        for result in resultArray {
+            ref.child(Util.getUUID()).child(result.key).observe(.childChanged, with: {snapshot in
+                Util.showNotification(title: "いいねされました", subtitle: "サブ", body: result.honbunn as!
+                String)
+            })
+        }
     
-    
+    }
     
     
     
