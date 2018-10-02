@@ -83,7 +83,7 @@ class TimeLineViewController: UIViewController {
         
         if TimeLineViewController.isTutorial{
             TimeLineViewController.isTutorial = false
-             self.performSegue(withIdentifier: "toTutorialViewController", sender: nil)
+            self.performSegue(withIdentifier: "toTutorialViewController", sender: nil)
         }
     }
     
@@ -109,7 +109,6 @@ class TimeLineViewController: UIViewController {
             }
             if let nextCard = self.swipeableView.topView(){
                 if (nextCard as! CardView).userName == nil {
-                    print("karate")
                     self.swipeableView.swipeTopView(inDirection: Direction.Right)
                 }
             }
@@ -164,7 +163,7 @@ class TimeLineViewController: UIViewController {
             }
             index = index + 1
             if index == userNameArray.count {
-                //                index = 0
+//                index = 0
             }
         }else{
             cardView.setClear()
