@@ -448,7 +448,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KRD3HBM28P;
+						DevelopmentTeam = 4M937WB6VR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -736,8 +736,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.a.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -754,8 +755,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.a.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

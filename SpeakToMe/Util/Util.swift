@@ -89,7 +89,7 @@ class Util: NSObject {
         let contents = UNMutableNotificationContent()
         contents.title = title
         contents.subtitle = subtitle
-        contents.body = body + " \(Date().description(with: NSLocale.system))"
+        contents.body = body
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let identifier = NSUUID().uuidString
@@ -99,17 +99,39 @@ class Util: NSObject {
             print(error?.localizedDescription)
         }
     }
+    
+    
     static func observeMyPost(){
         let realm = try! Realm()
         let resultArray = realm.objects(RealmModel.self)
         var ref:DatabaseReference! = Database.database().reference()
         for result in resultArray {
             ref.child(Util.getUUID()).child(result.key).observe(.childChanged, with: {snapshot in
-                Util.showNotification(title: "いいねされました", subtitle: "サブ", body: result.honbunn as!
+                let likes = snapshot.value as! Int
+                Util.showNotification(title: "いいねされました", subtitle: String(likes) + "likes", body: result.honbunn as!
                     String)
             })
         }
         
+    }
+    static var isObserving = false
+    
+    static func printLog(viewC : Any, tag : String, contents:Any){
+        print(String(describing: viewC.self) + "[" + tag + "]", terminator: "")
+        print(contents)
+    }
+    static func printErrorLog(ViewC : Any){
+        printLog(ViewC: ViewC.self, tag: "error", contents: "Error")
+    }
+    static func resizeImage(src: UIImage!,max:Int) -> UIImage!{
+        var resizeImage : CGSize!
+        let maxLongSize : CGFloat = CGFloat(max)
+        
+        let ss = src.size
+        if maxLongSize == 0 || ( ss.width <= maxLongSize && ss.height <= maxLongSize ){
+            resizeImage = ss
+            return src
+        }
     }
     
     

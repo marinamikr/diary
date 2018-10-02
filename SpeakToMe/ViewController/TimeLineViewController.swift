@@ -52,7 +52,6 @@ class TimeLineViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Util.observeMyPost()
         if (self.userDefaults.string(forKey: "UserName") != nil) {
             let elDrawer = self.navigationController?.parent as! KYDrawerController
             (elDrawer.drawerViewController as! DrawerViewController).dalegate = self
@@ -61,7 +60,7 @@ class TimeLineViewController: UIViewController {
             if TimeLineViewController.isRenew{
                 index = 0
                 var delview = self.view.viewWithTag(1)
-                delview?.removeFromSuperview()
+            delview?.removeFromSuperview()
                 setUpSwipeableView()
                 getUserContents()
                 TimeLineViewController.isRenew = false
