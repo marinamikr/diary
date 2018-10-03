@@ -110,14 +110,12 @@ class TimeLineViewController: UIViewController {
                 self.checkLeftFirst()
             }else if direction == Direction.Right {
                 self.checkRightFirst()
-                
             }
             if let nextCard = self.swipeableView.topView(){
                 if (nextCard as! CardView).userName == nil {
                     self.swipeableView.swipeTopView(inDirection: Direction.Right)
                 }
             }
-            
         }
         swipeableView.didCancel = {view in
             print("Did cancel swiping view")
@@ -169,7 +167,7 @@ class TimeLineViewController: UIViewController {
             }
             index = index + 1
             if index == userNameArray.count {
-              index = 0
+                index = 0
             }
         }else{
             cardView.setClear()
@@ -251,6 +249,7 @@ class TimeLineViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = button2
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)!]
     }
+    
     func checkLeftFirst(){
         if self.userDefaults.bool(forKey: "firstLeftSwipe") == false{
             self.userDefaults.set(true, forKey: "firstLeftSwipe")
@@ -261,8 +260,8 @@ class TimeLineViewController: UIViewController {
             alert.addAction(closeAction)
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
+    
     func checkRightFirst(){
         if self.userDefaults.bool(forKey: "firstRightSwipe") == false{
             self.userDefaults.set(true, forKey: "firstRightSwipe")
@@ -273,9 +272,7 @@ class TimeLineViewController: UIViewController {
             alert.addAction(closeAction)
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
-    
     
     //右側のボタンが押されたら呼ばれる
     internal func rightBarBtnClicked(sender: UIButton){
