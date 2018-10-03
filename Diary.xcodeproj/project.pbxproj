@@ -90,10 +90,24 @@
 		CE4676ED20F4C4DF009DA351 /* CurrentDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676E920F4C4DE009DA351 /* CurrentDateSetting.swift */; };
 		CE4676EE20F4C4DF009DA351 /* CalendarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EA20F4C4DE009DA351 /* CalendarSetting.swift */; };
 		CE4676EF20F4C4DF009DA351 /* TargetDateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */; };
+		CE486D9F2164C381009C4D63 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE486D9E2164C381009C4D63 /* FourthViewController.swift */; };
+		CE486DA12164D55F009C4D63 /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = CE486DA02164D55E009C4D63 /* tutorial.png */; };
 		CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D06B820E2305B00E87A14 /* Main.storyboard */; };
 		CE7AF50421265CB30057A925 /* TopView.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7AF50321265CB30057A925 /* TopView.png */; };
 		CEA3BBA22151062E00F0FDEB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA3BBA12151062E00F0FDEB /* icon.png */; };
 		CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */; };
+		CED496E22164F25900C4C556 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E12164F25900C4C556 /* FifthViewController.swift */; };
+		CED496E42164F26800C4C556 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E32164F26800C4C556 /* SixthViewController.swift */; };
+		CED496E72164F27C00C4C556 /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E62164F27C00C4C556 /* SeventhViewController.swift */; };
+		CED496E92164F2B400C4C556 /* EighthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E82164F2B400C4C556 /* EighthViewController.swift */; };
+		CED496F22164F35A00C4C556 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EA2164F35800C4C556 /* 1.png */; };
+		CED496F32164F35A00C4C556 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EB2164F35900C4C556 /* 2.png */; };
+		CED496F42164F35A00C4C556 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EC2164F35900C4C556 /* 7.png */; };
+		CED496F52164F35A00C4C556 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496ED2164F35900C4C556 /* 3.png */; };
+		CED496F62164F35A00C4C556 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EE2164F35900C4C556 /* 5.png */; };
+		CED496F72164F35A00C4C556 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EF2164F35A00C4C556 /* 6.png */; };
+		CED496F82164F35A00C4C556 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496F02164F35A00C4C556 /* 4.png */; };
+		CED496F92164F35A00C4C556 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496F12164F35A00C4C556 /* 8.png */; };
 		CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE4F11F211F68800008FC2A /* TopViewController1.png */; };
 /* End PBXBuildFile section */
 
@@ -185,10 +199,24 @@
 		CE4676E920F4C4DE009DA351 /* CurrentDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDateSetting.swift; sourceTree = "<group>"; };
 		CE4676EA20F4C4DE009DA351 /* CalendarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSetting.swift; sourceTree = "<group>"; };
 		CE4676EB20F4C4DF009DA351 /* TargetDateSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateSetting.swift; sourceTree = "<group>"; };
+		CE486D9E2164C381009C4D63 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		CE486DA02164D55E009C4D63 /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
 		CE4D06B820E2305B00E87A14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE7AF50321265CB30057A925 /* TopView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopView.png; sourceTree = "<group>"; };
 		CEA3BBA12151062E00F0FDEB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		CEA44AC920B434AC005D5BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CED496E12164F25900C4C556 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		CED496E32164F26800C4C556 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		CED496E62164F27C00C4C556 /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
+		CED496E82164F2B400C4C556 /* EighthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthViewController.swift; sourceTree = "<group>"; };
+		CED496EA2164F35800C4C556 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CED496EB2164F35900C4C556 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		CED496EC2164F35900C4C556 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		CED496ED2164F35900C4C556 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		CED496EE2164F35900C4C556 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		CED496EF2164F35A00C4C556 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		CED496F02164F35A00C4C556 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		CED496F12164F35A00C4C556 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		CEE4F11F211F68800008FC2A /* TopViewController1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewController1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +321,11 @@
 				AA9336552163C03300E651D0 /* FirstExplainViewController.swift */,
 				AA9336582163C05400E651D0 /* SecondExplainViewController.swift */,
 				AA93365A2163C06500E651D0 /* ThirdExplainViewController.swift */,
+				CE486D9E2164C381009C4D63 /* FourthViewController.swift */,
+				CED496E12164F25900C4C556 /* FifthViewController.swift */,
+				CED496E32164F26800C4C556 /* SixthViewController.swift */,
+				CED496E62164F27C00C4C556 /* SeventhViewController.swift */,
+				CED496E82164F2B400C4C556 /* EighthViewController.swift */,
 			);
 			name = ExplainViewController;
 			path = "New Group";
@@ -418,6 +451,7 @@
 		CE4676F020F4C4E4009DA351 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				CE486DA22164DE6A009C4D63 /* Tutorial */,
 				AA93365C2163C4D700E651D0 /* saba.PNG */,
 				AADFC8EA214FB28F00554EBD /* add_diary.png */,
 				AABA9D092125B31E00D4AEE3 /* imageBack.png */,
@@ -437,8 +471,24 @@
 				AABB5A762147C2C50010BCF5 /* TimeLine.png */,
 				AA10BC42214F6C0A00C86ED8 /* setting sun.JPG */,
 				CEA3BBA12151062E00F0FDEB /* icon.png */,
+				CE486DA02164D55E009C4D63 /* tutorial.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		CE486DA22164DE6A009C4D63 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				CED496EA2164F35800C4C556 /* 1.png */,
+				CED496EB2164F35900C4C556 /* 2.png */,
+				CED496ED2164F35900C4C556 /* 3.png */,
+				CED496F02164F35A00C4C556 /* 4.png */,
+				CED496EE2164F35900C4C556 /* 5.png */,
+				CED496EF2164F35A00C4C556 /* 6.png */,
+				CED496EC2164F35900C4C556 /* 7.png */,
+				CED496F12164F35A00C4C556 /* 8.png */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,7 +525,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KRD3HBM28P;
+						DevelopmentTeam = 4M937WB6VR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -505,18 +555,24 @@
 			files = (
 				AA10BC5D214F850800C86ED8 /* Mamelon.otf in Resources */,
 				AA10BC57214F70C000C86ED8 /* MyDiaryViewController.storyboard in Resources */,
+				CED496F32164F35A00C4C556 /* 2.png in Resources */,
 				AA10BC53214F703000C86ED8 /* SettingViewController.storyboard in Resources */,
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
+				CED496F72164F35A00C4C556 /* 6.png in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
 				AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
 				CEA3BBA22151062E00F0FDEB /* icon.png in Resources */,
 				AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */,
+				CED496F62164F35A00C4C556 /* 5.png in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
 				AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */,
+				CED496F82164F35A00C4C556 /* 4.png in Resources */,
+				CED496F92164F35A00C4C556 /* 8.png in Resources */,
 				CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */,
+				CED496F42164F35A00C4C556 /* 7.png in Resources */,
 				CE2E6D862101D4540065CCBB /* Camera.png in Resources */,
 				CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */,
 				AA10BC49214F6F5C00C86ED8 /* AllDiaryViewController.storyboard in Resources */,
@@ -529,10 +585,12 @@
 				AAC0B64B214FA69A00D9F723 /* MyDiaryListViewController.storyboard in Resources */,
 				AA10BC4B214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard in Resources */,
 				AA10BC55214F704F00C86ED8 /* AllMyDiaryViewController.storyboard in Resources */,
+				CE486DA12164D55F009C4D63 /* tutorial.png in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */,
 				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
+				CED496F52164F35A00C4C556 /* 3.png in Resources */,
 				AA93365D2163C4D700E651D0 /* saba.PNG in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
@@ -545,6 +603,7 @@
 				AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */,
 				CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */,
 				AA10BC47214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard in Resources */,
+				CED496F22164F35A00C4C556 /* 1.png in Resources */,
 				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,
 				AA10BC59214F712D00C86ED8 /* CalenderViewController.storyboard in Resources */,
 			);
@@ -612,6 +671,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED496E22164F25900C4C556 /* FifthViewController.swift in Sources */,
 				CE4676EC20F4C4DF009DA351 /* CalculateCalendarLogic.swift in Sources */,
 				CE4676E320F4C491009DA351 /* DateManager.swift in Sources */,
 				AA9336542163BEF500E651D0 /* TutorialViewController.swift in Sources */,
@@ -631,6 +691,7 @@
 				CE4676D620F4C42E009DA351 /* MyCustomDiaryTableViewCell.swift in Sources */,
 				AAC0B649214FA41B00D9F723 /* MyCardView.swift in Sources */,
 				AA93365B2163C06500E651D0 /* ThirdExplainViewController.swift in Sources */,
+				CED496E72164F27C00C4C556 /* SeventhViewController.swift in Sources */,
 				CE4676D820F4C42E009DA351 /* NameTableViewCell.swift in Sources */,
 				CE24278920BD5DDE009955AB /* Util.swift in Sources */,
 				CE4676D220F4C42E009DA351 /* CollectionViewCell.swift in Sources */,
@@ -639,7 +700,9 @@
 				AA4F33B12101F37B00B410FE /* CircleImageView.swift in Sources */,
 				CE4676B820F4C34B009DA351 /* MakeDiaryViewController.swift in Sources */,
 				CE4676E620F4C4A7009DA351 /* Extension.swift in Sources */,
+				CED496E92164F2B400C4C556 /* EighthViewController.swift in Sources */,
 				CE4676C020F4C34B009DA351 /* ShowMyDiaryViewController.swift in Sources */,
+				CE486D9F2164C381009C4D63 /* FourthViewController.swift in Sources */,
 				CE4676BE20F4C34B009DA351 /* AllRecivedDiaryViewController.swift in Sources */,
 				CE4676BA20F4C34B009DA351 /* MyDiaryViewController.swift in Sources */,
 				AA9336562163C03300E651D0 /* FirstExplainViewController.swift in Sources */,
@@ -649,6 +712,7 @@
 				AA76C03A213E8B9A0061DE38 /* Scheduler.swift in Sources */,
 				AAF53FF32147DAC700102816 /* TimeLineViewController.swift in Sources */,
 				AA76C03B213E8B9A0061DE38 /* Direction.swift in Sources */,
+				CED496E42164F26800C4C556 /* SixthViewController.swift in Sources */,
 				AA4F33AE2101EA8900B410FE /* UserModel.swift in Sources */,
 				CE4676ED20F4C4DF009DA351 /* CurrentDateSetting.swift in Sources */,
 				7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */,
@@ -769,7 +833,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -788,7 +852,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

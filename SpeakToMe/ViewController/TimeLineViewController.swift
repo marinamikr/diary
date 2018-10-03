@@ -106,12 +106,14 @@ class TimeLineViewController: UIViewController {
             let card = self.swipeableView.history.last as! CardView
             if direction == Direction.Left{
                 card.addLike()
+                self.likeArray[card.index] = card.like
             }
             if let nextCard = self.swipeableView.topView(){
                 if (nextCard as! CardView).userName == nil {
                     self.swipeableView.swipeTopView(inDirection: Direction.Right)
                 }
             }
+            
         }
         swipeableView.didCancel = {view in
             print("Did cancel swiping view")
@@ -163,7 +165,7 @@ class TimeLineViewController: UIViewController {
             }
             index = index + 1
             if index == userNameArray.count {
-//                index = 0
+              index = 0
             }
         }else{
             cardView.setClear()

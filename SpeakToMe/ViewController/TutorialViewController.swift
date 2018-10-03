@@ -34,6 +34,27 @@ extension TutorialViewController : UIPageViewControllerDataSource {
     func getThird() -> ThirdExplainViewController {
         return storyboard!.instantiateViewController(withIdentifier: "ThirdExplainViewController") as! ThirdExplainViewController
     }
+    func getFourth() -> FourthViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "FourthViewController") as!
+        FourthViewController
+    }
+    func getFifth() -> FifthViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "FifthViewController") as!
+        FifthViewController
+    }
+    func getSixth() -> SixthViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "SixthViewController") as!
+        SixthViewController
+    }
+    func getSeventh() -> SeventhViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "SeventhViewController") as!
+        SeventhViewController
+    }
+    func getEighth() -> EighthViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "EighthViewController") as!
+        EighthViewController
+    }
+    
     
     //戻る方向にスワイプされた場合の条件わけ
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -42,6 +63,16 @@ extension TutorialViewController : UIPageViewControllerDataSource {
             return getSecond()
         }else if viewController.isKind(of:SecondExplainViewController.self){
             return getFirst()
+        }else if viewController.isKind(of:FourthViewController.self){
+            return getThird()
+        }else if viewController.isKind(of:FifthViewController.self){
+            return getFourth()
+        }else if viewController.isKind(of:SixthViewController.self){
+            return getFifth()
+        }else if viewController.isKind(of:SeventhViewController.self){
+            return getSixth()
+        }else if viewController.isKind(of:EighthViewController.self){
+            return getSeventh()
         }else{
             return nil
         }
@@ -54,6 +85,16 @@ extension TutorialViewController : UIPageViewControllerDataSource {
             return getSecond()
         }else if viewController.isKind(of: SecondExplainViewController.self){
             return getThird()
+        }else if viewController.isKind(of: ThirdExplainViewController.self){
+            return getFourth()
+        }else if viewController.isKind(of: FourthViewController.self){
+            return getFifth()
+        }else if viewController.isKind(of: FifthViewController.self){
+            return getSixth()
+        }else if viewController.isKind(of: SixthViewController.self){
+            return getSeventh()
+        }else if viewController.isKind(of: SeventhViewController.self){
+            return getEighth()
         }else{
             return nil
         }
