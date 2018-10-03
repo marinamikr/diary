@@ -40,9 +40,7 @@
 		AA9336562163C03300E651D0 /* FirstExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336552163C03300E651D0 /* FirstExplainViewController.swift */; };
 		AA9336592163C05400E651D0 /* SecondExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336582163C05400E651D0 /* SecondExplainViewController.swift */; };
 		AA93365B2163C06500E651D0 /* ThirdExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93365A2163C06500E651D0 /* ThirdExplainViewController.swift */; };
-		AA93365D2163C4D700E651D0 /* saba.PNG in Resources */ = {isa = PBXBuildFile; fileRef = AA93365C2163C4D700E651D0 /* saba.PNG */; };
 		AABA9D082125A85800D4AEE3 /* hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D072125A85800D4AEE3 /* hearts.png */; };
-		AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */ = {isa = PBXBuildFile; fileRef = AABA9D092125B31E00D4AEE3 /* imageBack.png */; };
 		AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */ = {isa = PBXBuildFile; fileRef = AABB5A762147C2C50010BCF5 /* TimeLine.png */; };
 		AAC0B645214FA2C300D9F723 /* MyDiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0B644214FA2C300D9F723 /* MyDiaryListViewController.swift */; };
 		AAC0B649214FA41B00D9F723 /* MyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0B648214FA41B00D9F723 /* MyCardView.swift */; };
@@ -149,9 +147,7 @@
 		AA9336552163C03300E651D0 /* FirstExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExplainViewController.swift; sourceTree = "<group>"; };
 		AA9336582163C05400E651D0 /* SecondExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondExplainViewController.swift; sourceTree = "<group>"; };
 		AA93365A2163C06500E651D0 /* ThirdExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdExplainViewController.swift; sourceTree = "<group>"; };
-		AA93365C2163C4D700E651D0 /* saba.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saba.PNG; sourceTree = "<group>"; };
 		AABA9D072125A85800D4AEE3 /* hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearts.png; sourceTree = "<group>"; };
-		AABA9D092125B31E00D4AEE3 /* imageBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageBack.png; sourceTree = "<group>"; };
 		AABB5A762147C2C50010BCF5 /* TimeLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeLine.png; sourceTree = "<group>"; };
 		AAC0B644214FA2C300D9F723 /* MyDiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryListViewController.swift; sourceTree = "<group>"; };
 		AAC0B648214FA41B00D9F723 /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
@@ -451,10 +447,8 @@
 		CE4676F020F4C4E4009DA351 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				CED496FA2165027600C4C556 /* Tutorial2 */,
-				AA93365C2163C4D700E651D0 /* saba.PNG */,
+				CED496FA2165027600C4C556 /* Tutorial */,
 				AADFC8EA214FB28F00554EBD /* add_diary.png */,
-				AABA9D092125B31E00D4AEE3 /* imageBack.png */,
 				AABA9D072125A85800D4AEE3 /* hearts.png */,
 				CE3FD43C20FEE8EF00CF07F8 /* calender_add_blue1.png */,
 				CE2563C120FDAEEC00C4F948 /* calender_add_white.png */,
@@ -476,7 +470,7 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		CED496FA2165027600C4C556 /* Tutorial2 */ = {
+		CED496FA2165027600C4C556 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
 				CED496FB2165028C00C4C556 /* 1.png */,
@@ -488,7 +482,7 @@
 				CED496FD2165028D00C4C556 /* 7.png */,
 				CED497022165028F00C4C556 /* 8.png */,
 			);
-			path = Tutorial2;
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,12 +583,10 @@
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */,
 				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
-				AA93365D2163C4D700E651D0 /* saba.PNG in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
 				AA10BC51214F700B00C86ED8 /* DrawerViewController.storyboard in Resources */,
 				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
-				AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */,
 				CED497092165028F00C4C556 /* 4.png in Resources */,
 				CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */,
 				CED497032165028F00C4C556 /* 1.png in Resources */,
