@@ -17,7 +17,6 @@ class TutorialViewController: UIPageViewController {
         self.navigationItem.title = "使い方"
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)]
     }
-    
 }
 
 extension TutorialViewController : UIPageViewControllerDataSource {
@@ -34,27 +33,31 @@ extension TutorialViewController : UIPageViewControllerDataSource {
     func getThird() -> ThirdExplainViewController {
         return storyboard!.instantiateViewController(withIdentifier: "ThirdExplainViewController") as! ThirdExplainViewController
     }
+    
     func getFourth() -> FourthViewController {
         return storyboard!.instantiateViewController(withIdentifier: "FourthViewController") as!
         FourthViewController
     }
+    
     func getFifth() -> FifthViewController {
         return storyboard!.instantiateViewController(withIdentifier: "FifthViewController") as!
         FifthViewController
     }
+    
     func getSixth() -> SixthViewController {
         return storyboard!.instantiateViewController(withIdentifier: "SixthViewController") as!
         SixthViewController
     }
+    
     func getSeventh() -> SeventhViewController {
         return storyboard!.instantiateViewController(withIdentifier: "SeventhViewController") as!
         SeventhViewController
     }
+    
     func getEighth() -> EighthViewController {
         return storyboard!.instantiateViewController(withIdentifier: "EighthViewController") as!
         EighthViewController
     }
-    
     
     //戻る方向にスワイプされた場合の条件わけ
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
