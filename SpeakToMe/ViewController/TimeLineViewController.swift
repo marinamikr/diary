@@ -107,6 +107,10 @@ class TimeLineViewController: UIViewController {
             if direction == Direction.Left{
                 card.addLike()
                 self.likeArray[card.index] = card.like
+                self.checkLeftFirst()
+            }else if direction == Direction.Right {
+                self.checkRightFirst()
+                
             }
             if let nextCard = self.swipeableView.topView(){
                 if (nextCard as! CardView).userName == nil {
@@ -247,6 +251,31 @@ class TimeLineViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = button2
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Mamelon", size: 20)!]
     }
+    func checkLeftFirst(){
+        if self.userDefaults.bool(forKey: "firstLeftSwipe") == false{
+            self.userDefaults.set(true, forKey: "firstLeftSwipe")
+            let alert: UIAlertController = UIAlertController(title: "投稿にいいねしました",message: "これは初回だけ表示されます",preferredStyle: .alert)
+            let closeAction = UIAlertAction(title: "OK", style: .default){
+                action in
+            }
+            alert.addAction(closeAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    func checkRightFirst(){
+        if self.userDefaults.bool(forKey: "firstRightSwipe") == false{
+            self.userDefaults.set(true, forKey: "firstRightSwipe")
+            let alert: UIAlertController = UIAlertController(title: "スワイプする事で投稿を見ることができます",message: "これは初回だけ表示されます",preferredStyle: .alert)
+            let closeAction = UIAlertAction(title: "OK", style: .default){
+                action in
+            }
+            alert.addAction(closeAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
     
     //右側のボタンが押されたら呼ばれる
     internal func rightBarBtnClicked(sender: UIButton){

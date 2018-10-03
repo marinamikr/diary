@@ -100,14 +100,14 @@
 		CED496E42164F26800C4C556 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E32164F26800C4C556 /* SixthViewController.swift */; };
 		CED496E72164F27C00C4C556 /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E62164F27C00C4C556 /* SeventhViewController.swift */; };
 		CED496E92164F2B400C4C556 /* EighthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED496E82164F2B400C4C556 /* EighthViewController.swift */; };
-		CED496F22164F35A00C4C556 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EA2164F35800C4C556 /* 1.png */; };
-		CED496F32164F35A00C4C556 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EB2164F35900C4C556 /* 2.png */; };
-		CED496F42164F35A00C4C556 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EC2164F35900C4C556 /* 7.png */; };
-		CED496F52164F35A00C4C556 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496ED2164F35900C4C556 /* 3.png */; };
-		CED496F62164F35A00C4C556 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EE2164F35900C4C556 /* 5.png */; };
-		CED496F72164F35A00C4C556 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496EF2164F35A00C4C556 /* 6.png */; };
-		CED496F82164F35A00C4C556 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496F02164F35A00C4C556 /* 4.png */; };
-		CED496F92164F35A00C4C556 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496F12164F35A00C4C556 /* 8.png */; };
+		CED497032165028F00C4C556 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496FB2165028C00C4C556 /* 1.png */; };
+		CED497042165028F00C4C556 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496FC2165028C00C4C556 /* 2.png */; };
+		CED497052165028F00C4C556 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496FD2165028D00C4C556 /* 7.png */; };
+		CED497062165028F00C4C556 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496FE2165028D00C4C556 /* 3.png */; };
+		CED497072165028F00C4C556 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CED496FF2165028D00C4C556 /* 5.png */; };
+		CED497082165028F00C4C556 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CED497002165028E00C4C556 /* 6.png */; };
+		CED497092165028F00C4C556 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CED497012165028E00C4C556 /* 4.png */; };
+		CED4970A2165028F00C4C556 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CED497022165028F00C4C556 /* 8.png */; };
 		CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE4F11F211F68800008FC2A /* TopViewController1.png */; };
 /* End PBXBuildFile section */
 
@@ -209,14 +209,14 @@
 		CED496E32164F26800C4C556 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
 		CED496E62164F27C00C4C556 /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
 		CED496E82164F2B400C4C556 /* EighthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthViewController.swift; sourceTree = "<group>"; };
-		CED496EA2164F35800C4C556 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		CED496EB2164F35900C4C556 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		CED496EC2164F35900C4C556 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
-		CED496ED2164F35900C4C556 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		CED496EE2164F35900C4C556 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		CED496EF2164F35A00C4C556 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
-		CED496F02164F35A00C4C556 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		CED496F12164F35A00C4C556 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		CED496FB2165028C00C4C556 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CED496FC2165028C00C4C556 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		CED496FD2165028D00C4C556 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		CED496FE2165028D00C4C556 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		CED496FF2165028D00C4C556 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		CED497002165028E00C4C556 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		CED497012165028E00C4C556 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		CED497022165028F00C4C556 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		CEE4F11F211F68800008FC2A /* TopViewController1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewController1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -451,7 +451,7 @@
 		CE4676F020F4C4E4009DA351 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				CE486DA22164DE6A009C4D63 /* Tutorial */,
+				CED496FA2165027600C4C556 /* Tutorial2 */,
 				AA93365C2163C4D700E651D0 /* saba.PNG */,
 				AADFC8EA214FB28F00554EBD /* add_diary.png */,
 				AABA9D092125B31E00D4AEE3 /* imageBack.png */,
@@ -476,19 +476,19 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		CE486DA22164DE6A009C4D63 /* Tutorial */ = {
+		CED496FA2165027600C4C556 /* Tutorial2 */ = {
 			isa = PBXGroup;
 			children = (
-				CED496EA2164F35800C4C556 /* 1.png */,
-				CED496EB2164F35900C4C556 /* 2.png */,
-				CED496ED2164F35900C4C556 /* 3.png */,
-				CED496F02164F35A00C4C556 /* 4.png */,
-				CED496EE2164F35900C4C556 /* 5.png */,
-				CED496EF2164F35A00C4C556 /* 6.png */,
-				CED496EC2164F35900C4C556 /* 7.png */,
-				CED496F12164F35A00C4C556 /* 8.png */,
+				CED496FB2165028C00C4C556 /* 1.png */,
+				CED496FC2165028C00C4C556 /* 2.png */,
+				CED496FE2165028D00C4C556 /* 3.png */,
+				CED497012165028E00C4C556 /* 4.png */,
+				CED496FF2165028D00C4C556 /* 5.png */,
+				CED497002165028E00C4C556 /* 6.png */,
+				CED496FD2165028D00C4C556 /* 7.png */,
+				CED497022165028F00C4C556 /* 8.png */,
 			);
-			path = Tutorial;
+			path = Tutorial2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,7 +525,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KRD3HBM28P;
+						DevelopmentTeam = 4M937WB6VR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -555,55 +555,55 @@
 			files = (
 				AA10BC5D214F850800C86ED8 /* Mamelon.otf in Resources */,
 				AA10BC57214F70C000C86ED8 /* MyDiaryViewController.storyboard in Resources */,
-				CED496F32164F35A00C4C556 /* 2.png in Resources */,
 				AA10BC53214F703000C86ED8 /* SettingViewController.storyboard in Resources */,
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
-				CED496F72164F35A00C4C556 /* 6.png in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
 				AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
 				CEA3BBA22151062E00F0FDEB /* icon.png in Resources */,
 				AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */,
-				CED496F62164F35A00C4C556 /* 5.png in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
 				AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */,
-				CED496F82164F35A00C4C556 /* 4.png in Resources */,
-				CED496F92164F35A00C4C556 /* 8.png in Resources */,
 				CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */,
-				CED496F42164F35A00C4C556 /* 7.png in Resources */,
 				CE2E6D862101D4540065CCBB /* Camera.png in Resources */,
 				CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */,
+				CED497042165028F00C4C556 /* 2.png in Resources */,
 				AA10BC49214F6F5C00C86ED8 /* AllDiaryViewController.storyboard in Resources */,
+				CED497062165028F00C4C556 /* 3.png in Resources */,
 				CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */,
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
 				CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */,
 				CE7AF50421265CB30057A925 /* TopView.png in Resources */,
+				CED497072165028F00C4C556 /* 5.png in Resources */,
 				AA10BC45214F6EF200C86ED8 /* MakeDiaryViewController.storyboard in Resources */,
 				AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */,
 				AAC0B64B214FA69A00D9F723 /* MyDiaryListViewController.storyboard in Resources */,
+				CED497052165028F00C4C556 /* 7.png in Resources */,
 				AA10BC4B214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard in Resources */,
+				CED4970A2165028F00C4C556 /* 8.png in Resources */,
 				AA10BC55214F704F00C86ED8 /* AllMyDiaryViewController.storyboard in Resources */,
 				CE486DA12164D55F009C4D63 /* tutorial.png in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */,
 				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
-				CED496F52164F35A00C4C556 /* 3.png in Resources */,
 				AA93365D2163C4D700E651D0 /* saba.PNG in Resources */,
 				CEA44ACA20B434AC005D5BAA /* GoogleService-Info.plist in Resources */,
 				CE3FD43D20FEE8EF00CF07F8 /* calender_add_blue1.png in Resources */,
 				AA10BC51214F700B00C86ED8 /* DrawerViewController.storyboard in Resources */,
 				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
 				AABA9D0A2125B31E00D4AEE3 /* imageBack.png in Resources */,
+				CED497092165028F00C4C556 /* 4.png in Resources */,
 				CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */,
+				CED497032165028F00C4C556 /* 1.png in Resources */,
 				AADFC8EB214FB28F00554EBD /* add_diary.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
 				AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */,
+				CED497082165028F00C4C556 /* 6.png in Resources */,
 				CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */,
 				AA10BC47214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard in Resources */,
-				CED496F22164F35A00C4C556 /* 1.png in Resources */,
 				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,
 				AA10BC59214F712D00C86ED8 /* CalenderViewController.storyboard in Resources */,
 			);
@@ -833,11 +833,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.a.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinaharada.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -852,11 +852,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 4M937WB6VR;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.a.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinaharada.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
