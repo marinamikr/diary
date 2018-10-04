@@ -48,15 +48,16 @@
 		AAC0B64B214FA69A00D9F723 /* MyDiaryListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */; };
 		AADFC8EB214FB28F00554EBD /* add_diary.png in Resources */ = {isa = PBXBuildFile; fileRef = AADFC8EA214FB28F00554EBD /* add_diary.png */; };
 		AAF53FF32147DAC700102816 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF53FF22147DAC700102816 /* TimeLineViewController.swift */; };
+		CE0BD314216611ED0044D4E7 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD30C216611E70044D4E7 /* 1.png */; };
+		CE0BD315216611ED0044D4E7 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD30D216611E70044D4E7 /* 2.png */; };
+		CE0BD316216611ED0044D4E7 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD30E216611E80044D4E7 /* 7.png */; };
+		CE0BD317216611ED0044D4E7 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD30F216611E80044D4E7 /* 3.png */; };
+		CE0BD318216611ED0044D4E7 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD310216611E80044D4E7 /* 5.png */; };
+		CE0BD319216611ED0044D4E7 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD311216611EC0044D4E7 /* 6.png */; };
+		CE0BD31A216611ED0044D4E7 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD312216611EC0044D4E7 /* 4.png */; };
+		CE0BD31B216611ED0044D4E7 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD313216611EC0044D4E7 /* 8.png */; };
+		CE0BD31D216615DB0044D4E7 /* setting sun22.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD31C216615DB0044D4E7 /* setting sun22.png */; };
 		CE0F746520FDEF04000D83DB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0F746420FDEF03000D83DB /* background1.png */; };
-		CE12327821650F280012350C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327021650F260012350C /* 1.png */; };
-		CE12327921650F280012350C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327121650F260012350C /* 2.png */; };
-		CE12327A21650F280012350C /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327221650F270012350C /* 7.png */; };
-		CE12327B21650F280012350C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327321650F270012350C /* 3.png */; };
-		CE12327C21650F280012350C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327421650F270012350C /* 5.png */; };
-		CE12327D21650F280012350C /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327521650F270012350C /* 6.png */; };
-		CE12327E21650F280012350C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327621650F280012350C /* 4.png */; };
-		CE12327F21650F280012350C /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12327721650F280012350C /* 8.png */; };
 		CE123281216510F80012350C /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = CE123280216510F70012350C /* friend.png */; };
 		CE123284216513950012350C /* setting sun.png in Resources */ = {isa = PBXBuildFile; fileRef = CE123283216513950012350C /* setting sun.png */; };
 		CE24278920BD5DDE009955AB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24278820BD5DDE009955AB /* Util.swift */; };
@@ -158,15 +159,16 @@
 		AAC0B64A214FA69A00D9F723 /* MyDiaryListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyDiaryListViewController.storyboard; sourceTree = "<group>"; };
 		AADFC8EA214FB28F00554EBD /* add_diary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_diary.png; sourceTree = "<group>"; };
 		AAF53FF22147DAC700102816 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		CE0BD30C216611E70044D4E7 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CE0BD30D216611E70044D4E7 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		CE0BD30E216611E80044D4E7 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		CE0BD30F216611E80044D4E7 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		CE0BD310216611E80044D4E7 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		CE0BD311216611EC0044D4E7 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		CE0BD312216611EC0044D4E7 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		CE0BD313216611EC0044D4E7 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		CE0BD31C216615DB0044D4E7 /* setting sun22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting sun22.png"; sourceTree = "<group>"; };
 		CE0F746420FDEF03000D83DB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
-		CE12327021650F260012350C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		CE12327121650F260012350C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		CE12327221650F270012350C /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
-		CE12327321650F270012350C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		CE12327421650F270012350C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		CE12327521650F270012350C /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
-		CE12327621650F280012350C /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		CE12327721650F280012350C /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		CE123280216510F70012350C /* friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friend.png; sourceTree = "<group>"; };
 		CE123283216513950012350C /* setting sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting sun.png"; sourceTree = "<group>"; };
 		CE24278820BD5DDE009955AB /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -342,19 +344,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CE12326F21650E220012350C /* Tutorial2 */ = {
+		CE0BD30B216611CF0044D4E7 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				CE12327021650F260012350C /* 1.png */,
-				CE12327121650F260012350C /* 2.png */,
-				CE12327321650F270012350C /* 3.png */,
-				CE12327621650F280012350C /* 4.png */,
-				CE12327421650F270012350C /* 5.png */,
-				CE12327521650F270012350C /* 6.png */,
-				CE12327221650F270012350C /* 7.png */,
-				CE12327721650F280012350C /* 8.png */,
+				CE0BD30C216611E70044D4E7 /* 1.png */,
+				CE0BD30D216611E70044D4E7 /* 2.png */,
+				CE0BD30F216611E80044D4E7 /* 3.png */,
+				CE0BD312216611EC0044D4E7 /* 4.png */,
+				CE0BD310216611E80044D4E7 /* 5.png */,
+				CE0BD311216611EC0044D4E7 /* 6.png */,
+				CE0BD30E216611E80044D4E7 /* 7.png */,
+				CE0BD313216611EC0044D4E7 /* 8.png */,
 			);
-			path = Tutorial2;
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		CE24278720BD5DC6009955AB /* Util */ = {
@@ -468,7 +470,7 @@
 		CE4676F020F4C4E4009DA351 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				CE12326F21650E220012350C /* Tutorial2 */,
+				CE0BD30B216611CF0044D4E7 /* Tutorial */,
 				AADFC8EA214FB28F00554EBD /* add_diary.png */,
 				AABA9D072125A85800D4AEE3 /* hearts.png */,
 				CE3FD43C20FEE8EF00CF07F8 /* calender_add_blue1.png */,
@@ -490,6 +492,7 @@
 				CE123280216510F70012350C /* friend.png */,
 				CE123283216513950012350C /* setting sun.png */,
 				AA9150F4216609260058F867 /* pinkhearts.png */,
+				CE0BD31C216615DB0044D4E7 /* setting sun22.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -556,33 +559,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE12327B21650F280012350C /* 3.png in Resources */,
+				CE0BD31B216611ED0044D4E7 /* 8.png in Resources */,
 				AA10BC5D214F850800C86ED8 /* Mamelon.otf in Resources */,
+				CE0BD315216611ED0044D4E7 /* 2.png in Resources */,
 				AA10BC57214F70C000C86ED8 /* MyDiaryViewController.storyboard in Resources */,
 				AA10BC53214F703000C86ED8 /* SettingViewController.storyboard in Resources */,
 				CE2563C320FDAEEE00C4F948 /* calender_show_blue.png in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
-				CE12327821650F280012350C /* 1.png in Resources */,
 				CE4676D520F4C42E009DA351 /* CollectionViewCell.xib in Resources */,
 				AA10BC4D214F6FA800C86ED8 /* AddFriendViewController.storyboard in Resources */,
 				CE4676D320F4C42E009DA351 /* XibTableViewCell.xib in Resources */,
+				CE0BD317216611ED0044D4E7 /* 3.png in Resources */,
 				CEA3BBA22151062E00F0FDEB /* icon.png in Resources */,
 				AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */,
 				CE4D06B920E2305B00E87A14 /* Main.storyboard in Resources */,
 				CE2E6D892101D4BD0065CCBB /* Setting.png in Resources */,
 				AA63BE312150157C001A9496 /* TopViewController.storyboard in Resources */,
 				CE4676D720F4C42E009DA351 /* MyCustomDiaryTableViewCell.xib in Resources */,
-				CE12327921650F280012350C /* 2.png in Resources */,
+				CE0BD316216611ED0044D4E7 /* 7.png in Resources */,
 				CE2E6D862101D4540065CCBB /* Camera.png in Resources */,
 				CE4676D920F4C42E009DA351 /* NameTableViewCell.xib in Resources */,
-				CE12327E21650F280012350C /* 4.png in Resources */,
+				CE0BD318216611ED0044D4E7 /* 5.png in Resources */,
 				AA10BC49214F6F5C00C86ED8 /* AllDiaryViewController.storyboard in Resources */,
 				CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */,
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
+				CE0BD31A216611ED0044D4E7 /* 4.png in Resources */,
 				CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */,
 				CE7AF50421265CB30057A925 /* TopView.png in Resources */,
 				AA10BC45214F6EF200C86ED8 /* MakeDiaryViewController.storyboard in Resources */,
-				CE12327A21650F280012350C /* 7.png in Resources */,
 				AABB5A772147C2C50010BCF5 /* TimeLine.png in Resources */,
 				AAC0B64B214FA69A00D9F723 /* MyDiaryListViewController.storyboard in Resources */,
 				AA10BC4B214F6F8300C86ED8 /* AllRecivedDiaryViewController.storyboard in Resources */,
@@ -599,14 +603,14 @@
 				CE0F746520FDEF04000D83DB /* background1.png in Resources */,
 				CE2E6D8E2101DD0B0065CCBB /* MyFriendDiary.png in Resources */,
 				AADFC8EB214FB28F00554EBD /* add_diary.png in Resources */,
-				CE12327D21650F280012350C /* 6.png in Resources */,
+				CE0BD314216611ED0044D4E7 /* 1.png in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
+				CE0BD31D216615DB0044D4E7 /* setting sun22.png in Resources */,
 				AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */,
 				CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */,
-				CE12327F21650F280012350C /* 8.png in Resources */,
 				AA9150F5216609260058F867 /* pinkhearts.png in Resources */,
+				CE0BD319216611ED0044D4E7 /* 6.png in Resources */,
 				AA10BC47214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard in Resources */,
-				CE12327C21650F280012350C /* 5.png in Resources */,
 				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,
 				AA10BC59214F712D00C86ED8 /* CalenderViewController.storyboard in Resources */,
 				CE123284216513950012350C /* setting sun.png in Resources */,

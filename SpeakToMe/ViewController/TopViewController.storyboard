@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting sun.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-Ku-Sfw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting sun22.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tgm-Ku-Sfw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="233.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-gm-hfn" userLabel="Stack View5">
@@ -270,10 +270,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jB5-F1-VWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="-1037"/>
+            <point key="canvasLocation" x="282" y="-1035"/>
         </scene>
     </scenes>
     <resources>
-        <image name="setting sun.png" width="2048" height="1365"/>
+        <image name="setting sun22.png" width="2048" height="1365"/>
     </resources>
 </document>

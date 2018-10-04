@@ -121,7 +121,7 @@ class TimeLineViewController: UIViewController {
             }else if direction == Direction.Up{
                 if self.likeKeyArray.contains(card.key){
                     card.removeLike()
-                    self.likeKeyArray.remove(at: self.likeKeyArray.firstIndex(of: card.key)!)
+                    self.likeKeyArray.remove(at: self.likeKeyArray.index(of: card.key)!)
                     self.userDefaults.set(self.likeKeyArray, forKey: "likeKeyArray")
                     self.checkUpFirst()
                 }
@@ -233,7 +233,7 @@ class TimeLineViewController: UIViewController {
                                 self.uuIdArray.append(id)
                                 self.iconURLArray.append(postDict["iconURL"] as! String)
                                 self.ref.child(id).child((child as! DataSnapshot).key).observe(.value, with: {snapshot  in
-                                    let index = self.keyArray.firstIndex(of: (child as! DataSnapshot).key)
+                                    let index = self.keyArray.index(of: (child as! DataSnapshot).key)
                                     let postDict = (snapshot as! DataSnapshot).value as! [String : AnyObject]
                                     self.userNameArray[index!] = postDict["userName"] as! String
                                     self.dateArray[index!] = postDict["date"] as! String
