@@ -6,8 +6,6 @@
 //  Copyright © 2018年 Marina Harada. All rights reserved.
 //
 
-
-
 import UIKit
 import Firebase
 
