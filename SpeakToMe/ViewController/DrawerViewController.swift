@@ -17,7 +17,7 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     var userDefaults:UserDefaults = UserDefaults.standard
     var array:[String] = ["自分の愚痴一覧","MyQRコード","友達追加","設定","使い方"]
-    var imageArray:[String] = ["MyDiary.png","QRcode.png","Camera.png","Setting.png","tutorial.png"]
+    var imageArray:[String] = ["MyDiary.png","QRcode.png","friend.png","Setting.png","tutorial.png"]
     var dalegate : CustomDelegate!
     
     

@@ -31,6 +31,7 @@ class TimeLineViewController: UIViewController {
     var ref:DatabaseReference!
     var index = 0
     var isSetUpZLSwipeableView = false
+    var likeIndex = [Int]()
     static var isRenew = false
     static var isTutorial = false
     
@@ -105,7 +106,10 @@ class TimeLineViewController: UIViewController {
             print("Did swipe view in direction: \(direction), vector: \(vector)")
             let card = self.swipeableView.history.last as! CardView
             if direction == Direction.Left{
+                if !self.likeIndex.contains(card.index){
                 card.addLike()
+                self.likeIndex.append(card.index)
+                }
                 self.likeArray[card.index] = card.like
                 self.checkLeftFirst()
             }else if direction == Direction.Right {
