@@ -35,6 +35,7 @@
 		AA76C03C213E8B9A0061DE38 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C038213E8B9A0061DE38 /* ViewManager.swift */; };
 		AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03D213E8D6F0061DE38 /* CardView.swift */; };
 		AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */; };
+		AA9150F5216609260058F867 /* pinkhearts.png in Resources */ = {isa = PBXBuildFile; fileRef = AA9150F4216609260058F867 /* pinkhearts.png */; };
 		AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */; };
 		AA9336542163BEF500E651D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336532163BEF500E651D0 /* TutorialViewController.swift */; };
 		AA9336562163C03300E651D0 /* FirstExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336552163C03300E651D0 /* FirstExplainViewController.swift */; };
@@ -144,6 +145,7 @@
 		AA76C038213E8B9A0061DE38 /* ViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 		AA76C03D213E8D6F0061DE38 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViewController.swift; sourceTree = "<group>"; };
+		AA9150F4216609260058F867 /* pinkhearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkhearts.png; sourceTree = "<group>"; };
 		AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
 		AA9336532163BEF500E651D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		AA9336552163C03300E651D0 /* FirstExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExplainViewController.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				CE486DA02164D55E009C4D63 /* tutorial.png */,
 				CE123280216510F70012350C /* friend.png */,
 				CE123283216513950012350C /* setting sun.png */,
+				AA9150F4216609260058F867 /* pinkhearts.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				AA4F33B52102005500B410FE /* SettingTableViewCell.xib in Resources */,
 				CEE4F121211F68830008FC2A /* TopViewController1.png in Resources */,
 				CE12327F21650F280012350C /* 8.png in Resources */,
+				AA9150F5216609260058F867 /* pinkhearts.png in Resources */,
 				AA10BC47214F6F3200C86ED8 /* ShowMyDiaryViewController.storyboard in Resources */,
 				CE12327C21650F280012350C /* 5.png in Resources */,
 				CE2E6D8C2101DB7E0065CCBB /* MyDiary.png in Resources */,

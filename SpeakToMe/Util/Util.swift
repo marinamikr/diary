@@ -16,6 +16,7 @@ import Firebase
 class Util: NSObject {
     
     static var isObserving  = false
+    static var likesDictionary : [String:Int] = [:]
     
     
     static func  printLog(viewC : Any ,tag : String, contents:Any){
@@ -109,11 +110,17 @@ class Util: NSObject {
         let resultArray = realm.objects(RealmModel.self)
         var ref:DatabaseReference! = Database.database().reference()
         for result in resultArray {
-            let handler :UInt = ref.child(Util.getUUID()).child(result.key).observe(.childChanged, with: {
+            let handler :UInt = ref.child(Util.getUUID()).child(result.key).child("like").observe(.value, with: {
                 snapshot in
                 let likes = snapshot.value as! Int
-                Util.showNotification(title: "いいねされました", subtitle:  String(likes) + "likes", body: result.honbunn as!
-                    String)
+                if likesDictionary[result.key] == nil{
+                    likesDictionary[result.key] = likes
+                }else{
+                    if likes > likesDictionary[result.key]!{
+                        Util.showNotification(title: "いいねされました", subtitle:  String(likes) + "likes", body: result.honbunn as! String)
+                    }
+                    likesDictionary[result.key] = likes
+                }
             })
         }
         isObserving = true

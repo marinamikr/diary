@@ -31,7 +31,7 @@ class TimeLineViewController: UIViewController {
     var ref:DatabaseReference!
     var index = 0
     var isSetUpZLSwipeableView = false
-    var likeIndex = [Int]()
+    var likeKeyArray = [String]()
     static var isRenew = false
     static var isTutorial = false
     
@@ -47,6 +47,9 @@ class TimeLineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (userDefaults.array(forKey: "likeKeyArray") != nil){
+            likeKeyArray = userDefaults.array(forKey: "likeKeyArray") as! [String]
+        }
         if (self.userDefaults.string(forKey: "UserName") == nil) {
             self.performSegue(withIdentifier: "toTopViewController", sender: nil)
         }
@@ -90,6 +93,7 @@ class TimeLineViewController: UIViewController {
     
     func setUpSwipeableView() {
         swipeableView = ZLSwipeableView()
+        swipeableView.allowedDirection = [Direction.Horizontal,Direction.Up]
         swipeableView.tag = 1
         view.addSubview(swipeableView)
         swipeableView.didStart = {view, location in
@@ -106,14 +110,21 @@ class TimeLineViewController: UIViewController {
             print("Did swipe view in direction: \(direction), vector: \(vector)")
             let card = self.swipeableView.history.last as! CardView
             if direction == Direction.Left{
-                if !self.likeIndex.contains(card.index){
-                card.addLike()
-                self.likeIndex.append(card.index)
+                if !self.likeKeyArray.contains(card.key){
+                    card.addLike()
+                    self.likeKeyArray.append(card.key)
+                    self.userDefaults.set(self.likeKeyArray, forKey: "likeKeyArray")
+                    self.checkLeftFirst()
                 }
-                self.likeArray[card.index] = card.like
-                self.checkLeftFirst()
             }else if direction == Direction.Right {
                 self.checkRightFirst()
+            }else if direction == Direction.Up{
+                if self.likeKeyArray.contains(card.key){
+                    card.removeLike()
+                    self.likeKeyArray.remove(at: self.likeKeyArray.firstIndex(of: card.key)!)
+                    self.userDefaults.set(self.likeKeyArray, forKey: "likeKeyArray")
+                    self.checkUpFirst()
+                }
             }
             if let nextCard = self.swipeableView.topView(){
                 if (nextCard as! CardView).userName == nil {
@@ -147,7 +158,11 @@ class TimeLineViewController: UIViewController {
             cardView.setContentsText(text: contentsArray[index])
             cardView.setIconImage(url: iconURLArray[index])
             cardView.setPicture(url: urlArray[index])
-            cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
+            if likeKeyArray.contains(keyArray[index]){
+                cardView.setHeartImage(image: UIImage(named: "hearts_red.png")!)
+            }else{
+                cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
+            }
             cardView.setDateLabel(dateText: dateArray[index])
             cardView.setHeartLabel(heartText: String(likeArray[index]))
             cardView.setUUID(UUID: uuIdArray[index])
@@ -203,6 +218,7 @@ class TimeLineViewController: UIViewController {
                 if permission {
                     self.ref.child(id).observe(.value, with: {snapshot  in
                         for i in 0 ..< snapshot.children.allObjects.count {
+                            print("hoge")
                             let child = snapshot.children.allObjects[i]
                             let postDict = (child as! DataSnapshot).value as! [String : AnyObject]
                             if Util.differenceOfDate(date1: Date(), date2: (postDict["date"] as! String).getDate()) > 3 {
@@ -216,6 +232,28 @@ class TimeLineViewController: UIViewController {
                                 self.keyArray.append((child as! DataSnapshot).key)
                                 self.uuIdArray.append(id)
                                 self.iconURLArray.append(postDict["iconURL"] as! String)
+                                self.ref.child(id).child((child as! DataSnapshot).key).observe(.value, with: {snapshot  in
+                                    let index = self.keyArray.firstIndex(of: (child as! DataSnapshot).key)
+                                    let postDict = (snapshot as! DataSnapshot).value as! [String : AnyObject]
+                                    self.userNameArray[index!] = postDict["userName"] as! String
+                                    self.dateArray[index!] = postDict["date"] as! String
+                                    self.contentsArray[index!] = postDict["contents"] as! String
+                                    self.urlArray[index!] = postDict["URL"] as! String
+                                    self.likeArray[index!] = postDict["like"] as! Int
+                                    self.iconURLArray[index!] = postDict["iconURL"] as! String
+                                    let activeViews = self.swipeableView.activeViews()
+                                    for i in 0 ..< activeViews.count{
+                                        let cardView = activeViews[i] as! CardView
+                                        if cardView.key == (child as! DataSnapshot).key{
+                                            cardView.setUserName(userName: postDict["userName"] as! String)
+                                            cardView.setContentsText(text: postDict["contents"]  as! String)
+                                            cardView.setIconImage(url: postDict["iconURL"] as! String)
+                                            cardView.setPicture(url: postDict["URL"] as! String)
+                                            cardView.setDateLabel(dateText: postDict["date"] as! String)
+                                            cardView.setHeartLabel(heartText: String(postDict["like"] as! Int))
+                                        }
+                                    }
+                                })
                             }
                             if id == idArray.last && i == snapshot.children.allObjects.count - 1 {
                                 if self.userNameArray.count > self.index{
@@ -270,6 +308,18 @@ class TimeLineViewController: UIViewController {
         if self.userDefaults.bool(forKey: "firstRightSwipe") == false{
             self.userDefaults.set(true, forKey: "firstRightSwipe")
             let alert: UIAlertController = UIAlertController(title: "スワイプする事で投稿を見ることができます",message: "これは初回だけ表示されます",preferredStyle: .alert)
+            let closeAction = UIAlertAction(title: "OK", style: .default){
+                action in
+            }
+            alert.addAction(closeAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func checkUpFirst(){
+        if self.userDefaults.bool(forKey: "firstUpSwipe") == false{
+            self.userDefaults.set(true, forKey: "firstUpSwipe")
+            let alert: UIAlertController = UIAlertController(title: "いいねを取り消しました",message: "これは初回だけ表示されます",preferredStyle: .alert)
             let closeAction = UIAlertAction(title: "OK", style: .default){
                 action in
             }

@@ -29,6 +29,7 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
     var myUUID: String!
     var picFlag : Bool = false
     let realm = try! Realm()
+    var likesDictionary : [String:Int] = [:]
     //    var hizukeTest = "2018/08/25"
     @IBOutlet weak var picture: UIImageView!
     
@@ -230,11 +231,18 @@ public class MakeDiaryViewController: UIViewController, SFSpeechRecognizerDelega
                         realm.add(realmModel)
                     }
                     //通知
-                    let handler :UInt = ref.child(Util.getUUID()).child(sendRef.key).observe(.childChanged, with: {
+                    let handler :UInt = ref.child(Util.getUUID()).child(sendRef.key).child("like").observe(.value, with: {
                         snapshot in
                         let likes = snapshot.value as! Int
-                        Util.showNotification(title: "いいねされました", subtitle:  String(likes) + "likes", body: self.textView.text as!
-                            String)
+                        if self.likesDictionary[sendRef.key] == nil{
+                            self.likesDictionary[sendRef.key] = likes
+                        }else{
+                            if likes > self.likesDictionary[sendRef.key]!{
+                                Util.showNotification(title: "いいねされました", subtitle:  String(likes) + "likes", body: self.textView.text
+                                )
+                            }
+                            self.likesDictionary[sendRef.key] = likes
+                        }
                     })
                 })
             }

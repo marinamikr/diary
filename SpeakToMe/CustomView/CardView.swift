@@ -229,11 +229,18 @@ class CardView: UIView {
     }
     
     func addLike(){
-        
         self.like = self.like + 1
+        heartImageView.image = UIImage(named: "pinkhearts.png")
         heartLabel.text = String(like)
         let data = ["userName":userName!,"contents": contents!,"date": date!,"URL": URL!,"like": like!] as [String : Any]
         self.ref.child(UUID).child(key).updateChildValues(data)
-        
+    }
+    
+    func removeLike(){
+        self.like = self.like - 1
+        heartImageView.image = UIImage(named: "hearts.png")
+        heartLabel.text = String(like)
+        let data = ["userName":userName!,"contents": contents!,"date": date!,"URL": URL!,"like": like!] as [String : Any]
+        self.ref.child(UUID).child(key).updateChildValues(data)
     }
 }
