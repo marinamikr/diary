@@ -159,7 +159,7 @@ class TimeLineViewController: UIViewController {
             cardView.setIconImage(url: iconURLArray[index])
             cardView.setPicture(url: urlArray[index])
             if likeKeyArray.contains(keyArray[index]){
-                cardView.setHeartImage(image: UIImage(named: "hearts_red.png")!)
+                cardView.setHeartImage(image: UIImage(named: "pinkhearts.png")!)
             }else{
                 cardView.setHeartImage(image: UIImage(named: "hearts.png")!)
             }

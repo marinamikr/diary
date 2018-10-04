@@ -36,6 +36,7 @@
 		AA76C03E213E8D6F0061DE38 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C03D213E8D6F0061DE38 /* CardView.swift */; };
 		AA76C042213E90AC0061DE38 /* ZLSwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */; };
 		AA9150F5216609260058F867 /* pinkhearts.png in Resources */ = {isa = PBXBuildFile; fileRef = AA9150F4216609260058F867 /* pinkhearts.png */; };
+		AA9150F721661DE00058F867 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = AA9150F621661DE00058F867 /* 4.png */; };
 		AA9336452163B8C500E651D0 /* TutorialViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */; };
 		AA9336542163BEF500E651D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336532163BEF500E651D0 /* TutorialViewController.swift */; };
 		AA9336562163C03300E651D0 /* FirstExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9336552163C03300E651D0 /* FirstExplainViewController.swift */; };
@@ -54,7 +55,6 @@
 		CE0BD317216611ED0044D4E7 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD30F216611E80044D4E7 /* 3.png */; };
 		CE0BD318216611ED0044D4E7 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD310216611E80044D4E7 /* 5.png */; };
 		CE0BD319216611ED0044D4E7 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD311216611EC0044D4E7 /* 6.png */; };
-		CE0BD31A216611ED0044D4E7 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD312216611EC0044D4E7 /* 4.png */; };
 		CE0BD31B216611ED0044D4E7 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD313216611EC0044D4E7 /* 8.png */; };
 		CE0BD31D216615DB0044D4E7 /* setting sun22.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0BD31C216615DB0044D4E7 /* setting sun22.png */; };
 		CE0F746520FDEF04000D83DB /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0F746420FDEF03000D83DB /* background1.png */; };
@@ -147,6 +147,7 @@
 		AA76C03D213E8D6F0061DE38 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AA76C041213E90AC0061DE38 /* ZLSwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViewController.swift; sourceTree = "<group>"; };
 		AA9150F4216609260058F867 /* pinkhearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkhearts.png; sourceTree = "<group>"; };
+		AA9150F621661DE00058F867 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		AA9336442163B8C500E651D0 /* TutorialViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialViewController.storyboard; sourceTree = "<group>"; };
 		AA9336532163BEF500E651D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		AA9336552163C03300E651D0 /* FirstExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExplainViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		CE0BD30F216611E80044D4E7 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		CE0BD310216611E80044D4E7 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		CE0BD311216611EC0044D4E7 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
-		CE0BD312216611EC0044D4E7 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		CE0BD313216611EC0044D4E7 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		CE0BD31C216615DB0044D4E7 /* setting sun22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting sun22.png"; sourceTree = "<group>"; };
 		CE0F746420FDEF03000D83DB /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 				CE0BD30C216611E70044D4E7 /* 1.png */,
 				CE0BD30D216611E70044D4E7 /* 2.png */,
 				CE0BD30F216611E80044D4E7 /* 3.png */,
-				CE0BD312216611EC0044D4E7 /* 4.png */,
+				AA9150F621661DE00058F867 /* 4.png */,
 				CE0BD310216611E80044D4E7 /* 5.png */,
 				CE0BD311216611EC0044D4E7 /* 6.png */,
 				CE0BD30E216611E80044D4E7 /* 7.png */,
@@ -531,7 +531,7 @@
 				TargetAttributes = {
 					7539A46C1CE7A57600505E8B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 4M937WB6VR;
+						DevelopmentTeam = V7EPKJW7KG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -583,7 +583,6 @@
 				AA10BC49214F6F5C00C86ED8 /* AllDiaryViewController.storyboard in Resources */,
 				CE4676D120F4C42E009DA351 /* CustomDrawerTableViewCell.xib in Resources */,
 				CE2563C220FDAEEE00C4F948 /* calender_show_white.png in Resources */,
-				CE0BD31A216611ED0044D4E7 /* 4.png in Resources */,
 				CE2E6D8A2101D4BD0065CCBB /* QRcode.png in Resources */,
 				CE7AF50421265CB30057A925 /* TopView.png in Resources */,
 				AA10BC45214F6EF200C86ED8 /* MakeDiaryViewController.storyboard in Resources */,
@@ -593,6 +592,7 @@
 				AA10BC55214F704F00C86ED8 /* AllMyDiaryViewController.storyboard in Resources */,
 				CE486DA12164D55F009C4D63 /* tutorial.png in Resources */,
 				AABA9D082125A85800D4AEE3 /* hearts.png in Resources */,
+				AA9150F721661DE00058F867 /* 4.png in Resources */,
 				CE2563C520FDAEEE00C4F948 /* calender_add_white.png in Resources */,
 				AA10BC4F214F6FCF00C86ED8 /* QRViewController.storyboard in Resources */,
 				AA10BC43214F6C0A00C86ED8 /* setting sun.JPG in Resources */,
@@ -841,11 +841,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4M937WB6VR;
+				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinaharada.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -860,11 +860,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4M937WB6VR;
+				DEVELOPMENT_TEAM = V7EPKJW7KG;
 				INFOPLIST_FILE = SpeakToMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinaharada.comdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marina.harada.comdiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
